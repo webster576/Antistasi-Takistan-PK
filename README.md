@@ -1,5 +1,5 @@
 # antistasi_pk
-Слегка допиленная под себя версия AntiStasi Official Community Edition 2.4.1.
+Слегка допиленная под себя версия AntiStasi Official Community Edition 2.4.1. - карта Takistan
 (https://github.com/official-antistasi-community/A3-Antistasi/releases)
 
 В папке Инструкции лежат, как ни парадоксально, инструкции по поводу того как менять миссию под себя. Описаны только те аспекты, с котоыми я/мы разобрались.
