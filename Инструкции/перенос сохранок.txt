@@ -1,0 +1,13 @@
+Весь прогресс миссии для Antistasi лежит в файле имя_пользователя.vars.Arma3Profile
+
+В моем случае, для локального LAN сервера:
+С:\Users\PaveL\Documents\Arma 3\PaveL.vars.Arma3Profile
+
+Для Андреевского выделенного сервера:
+C:\Program Files (x86)\Steam\steamapps\common\Arma 3 Server\TADST\default\Users\default\default.vars.Arma3Profile
+
+Для того чтобы перенести сохранку, достаточно взять нужный файл. Положить его по нужному адресу и заменить имя пользователя на свое. Предварительно забекапить
+свое сохранение, если оно по каким-то причинам еще понадобится.
+
+Подробнее расписано здесь:
+https://a3antistasi.enjin.com/mobile/forum/viewthread/m/38173738/id/27808947-persistent-save-location-running-on-dedicated-server
