@@ -1,0 +1,10 @@
+При помощи редактирования этих файликов, можно расширить меню покупки техники и стационарных орудий в игре (пустых. Без экипажа)
+
+dialogs.hpp - диалоговые окна вызова менюшек
+antistasiMissionMP.tpoj - регистрация вызова фукций. XML файл, в котором перечислены вызываемые фукции. Нужна будет функция для каждой подменюшки. (Этот файлик есть под карту Altis, но не требуется для карты Takistan)
+functions.hpp - еще одно место, где необходимо зарегистрировать вызов своей фукции. Класс Dialogs
+functions/Dialogs/fn_name.sqf - своя фукция, которая вытащит название, описание и цену для техники
+Templates/NewTemplates/RHS/RHS_Reb_NAPA_Template.sqf - основной шаблон фракции, где необходимо определить новую локальную переменную. Например "vehicleFuelTruck"
+Templates/NewTemplates/RHS/RHS_Reb_NAPA_Arid.sqf - дополнительный шаблон фракции, где необходимо определить новую локальную переменную. Например "vehicleFuelTruck"
+functions/Templates/fn_compatibilityLoadFaction.sqf - определение соответствий. Локальных переменных фракции типа vehicleTruck глобальной переменной сервера vehSDKTruck
+functions/init/fn_initVarServer.sqf - глобальные переменные сервера. В том числе машины (vehSDKTruck, vehSDKPlane, vehSDKBoat и пр.)
