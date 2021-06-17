@@ -679,6 +679,10 @@
         <Chinesesimp>军用载具</Chinesesimp>
         <Korean>군 차량</Korean>
       </Key>
+	  <Key ID="STR_antistasi_dialogs_vehicle_purchase_military_air_vehicles">
+        <Original>Air vehicles</Original>
+        <Russian>ВВС</Russian>
+      </Key>
       <Key ID="STR_antistasi_dialogs_vehicle_purchase_military_support_text">
         <Original>Military Support</Original>
         <Russian>Снабжение</Russian>

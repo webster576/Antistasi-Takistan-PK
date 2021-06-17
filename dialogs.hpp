@@ -601,6 +601,101 @@ class vehicle_option 	{
 		};
 	};
 };
+class air_vehicles {
+	idd=100;
+	movingenable=false;
+	
+	class controls {
+		class HQ_box: BOX
+		{
+			idc = -1;
+			text = $STR_antistasi_dialogs_generic_box_text;
+			x = 0.244979 * safezoneW + safezoneX;
+			y = 0.223941 * safezoneH + safezoneY;
+			w = 0.445038 * safezoneW;
+			h = 0.40 * safezoneH;
+		};
+		class HQ_frame: RscFrame
+		{
+			idc = -1;
+			text = $STR_antistasi_dialogs_vehicle_purchase_military_air_vehicles;
+			x = 0.254979 * safezoneW + safezoneX;
+			y = 0.233941 * safezoneH + safezoneY;
+			w = 0.425038 * safezoneW;
+			h = 0.38 * safezoneH;
+		};
+		class HQ_button_back: RscButton
+		{
+			idc = -1;
+			text = $STR_antistasi_dialogs_generic_button_back_text;
+			x = 0.61 * safezoneW + safezoneX;
+			y = 0.251941 * safezoneH + safezoneY;
+			w = 0.06 * safezoneW;//0.175015
+			h = 0.05 * safezoneH;
+			action = "closeDialog 0; nul = createDialog ""mil_vehicles"";";
+		};
+		class HQ_button_mi8: RscButton
+		{
+			idc = 101;
+			text = "Mi-8 AMT";
+			x = 0.272481 * safezoneW + safezoneX;
+			y = 0.317959 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			action = "closeDialog 0;nul = [vehSDKHeliMi8] spawn A3A_fnc_addFIAveh;";
+		};
+		class HQ_button_mi8mt: RscButton
+		{
+			idc = 102;
+			text = "Mi-8 MT";
+			x = 0.482498 * safezoneW + safezoneX;
+			y = 0.317959 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			action = "closeDialog 0;nul = [vehSDKHeliMi8MT] spawn A3A_fnc_addFIAveh;";
+		};
+		class HQ_button_mi24v: RscButton
+		{
+			idc = 103;
+			text = "Mi-24V";
+			x = 0.272481 * safezoneW + safezoneX;
+		 	y = 0.415981 * safezoneH + safezoneY;
+		 	w = 0.175015 * safezoneW;
+		 	h = 0.0560125 * safezoneH;
+			action = "closeDialog 0;nul = [vehSDKHeliMi24V] spawn A3A_fnc_addFIAveh;";
+		};
+		class HQ_button_l39: RscButton
+		{
+			idc = 104;
+			text = "L39 Albatros";
+			x = 0.482498 * safezoneW + safezoneX;
+			y = 0.415981 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			action = "closeDialog 0;nul = [vehSDKPlaneL39] spawn A3A_fnc_addFIAveh;";
+		};
+		class HQ_button_su25: RscButton
+		{
+			idc = 105;
+			text = "Su-25";
+			x = 0.272481 * safezoneW + safezoneX;
+			y = 0.514003 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			action = "closeDialog 0;nul = [vehSDKPlaneSu25] spawn A3A_fnc_addFIAveh;";
+		};
+		class HQ_button_mig29: RscButton
+		{
+			idc = 106;
+			text = "MiG-29S";
+			x = 0.482498 * safezoneW + safezoneX;
+			y = 0.514003 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			action = "closeDialog 0;nul = [vehSDKPlaneMig29S] spawn A3A_fnc_addFIAveh;";
+		};
+	}
+}
 class mil_vehicles {
 	idd=-1;
 	movingenable=false;

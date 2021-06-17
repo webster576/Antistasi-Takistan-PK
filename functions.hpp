@@ -271,6 +271,7 @@ class A3A
 
     class Dialogs
     {
+        class buyAirVehicle {};
         class buyVehicleCiv {};
         class buySupportVehicle {};
         class buyMilOffroad {};

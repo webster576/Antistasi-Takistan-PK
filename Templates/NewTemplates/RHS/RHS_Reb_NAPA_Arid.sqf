@@ -37,6 +37,13 @@
 ["vehicle2S1", "rhsgref_ins_g_2s1"] call _fnc_saveToTemplate;
 ["vehicleBoat", "I_C_Boat_Transport_02_F"] call _fnc_saveToTemplate;
 
+["vehicleMi8", "rhsgref_ins_g_Mi8amt"] call _fnc_saveToTemplate;
+["vehicleMi8MT", "rhsgref_cdf_reg_Mi17Sh"] call _fnc_saveToTemplate;
+["vehicleMi24V", "rhsgref_cdf_Mi35"] call _fnc_saveToTemplate;
+["vehicleL39", "rhs_l39_cdf"] call _fnc_saveToTemplate;
+["vehicleSu25", "rhsgref_cdf_su25"] call _fnc_saveToTemplate;
+["vehicleMig29S", "rhsgref_cdf_mig29s"] call _fnc_saveToTemplate;
+
 ["vehiclePlane", "RHS_AN2"] call _fnc_saveToTemplate;
 ["vehicleHeli", "not_supported"] call _fnc_saveToTemplate;
 
