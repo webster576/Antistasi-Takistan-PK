@@ -70,7 +70,9 @@ if (_costs == 0) exitWith {
 
 _costs = round (_costs * (1-damage _veh));
 
-[0,_costs] remoteExec ["A3A_fnc_resourcesFIA",2];
+//[0,_costs] remoteExec ["A3A_fnc_resourcesFIA",2];
+[_costs] call A3A_fnc_resourcesPlayer;
+
 
 if (_veh in staticsToSave) then {staticsToSave = staticsToSave - [_veh]; publicVariable "staticsToSave"};
 if (_veh in reportedVehs) then {reportedVehs = reportedVehs - [_veh]; publicVariable "reportedVehs"};

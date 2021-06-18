@@ -2207,25 +2207,25 @@ class commander_comm 		{
 	movingenable=false;
 	class controls {
 		//Menu Structure
-		class 8slots_box: BOX
+		class 6slots_box: BOX
 		{
 			idc = -1;
 			text = $STR_antistasi_dialogs_generic_box_text;
 			x = 0.244979 * safezoneW + safezoneX;
 			y = 0.223941 * safezoneH + safezoneY;
 			w = 0.445038 * safezoneW;
-			h = 0.492103 * safezoneH;
+			h = 0.40 * safezoneH;
 		};
-		class 8slots_frame: RscFrame
+		class 6slots_frame: RscFrame
 		{
 			idc = -1;
 			text = $STR_antistasi_dialogs_commander_comm;
 			x = 0.254979 * safezoneW + safezoneX;
 			y = 0.233941 * safezoneH + safezoneY;
 			w = 0.425038 * safezoneW;
-			h = 0.462103 * safezoneH;
+			h = 0.38 * safezoneH;
 		};
-		class 8slots_Back: RscButton
+		class 6slots_Back: RscButton
 		{
 			idc = -1;
 			text = $STR_antistasi_dialogs_generic_button_back_text;
@@ -2236,7 +2236,7 @@ class commander_comm 		{
 			action = "closeDialog 0;nul = createDialog ""radio_comm"";";
 		};
 		//Action Buttons
-		class 8slots_L1: RscButton
+		class 6slots_L1: RscButton
 		{
 			idc = -1;
 			text = $STR_antistasi_dialogs_commander_comm_recruit;
@@ -2247,7 +2247,7 @@ class commander_comm 		{
 			tooltip = $STR_antistasi_dialogs_commander_comm_recruit_tooltip;
 			action = "closeDialog 0;if (player == theBoss) then { [] spawn A3A_fnc_squadRecruit; } else {[""Recruit Squad"", ""Only Player Commander has access to this function""] call A3A_fnc_customHint;};";
 		};
-		class 8slots_R1: RscButton
+		class 6slots_R1: RscButton
 		{
 			idc = -1;
 			text = $STR_antistasi_dialogs_commander_comm_air_support;
@@ -2258,7 +2258,7 @@ class commander_comm 		{
 			tooltip = $STR_antistasi_dialogs_commander_comm_air_support_tooltip;
 			action = "closeDialog 0;if (player == theBoss) then {_nul = createDialog ""carpet_bombing""} else {[""Air Support"", ""Only Player Commander has access to this function""] call A3A_fnc_customHint;};";
 		};
-		class 8slots_L2: RscButton
+		class 6slots_L2: RscButton
 		{
 			idc = -1;
 			text = $STR_antistasi_dialogs_commander_comm_roadblock;
@@ -2269,7 +2269,7 @@ class commander_comm 		{
 			tooltip = $STR_antistasi_dialogs_commander_comm_roadblock_tooltip;
 			action = "if (player == theBoss) then {closeDialog 0;[""create""] spawn A3A_fnc_outpostDialog} else {[""Outposts/Roadblocks"", ""You're not the Commander!""] call A3A_fnc_customHint;};";
 		};
-		class 8slots_R2: RscButton
+		class 6slots_R2: RscButton
 		{
 			idc = -1;
 			text = $STR_antistasi_dialogs_commander_comm_clean;
@@ -2280,7 +2280,7 @@ class commander_comm 		{
 			tooltip = $STR_antistasi_dialogs_commander_comm_clean_tooltip;
 			action = "if (player == theBoss) then {closedialog 0;[] remoteExec [""A3A_fnc_garbageCleaner"",2]} else {[""Garbage Cleaner"", ""Only Player Commander has access to this function""] call A3A_fnc_customHint;};";
 		};
-		class 8slots_L3: RscButton
+		class 6slots_L3: RscButton
 		{
 			idc = -1;
 			text = $STR_antistasi_dialogs_commander_comm_roadblock_delete;
@@ -2291,38 +2291,16 @@ class commander_comm 		{
 			tooltip = $STR_antistasi_dialogs_commander_comm_roadblock_delete_tooltip;
 			action = "if (player == theBoss) then {closeDialog 0; [""delete""] spawn A3A_fnc_outpostDialog} else {[""Outposts/Roadblocks"", ""You're not the Commander!""] call A3A_fnc_customHint;};";
 		};
-		class 8slots_R3: RscButton
+		class 6slots_R3: RscButton
 		{
 			idc = -1;
-			text = $STR_antistasi_dialogs_commander_comm_faction_garage;
+			text = $STR_antistasi_dialogs_commander_comm_resign;
 			x = 0.482498 * safezoneW + safezoneX;
 			y = 0.514003 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
 			h = 0.0560125 * safezoneH;
-			tooltip = $STR_antistasi_dialogs_commander_comm_faction_garage_tooltip;
-			action = "closeDialog 0; [true] call A3A_fnc_garageVehicle;";
-		};
-		class 8slots_L4: RscButton
-		{
-			idc = -1;
-			text = $STR_antistasi_dialogs_commander_comm_resign;
-			x = 0.272481 * safezoneW + safezoneX;
-			y = 0.612025 * safezoneH + safezoneY;
-			w = 0.175015 * safezoneW;
-			h = 0.0560125 * safezoneH;
 			tooltip = $STR_antistasi_dialogs_commander_comm_resign_tooltip;
 			action = "if (isMultiplayer) then {closedialog 0;[player, cursorTarget] remoteExec [""A3A_fnc_theBossToggleEligibility"", 2]} else {[""Resign Commander"", ""This feature is MP Only""] call A3A_fnc_customHint;};";
-		};
-		class 8slots_R4: RscButton
-		{
-			idc = -1;
-			text = $STR_antistasi_dialogs_commander_comm_sell;
-			x = 0.482498 * safezoneW + safezoneX;
-			y = 0.612025 * safezoneH + safezoneY;
-			w = 0.175015 * safezoneW;
-			h = 0.0560125 * safezoneH;
-			tooltip = $STR_antistasi_dialogs_commander_comm_sell_tooltip;
-			action = "if (player == theBoss) then {closeDialog 0; nul = [player,cursorObject] remoteExecCall [""A3A_fnc_sellVehicle"",2]} else {[""Sell Vehicle"", ""Only the Commander can sell vehicles""] call A3A_fnc_customHint;};";
 		};
 	};
 };
@@ -2734,7 +2712,7 @@ class player_money 			{
 			x = 0.244979 * safezoneW + safezoneX;
 			y = 0.223941 * safezoneH + safezoneY;
 			w = 0.445038 * safezoneW;
-			h = 0.30 * safezoneH;
+			h = 0.40 * safezoneH;
 		};
 		class HQ_frame: RscFrame
 		{
@@ -2743,7 +2721,7 @@ class player_money 			{
 			x = 0.254979 * safezoneW + safezoneX;
 			y = 0.233941 * safezoneH + safezoneY;
 			w = 0.425038 * safezoneW;
-			h = 0.28 * safezoneH;
+			h = 0.38 * safezoneH;
 		};
 		class HQ_button_back: RscButton
 		{
@@ -2797,6 +2775,17 @@ class player_money 			{
 			h = 0.0560125 * safezoneH;
 			tooltip = $STR_antistasi_dialogs_player_money_donate_faction_tooltip;
 			action = "[] call A3A_fnc_donateMoney;";
+		};
+		class HQ_button_sell: RscButton
+		{
+			idc = -1;
+			text = $STR_antistasi_dialogs_commander_comm_sell;
+			x = 0.272481 * safezoneW + safezoneX;
+			y = 0.514003 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			tooltip = $STR_antistasi_dialogs_commander_comm_sell_tooltip;
+			action = "closeDialog 0; nul = [player,cursorObject] remoteExecCall [""A3A_fnc_sellVehicle"",2]";
 		};
 	};
 };
