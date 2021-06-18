@@ -34,6 +34,7 @@ _eh1 = player addEventHandler ["HandleDamage",
 	["Control Unit", "Returned to original Unit as it received damage"] call A3A_fnc_customHint;
 	nil;
 	}];
+/*
 _eh2 = _unit addEventHandler ["HandleDamage",
 	{
 	_unit = _this select 0;
@@ -42,23 +43,31 @@ _eh2 = _unit addEventHandler ["HandleDamage",
 	selectPlayer (_unit getVariable "owner");
 	(units group player) joinsilent group player;
 	group player selectLeader player;
-	["Control Unit", "Returned to original Unit as controlled AI received damage"] call A3A_fnc_customHint;
+	["Control Unit", "Returned to original Unit as controlled AI received fatal wound."] call A3A_fnc_customHint;
 	nil;
 	}];
+*/
 selectPlayer _unit;
 
-_timeX = 60;
 
 _unit addAction ["Return Control to AI",{selectPlayer leader (group (_this select 0))}];
 
-waitUntil {sleep 1; ["Control Unit", format ["Time to return control to AI: %1", _timeX]] call A3A_fnc_customHint; _timeX = _timeX - 1; (_timeX == -1) or (isPlayer (leader group player))};
+// Unit control timer
+_timeX = 60;
+waitUntil {
+	sleep 1;
+	["Control Unit", format ["Time to return control to AI: %1", _timeX]] call A3A_fnc_customHint;
+	//_timeX = _timeX - 1;
+	//(_timeX == -1) or (isPlayer (leader group player))
+	isPlayer (leader group player)
+};
 
 removeAllActions _unit;
 selectPlayer (_unit getVariable ["owner",_unit]);
 //_unit setVariable ["owner",nil,true];
 (units group player) joinsilent group player;
 group player selectLeader player;
-_unit removeEventHandler ["HandleDamage",_eh2];
+//_unit removeEventHandler ["HandleDamage",_eh2];
 player removeEventHandler ["HandleDamage",_eh1];
 ["Control Unit", ""] call A3A_fnc_customHint;
 

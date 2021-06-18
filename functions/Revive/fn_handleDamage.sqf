@@ -52,7 +52,51 @@ private _makeUnconscious =
 	{
 		moveOut _unit;
 	};
-	if (isPlayer _unit) then {_unit allowDamage false};
+	
+	if (isPlayer _unit) then {
+		//_unit allowDamage false;
+		private _unit_owner = (_unit getVariable "owner");
+		
+		// player had control over subordinate unit. Return control to subordinate unit owner.
+		if (!isPlayer _unit_owner) then {
+			_unit removeEventHandler ["HandleDamage",_thisEventHandler];
+			removeAllActions _unit;
+			selectPlayer _unit_owner;
+			
+			if (_unit_owner getVariable ["incapacitated",false]) then
+			{
+				[_unit_owner] spawn A3A_fnc_respawn;
+			} else {
+				(units group player) joinsilent group player;
+				group player selectLeader player;
+				["Control Unit", "Control returned to squad leader."] call A3A_fnc_customHint;
+			}
+
+		// player played as a squad commander until it was shoot. Trying to switch command to most appropriete remain unit
+		} else {
+			_unit removeEventHandler ["HandleDamage",_thisEventHandler];
+			removeAllActions _unit;
+			private _player_group_units = (units group player);
+			
+			if ((count _player_group_units) > 0) then {
+			{
+				if ([_x] call A3A_fnc_isMedic && (getDammage _x < 1)) exitWith {
+						selectPlayer _x;
+						_player_group_units joinsilent group player;
+						group player selectLeader player;
+						["Control Unit", "Control switched to medic."] call A3A_fnc_customHint;
+					};
+				} forEach _player_group_units;
+				
+				private _healthiestUnit = [_player_group_units, [], { getDammage _x }, "ASCEND"] call BIS_fnc_sortBy;
+				selectPlayer (_healthiestUnit select 0);
+				_player_group_units joinsilent group player;
+				group player selectLeader player;
+				["Control Unit", "Control switched to healthiest unit."] call A3A_fnc_customHint;
+			};
+		};
+	};
+	
 	private _fromside = if (!isNull _injurer) then {side group _injurer} else {sideUnknown};
 	[_unit,_fromside] spawn A3A_fnc_unconscious;
 };
