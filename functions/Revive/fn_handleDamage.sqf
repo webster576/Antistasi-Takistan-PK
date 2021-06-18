@@ -55,12 +55,12 @@ private _makeUnconscious =
 	
 	if (isPlayer _unit) then {
 		//_unit allowDamage false;
+		_unit removeEventHandler ["HandleDamage",_thisEventHandler];
+		removeAllActions _unit;
 		private _unit_owner = (_unit getVariable "owner");
 		
-		// player had control over subordinate unit. Return control to subordinate unit owner.
+		// player had control over subordinate unit. Return control to squad leader.
 		if (!isPlayer _unit_owner) then {
-			_unit removeEventHandler ["HandleDamage",_thisEventHandler];
-			removeAllActions _unit;
 			selectPlayer _unit_owner;
 			
 			if (_unit_owner getVariable ["incapacitated",false]) then
@@ -72,14 +72,13 @@ private _makeUnconscious =
 				["Control Unit", "Control returned to squad leader."] call A3A_fnc_customHint;
 			}
 
-		// player played as a squad commander until it was shoot. Trying to switch command to most appropriete remain unit
+		// player played as a squad leader until it was shoot. Trying to switch command to most appropriete remain unit.
 		} else {
-			_unit removeEventHandler ["HandleDamage",_thisEventHandler];
-			removeAllActions _unit;
 			private _player_group_units = (units group player);
-			
+
 			if ((count _player_group_units) > 0) then {
 			{
+				// attempt switch control to medic
 				if ([_x] call A3A_fnc_isMedic && (getDammage _x < 1)) exitWith {
 						selectPlayer _x;
 						_player_group_units joinsilent group player;

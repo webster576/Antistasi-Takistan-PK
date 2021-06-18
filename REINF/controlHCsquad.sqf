@@ -54,7 +54,13 @@ _timeX = 60;
 
 _unit addAction ["Return Control to AI",{selectPlayer (player getVariable ["owner",player])}];
 
-waitUntil {sleep 1;["Control Squad", format ["Time to return control to AI: %1", _timeX]] call A3A_fnc_customHint; _timeX = _timeX - 1; (_timeX < 0) or (isPlayer theBoss)};
+waitUntil {
+	sleep 1;
+	["Control Squad", format ["Time to return control to AI: %1", _timeX]] call A3A_fnc_customHint;
+	//_timeX = _timeX - 1;
+	//(_timeX < 0) or (isPlayer theBoss)
+	isPlayer theBoss;
+};
 
 removeAllActions _unit;
 if (!isPlayer (_unit getVariable ["owner",_unit])) then {selectPlayer (_unit getVariable ["owner",_unit])};
