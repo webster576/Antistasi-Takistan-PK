@@ -165,22 +165,24 @@ if (_medicX getVariable ["success",true]) then {
 	 };
 	 
 	_cured setVariable ["incapacitated",false,true];
+	_cured allowDamage true;
 	_healed = true;
 	
 	// Reviewed person isn't controlled by player, but own itself. Obviously it was a former group leader. 
 	// Attempt to switch command back to him, if there are some players/player in his group.
 	if !(isPlayer _cured) then {
-		private _cured_owner = (_cured getVariable "owner");
-		if (_cured == _cured_owner) then {
-			{
-				if (isPlayer _x) exitWith {
-					selectPlayer _cured;
-					(units group _x) joinsilent group _cured;
-					group _cured selectLeader _cured;
-					_cured allowDamage true;
-					["Control Unit", "Control switched back to squad leader."] call A3A_fnc_customHint;
-				};
-			} forEach (units group _cured);
+		if !(isNil{_cured getVariable "owner"}) then {
+			private _cured_owner = (_cured getVariable "owner");
+			if (_cured isEqualTo _cured_owner) then {
+				{
+					if (isPlayer _x) exitWith {
+						selectPlayer _cured;
+						(units group _x) joinsilent group _cured;
+						group _cured selectLeader _cured;
+						["Control Unit", "Control switched back to squad leader."] call A3A_fnc_customHint;
+					};
+				} forEach (units group _cured);
+			};
 		};
 	};
 }

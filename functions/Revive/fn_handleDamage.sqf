@@ -48,6 +48,7 @@ private _makeUnconscious =
 	params ["_unit", "_injurer"];
 	_unit setVariable ["incapacitated",true,true];
 	_unit setUnconscious true;
+	_unit allowDamage false;
 	if (vehicle _unit != _unit) then
 	{
 		moveOut _unit;
@@ -90,7 +91,6 @@ private _makeUnconscious =
 			};
 		};
 
-		_unit removeEventHandler ["HandleDamage",_thisEventHandler];
 		removeAllActions _unit;
 		private _unit_owner = (_unit getVariable "owner");
 		private _player_group_units = (units group _unit);
@@ -109,7 +109,6 @@ private _makeUnconscious =
 			}
 		// player played as a squad leader until it was shoot. Trying to switch command to most appropriete remain unit.
 		} else {
-			_unit allowDamage false;
 			[_player_group_units, _unit_owner] call _switchToNextMostApproprieteUnit;
 		};
 	};
