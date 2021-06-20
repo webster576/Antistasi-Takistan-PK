@@ -18,9 +18,11 @@ while {true} do
 	private _popKilled = 0;
 	private _popTotal = 0;
 
+	// calculate boosters
 	private _suppBoost = 0.5 * (1+ ({sidesX getVariable [_x,sideUnknown] == teamPlayer} count seaports));
 	private _resBoost = 1 + (0.25*({(sidesX getVariable [_x,sideUnknown] == teamPlayer) and !(_x in destroyedSites)} count factories));
 
+	// calculate city supplies
 	{
 		private _city = _x;
 		private _resAddCity = 0;
@@ -95,6 +97,7 @@ while {true} do
 	if (_popKilled > (_popTotal / 3)) then {["destroyedSites",false,true] remoteExec ["BIS_fnc_endMission"]};
 	if ((_popReb > _popGov) and ({sidesX getVariable [_x,sideUnknown] == teamPlayer} count airportsX == count airportsX)) then {["end1",true,true,true,true] remoteExec ["BIS_fnc_endMission",0]};
 
+	// calculate resources supplies
 	{
 		if ((sidesX getVariable [_x,sideUnknown] == teamPlayer) and !(_x in destroyedSites)) then
 		{
@@ -105,8 +108,31 @@ while {true} do
 	_hrAdd = ceil _hrAdd;
 	_resAdd = ceil _resAdd;
 	server setVariable ["hr", _hrAdd + (server getVariable "hr"), true];
-	server setVariable ["resourcesFIA", _resAdd + (server getVariable "resourcesFIA"), true];
+	private _resourcesFIASum = _resAdd + (server getVariable "resourcesFIA");
+	
+	if (_resourcesFIASum < 10000) then {
+		server setVariable ["resourcesFIA", _resourcesFIASum, true];
+	// distribute resource cut between players, where fraction is rich enough
+	} else {
+		private _players_cut = _resourcesFIASum * 0.1;
+		private _allPlayers = call BIS_fnc_listPlayers;
+		private _player_cut = floor (_players_cut / (count _allPlayers));
+		private _players_cut_reminder = _players_cut - ((count _allPlayers) * _player_cut);
+		
+		{
+			private _player_cut_msg = format ["<t size='1' color='#C1C0BB'>Our fraction is growing. It becomes more powerful and rich. Not least thanks by you. Anyway, here is your cut:<br/><br/><t size='2' color='#C1C0BB'>Money: +%1 €", _player_cut];
+			["Your cut", _player_cut_msg] call A3A_fnc_customHint;
+			[_player_cut] remoteExec ["A3A_fnc_resourcesPlayer", _x];
+		} forEach _allPlayers;
+		
+		if (_players_cut_reminder > 0) then {
+			[floor(_players_cut_reminder)] remoteExec ["A3A_fnc_resourcesPlayer", (selectRandom _allPlayers)];
+		};
+		
+		server setVariable ["resourcesFIA", _resourcesFIASum - _players_cut, true];
+	};
 
+	// calculate airstrikes
 	bombRuns = bombRuns + 0.25 * ({sidesX getVariable [_x,sideUnknown] == teamPlayer} count airportsX);
 	publicVariable "bombRuns";
 
