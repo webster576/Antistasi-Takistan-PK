@@ -687,6 +687,38 @@
         <Original>Military Support</Original>
         <Russian>Снабжение</Russian>
       </Key>
+	  <Key ID="STR_antistasi_dialogs_vehicle_purchase_military_support_hospital">
+        <Original>Field hospital</Original>
+        <Russian>Полевой госпиталь</Russian>
+      </Key>
+	  <Key ID="STR_antistasi_dialogs_vehicle_purchase_military_support_truck">
+        <Original>Truck</Original>
+        <Russian>Грузовик</Russian>
+      </Key>
+	  <Key ID="STR_antistasi_dialogs_vehicle_purchase_military_support_medium_truck">
+        <Original>Medium truck</Original>
+        <Russian>Средний грузовик</Russian>
+      </Key>
+	  <Key ID="STR_antistasi_dialogs_vehicle_purchase_military_support_heavy_truck">
+        <Original>Heavy truck</Original>
+        <Russian>Тяжелый грузовик</Russian>
+      </Key>
+	  <Key ID="STR_antistasi_dialogs_vehicle_purchase_military_support_fuel_truck">
+        <Original>Fuel truck</Original>
+        <Russian>Топливозаправщик</Russian>
+      </Key>
+	  <Key ID="STR_antistasi_dialogs_vehicle_purchase_military_support_repair_truck">
+        <Original>Repair truck</Original>
+        <Russian>Ремонтная машина</Russian>
+      </Key>
+	  <Key ID="STR_antistasi_dialogs_vehicle_purchase_military_support_ammo_truck">
+        <Original>Ammo truck</Original>
+        <Russian>Боеприпасы</Russian>
+      </Key>
+	  <Key ID="STR_antistasi_dialogs_vehicle_purchase_military_support_carrier">
+        <Original>Carrier truck</Original>
+        <Russian>Тягач</Russian>
+      </Key>
       <Key ID="STR_antistasi_dialogs_vehicle_purchase_military_offroad_text">
         <Original>Light offroad</Original>
         <Russian>Внедорожники</Russian>
@@ -866,6 +898,100 @@
         <Czech>Ozbrojený pickup</Czech>
         <Chinesesimp>武装皮卡</Chinesesimp>
         <Korean>장갑 픽업트럭</Korean>
+      </Key>
+    </Container>
+    <Container name="dialog_vehicle_purchase_mil_offroad">
+      <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_text">
+        <Original>Military offroad</Original>
+        <English>Military offroad</English>
+        <Russian>Военные внедорожники</Russian>
+      </Key>
+      <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_quad">
+        <Original>Quad bike</Original>
+        <English>Quad bike</English>
+        <Russian>Квадроцикл</Russian>
+      </Key>
+      <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_uaz">
+        <Original>UAZ</Original>
+        <English>UAZ</English>
+        <Russian>УАЗ</Russian>
+      </Key>
+      <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_gaz66">
+        <Original>GAZ 66</Original>
+        <English>GAZ 66</English>
+        <Russian>ГАЗ 66</Russian>
+      </Key>
+      <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_uaz_dshkm">
+        <Original>UAZ DShKM</Original>
+        <English>UAZ DShKM</English>
+        <Russian>УАЗ с ДШКМ</Russian>
+      </Key>
+      <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_uaz_ags">
+        <Original>UAZ AGS</Original>
+        <English>UAZ AGS</English>
+        <Russian>УАЗ с АГС</Russian>
+      </Key>
+      <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_uaz_spg9">
+        <Original>UAZ SPG-9</Original>
+        <English>UAZ SPG-9</English>
+        <Russian>УАЗ с СПГ-9</Russian>
+      </Key>
+      <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_gaz66_zu23">
+        <Original>GAZ 66 ZSU-23</Original>
+        <English>GAZ 66 ZSU-23</English>
+        <Russian>ГАЗ 66 с ЗСУ-23-2</Russian>
+      </Key>
+      <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_brdm2m">
+        <Original>BRDM 2M</Original>
+        <English>BRDM 2M</English>
+        <Russian>БРДМ 2М</Russian>
+      </Key>
+    </Container>
+    <Container name="dialog_vehicle_purchase_mil_armored">
+     <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_text">
+        <Original>Armored vehicles</Original>
+        <English>Armored vehicles</English>
+        <Russian>Бронетехника</Russian>
+      </Key>
+      <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_brdm2_atgm">
+        <Original>BRDM 2 ATGM</Original>
+        <English>BRDM 2 ATGM</English>
+        <Russian>БРДМ 2 ПТРК</Russian>
+      </Key>
+      <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_btr80">
+        <Original>BTR-80</Original>
+        <English>BTR-80</English>
+        <Russian>БТР-80</Russian>
+      </Key>
+      <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_shilka">
+        <Original>ZSU-23-4 Shilka</Original>
+        <English>ZSU-23-4 Shilka</English>
+        <Russian>ЗСУ-23-4 Шилка</Russian>
+      </Key>
+      <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_bmd1p">
+        <Original>BMD-1P</Original>
+        <English>BMD-1P</English>
+        <Russian>БМД-1П</Russian>
+      </Key>
+      <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_bmp2">
+        <Original>BMP-2</Original>
+        <English>BMP-2</English>
+        <Russian>БМП-2</Russian>
+      </Key>
+      <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_t72ba">
+        <Original>T-72</Original>
+        <English>T-72</English>
+        <Russian>T-72</Russian>
+      </Key>
+      <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_t72bb">
+        <Original>T-72 RA</Original>
+        <English>T-72 RA</English>
+        <Russian>T-72 ДЗ</Russian>
+      </Key>
+      <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_2s1">
+        <Original>2S1 Carnation</Original>
+        <English>2S1 Carnation</English>
+        <Russian>2С1 Гвоздика</Russian>
       </Key>
     </Container>
     <Container name="dialog_vehicle_purchase_civ">
@@ -3272,15 +3398,23 @@
       </Key>
       <Key ID="STR_antistasi_dialogs_squad_recruit_sniper">
         <Original>Recruit Sniper Team</Original>
-        <Russian>Группа снайперов</Russian>
+        <Russian>Снайперы</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_squad_recruit_mg">
         <Original>Recruit MG Team</Original>
-        <Russian>Группа пулеметчиков</Russian>
+        <Russian>Пулеметный рассчет</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_squad_recruit_at_car">
         <Original>Recruit AT Car</Original>
         <Russian>ПТ Техника</Russian>
+      </Key>
+	  <Key ID="STR_antistasi_dialogs_squad_recruit_lvh">
+        <Original>Light vehicles</Original>
+        <Russian>Легкая техника</Russian>
+      </Key>
+      <Key ID="STR_antistasi_dialogs_squad_recruit_avh">
+        <Original>Armored vehicles</Original>
+        <Russian>Бронетехника</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_squad_recruit_aa_car">
         <Original>Recruit AA Truck</Original>
@@ -3288,7 +3422,7 @@
       </Key>
       <Key ID="STR_antistasi_dialogs_squad_recruit_mortar">
         <Original>Recruit Mortar Team</Original>
-        <Russian>Артилерия</Russian>
+        <Russian>Минометный рассчет</Russian>
       </Key>
     </Container>
     <Container name="player_money">
@@ -3467,6 +3601,12 @@
       <Key ID="STR_antistasi_dialogs_gameMode_menu_Reb_vs_Inv">
         <Original>Reb vs Inv</Original>
         <Russian>Зеленые vs Красные</Russian>
+      </Key>
+    </Container>
+	<Container name="flag_action">
+      <Key ID="STR_antistasi_flag_action_unitRecruitment">
+        <Original>Unit Recruitment</Original>
+        <Russian>Нанять бойцов</Russian>
       </Key>
     </Container>
   </Package>

@@ -10,26 +10,25 @@ if (str (_display) != "no display") then
 {
 	_ChildControl = _display displayCtrl 101;
 	_ChildControl  ctrlSetTooltip format ["Cost: %1 €",[vehSDKBike] call A3A_fnc_vehiclePrice];
-	_childControl ctrlSetText format ["%1",getText (configFile >> "CfgVehicles" >> vehSDKBike >> "displayName")];
+	
 	_ChildControl = _display displayCtrl 102;
-	_ChildControl  ctrlSetTooltip format ["Cost: %1 €",[vehSDKLightUnarmed] call A3A_fnc_vehiclePrice];
-	_childControl ctrlSetText format ["%1",getText (configFile >> "CfgVehicles" >> vehSDKLightUnarmed >> "displayName")];
+	_ChildControl  ctrlSetTooltip format ["Cost: %1 €",[vehSDKLightUnarmed] call A3A_fnc_vehiclePrice];	
+	
 	_ChildControl = _display displayCtrl 103;
 	_ChildControl  ctrlSetTooltip format ["Cost: %1 €",[vehSDKLightTruck] call A3A_fnc_vehiclePrice];
-	_childControl ctrlSetText format ["%1",getText (configFile >> "CfgVehicles" >> vehSDKLightTruck >> "displayName")];
+	
 	_ChildControl = _display displayCtrl 104;
 	_ChildControl  ctrlSetTooltip format ["Cost: %1 €",[vehSDKLightArmed] call A3A_fnc_vehiclePrice];
-	_childControl ctrlSetText format ["%1",getText (configFile >> "CfgVehicles" >> vehSDKLightArmed >> "displayName")];
+	
 	_ChildControl = _display displayCtrl 105;
 	_ChildControl  ctrlSetTooltip format ["Cost: %1 €",[vehSDKGL] call A3A_fnc_vehiclePrice];
-	_childControl ctrlSetText format ["%1",getText (configFile >> "CfgVehicles" >> vehSDKGL >> "displayName")];
+	
 	_ChildControl = _display displayCtrl 106;
 	_ChildControl  ctrlSetTooltip format ["Cost: %1 €",[vehSDKAT] call A3A_fnc_vehiclePrice];
-	_childControl ctrlSetText format ["%1",getText (configFile >> "CfgVehicles" >> vehSDKAT >> "displayName")];
+	
 	_ChildControl = _display displayCtrl 107;
 	_ChildControl  ctrlSetTooltip format ["Cost: %1 €",[vehSDKAA] call A3A_fnc_vehiclePrice];
-	_childControl ctrlSetText format ["%1",getText (configFile >> "CfgVehicles" >> vehSDKAA >> "displayName")];
+	
 	_ChildControl = _display displayCtrl 108;
 	_ChildControl  ctrlSetTooltip format ["Cost: %1 €",[vehSDKBRDM] call A3A_fnc_vehiclePrice];
-	_childControl ctrlSetText format ["%1",getText (configFile >> "CfgVehicles" >> vehSDKBRDM >> "displayName")];
 };

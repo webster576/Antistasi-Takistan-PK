@@ -16,11 +16,11 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=405;
+		nextID=653;
 	};
 	class Camera
 	{
-		pos[]={807.04236,1145.1771,1380.066};
+		pos[]={623.48358,518.82202,2452.1899};
 		dir[]={-0.13815704,-0.48773053,0.8619929};
 		up[]={-0.07718654,0.87299418,0.48158422};
 		aside[]={0.98739809,0,0.15825653};
@@ -3059,7 +3059,7 @@ class Mission
 					colorName="ColorGreen";
 					a=10;
 					b=10;
-					angle=112.28652;
+					angle=112.28648;
 					id=1658;
 					atlOffset=-2.0934296;
 				};
@@ -15365,7 +15365,7 @@ class Mission
 			type="rectangle";
 			a=6.6306639;
 			b=5.4339333;
-			angle=226.70998;
+			angle=226.70992;
 			id=1385;
 			atlOffset=-15.722351;
 		};

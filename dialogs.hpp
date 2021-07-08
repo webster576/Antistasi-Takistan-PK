@@ -48,7 +48,7 @@ class set_params {
 };
 
 //FLAG
-class HQ_menu 			{
+class HQ_menu {
 	idd=100;
 	movingenable=false;
 
@@ -162,7 +162,7 @@ class HQ_menu 			{
 		};
 	};
 }; 										//slots: 6+1
-class build_menu  			{
+class build_menu {
 	idd=-1;
 	movingenable=false;
 
@@ -428,7 +428,7 @@ class minebuild_menu 			{
 		};
 	};
 };
-class unit_recruit 		{
+class unit_recruit {
 	idd= 100;
 	movingenable=false;
 	class controls {
@@ -543,7 +543,7 @@ class unit_recruit 		{
 		};
 	};
 };
-class vehicle_option 	{
+class vehicle_option {
 	idd=-1;
 	movingenable=false;
 
@@ -811,7 +811,7 @@ class mil_vehicle_support {
 		class HQ_button_heal: RscButton
 		{
 			idc = 101;
-			text = "Heal truck";
+			text = $STR_antistasi_dialogs_vehicle_purchase_military_support_hospital;
 			x = 0.272481 * safezoneW + safezoneX;
 			y = 0.317959 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -821,7 +821,7 @@ class mil_vehicle_support {
 		class HQ_button_mtruck: RscButton
 		{
 			idc = 102;
-			text = "Medium Truck";
+			text = $STR_antistasi_dialogs_vehicle_purchase_military_support_medium_truck;
 			x = 0.482498 * safezoneW + safezoneX;
 			y = 0.317959 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -831,7 +831,7 @@ class mil_vehicle_support {
 		class HQ_button_truck: RscButton
 		{
 			idc = 103;
-			text = "Truck";
+			text = $STR_antistasi_dialogs_vehicle_purchase_military_support_truck;
 			x = 0.272481 * safezoneW + safezoneX;
 		 	y = 0.415981 * safezoneH + safezoneY;
 		 	w = 0.175015 * safezoneW;
@@ -841,7 +841,7 @@ class mil_vehicle_support {
 		class HQ_button_htruck: RscButton
 		{
 			idc = 104;
-			text = "Heavy Truck";
+			text = $STR_antistasi_dialogs_vehicle_purchase_military_support_heavy_truck;
 			x = 0.482498 * safezoneW + safezoneX;
 			y = 0.415981 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -851,7 +851,7 @@ class mil_vehicle_support {
 		class HQ_button_fuel: RscButton
 		{
 			idc = 105;
-			text = "Fuel truck";
+			text = $STR_antistasi_dialogs_vehicle_purchase_military_support_fuel_truck;
 			x = 0.272481 * safezoneW + safezoneX;
 			y = 0.514003 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -861,7 +861,7 @@ class mil_vehicle_support {
 		class HQ_button_repair: RscButton
 		{
 			idc = 106;
-			text = "Repair truck";
+			text = $STR_antistasi_dialogs_vehicle_purchase_military_support_repair_truck;
 			x = 0.482498 * safezoneW + safezoneX;
 			y = 0.514003 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -871,7 +871,7 @@ class mil_vehicle_support {
 		class HQ_button_ammo: RscButton
 		{
 			idc = 107;
-			text = "Ammo truck";
+			text = $STR_antistasi_dialogs_vehicle_purchase_military_support_ammo_truck;
 			x = 0.272481 * safezoneW + safezoneX;
 			y = 0.612025 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -881,7 +881,7 @@ class mil_vehicle_support {
 		class HQ_button_carrier: RscButton
 		{
 			idc = 108;
-			text = "Carrier truck";
+			text = $STR_antistasi_dialogs_vehicle_purchase_military_support_carrier;
 			x = 0.482498 * safezoneW + safezoneX;
 			y = 0.612025 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -907,7 +907,7 @@ class mil_vehicle_offroad {
 		class HQ_frame: RscFrame
 		{
 			idc = -1;
-			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_civ_text;
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_text;
 			x = 0.254979 * safezoneW + safezoneX;
 			y = 0.233941 * safezoneH + safezoneY;
 			w = 0.425038 * safezoneW;
@@ -926,7 +926,7 @@ class mil_vehicle_offroad {
 		class HQ_button_quad: RscButton
 		{
 			idc = 101;
-			text = "Quad bike";
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_quad;
 			x = 0.272481 * safezoneW + safezoneX;
 			y = 0.317959 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -936,7 +936,7 @@ class mil_vehicle_offroad {
 		class HQ_button_uaz_open: RscButton
 		{
 			idc = 102;
-			text = "UAZ Open";
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_uaz;
 			x = 0.482498 * safezoneW + safezoneX;
 			y = 0.317959 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -946,7 +946,7 @@ class mil_vehicle_offroad {
 		class HQ_button_uaz_covered: RscButton
 		{
 			idc = 103;
-		 	text = "GAZ66 Open";
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_gaz66;
 			x = 0.272481 * safezoneW + safezoneX;
 		 	y = 0.415981 * safezoneH + safezoneY;
 		 	w = 0.175015 * safezoneW;
@@ -956,7 +956,7 @@ class mil_vehicle_offroad {
 		class HQ_button_dshkm: RscButton
 		{
 			idc = 104;
-			text = "UAZ DShKM";
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_uaz_dshkm;
 			x = 0.482498 * safezoneW + safezoneX;
 			y = 0.415981 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -966,7 +966,7 @@ class mil_vehicle_offroad {
 		class HQ_button_ags: RscButton
 		{
 			idc = 105;
-			text = "UAZ AGS";
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_uaz_ags;
 			x = 0.272481 * safezoneW + safezoneX;
 			y = 0.514003 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -976,7 +976,7 @@ class mil_vehicle_offroad {
 		class HQ_button_spg9: RscButton
 		{
 			idc = 106;
-			text = "UAZ SPG9";
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_uaz_spg9;
 			x = 0.482498 * safezoneW + safezoneX;
 			y = 0.514003 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -986,7 +986,7 @@ class mil_vehicle_offroad {
 		class HQ_button_ural_aa: RscButton
 		{
 			idc = 107;
-			text = "URAL ZSU-23";
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_gaz66_zu23;
 			x = 0.272481 * safezoneW + safezoneX;
 			y = 0.612025 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -996,7 +996,7 @@ class mil_vehicle_offroad {
 		class HQ_button_brdm: RscButton
 		{
 			idc = 108;
-			text = "BRDM 2M";
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_brdm2m;
 			x = 0.482498 * safezoneW + safezoneX;
 			y = 0.612025 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -1022,7 +1022,7 @@ class mil_vehicle_armored {
 		class HQ_frame: RscFrame
 		{
 			idc = -1;
-			text = $STR_antistasi_dialogs_vehicle_purchase_military_text;
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_text;
 			x = 0.254979 * safezoneW + safezoneX;
 			y = 0.233941 * safezoneH + safezoneY;
 			w = 0.425038 * safezoneW;
@@ -1041,7 +1041,7 @@ class mil_vehicle_armored {
 		class HQ_button_atgm: RscButton
 		{
 			idc = 101;
-			text = "BRDM2 ATGM";
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_brdm2_atgm;
 			x = 0.272481 * safezoneW + safezoneX;
 			y = 0.317959 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -1051,7 +1051,7 @@ class mil_vehicle_armored {
 		class HQ_button_btr: RscButton
 		{
 			idc = 102;
-			text = "BTR80";
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_btr80;
 			x = 0.482498 * safezoneW + safezoneX;
 			y = 0.317959 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -1061,7 +1061,7 @@ class mil_vehicle_armored {
 		class HQ_button_zsu: RscButton
 		{
 			idc = 103;
-			text = "ZSU-23-4";
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_shilka;
 			x = 0.272481 * safezoneW + safezoneX;
 			y = 0.415981 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -1071,7 +1071,7 @@ class mil_vehicle_armored {
 		class HQ_button_bmd: RscButton
 		{
 			idc = 104;
-			text = "BMD1P";
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_bmd1p;
 			x = 0.482498 * safezoneW + safezoneX;
 			y = 0.415981 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -1081,7 +1081,7 @@ class mil_vehicle_armored {
 		class HQ_button_bmp: RscButton
 		{
 			idc = 105;
-			text = "BMP 2";
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_bmp2;
 			x = 0.272481 * safezoneW + safezoneX;
 			y = 0.514003 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -1091,7 +1091,7 @@ class mil_vehicle_armored {
 		class HQ_button_t72ba: RscButton
 		{
 			idc = 106;
-			text = "T72 BA";
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_t72ba;
 			x = 0.482498 * safezoneW + safezoneX;
 			y = 0.514003 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -1101,7 +1101,7 @@ class mil_vehicle_armored {
 		class HQ_button_t72bb: RscButton
 		{
 			idc = 107;
-			text = "T72 BB";
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_t72bb;
 			x = 0.272481 * safezoneW + safezoneX;
 			y = 0.612025 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -1111,7 +1111,7 @@ class mil_vehicle_armored {
 		class HQ_button_2S1: RscButton
 		{
 			idc = 108;
-			text = "2C1";
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_2s1;
 			x = 0.482498 * safezoneW + safezoneX;
 			y = 0.612025 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
@@ -1451,7 +1451,7 @@ class game_options 		{
 		};
 	};
 };										//slots 6+1
-class fps_limiter 			{
+class fps_limiter {
 	idd=-1;
 	movingenable=false;
 
@@ -1507,7 +1507,7 @@ class fps_limiter 			{
 		};
 	};
 };
-class spawn_config 			{
+class spawn_config {
 	idd=-1;
 	movingenable=false;
 
@@ -1563,7 +1563,7 @@ class spawn_config 			{
 		};
 	};
 };
-class civ_config 			{
+class civ_config {
 	idd=-1;
 	movingenable=false;
 
@@ -2304,7 +2304,7 @@ class commander_comm 		{
 		};
 	};
 };
-class carpet_bombing 			{
+class carpet_bombing {
 	idd=-1;
 	movingenable=false;
 
@@ -2444,7 +2444,7 @@ class dismiss_menu 				{
 		*/
 	};
 };
-class construction_menu 	{
+class construction_menu {
 	idd=-1;
 	movingenable=false;
 
@@ -2524,12 +2524,11 @@ class construction_menu 	{
 		};
 	};
 };
-class bunker_menu 				{
+class bunker_menu {
 	idd=-1;
 	movingenable=false;
 
 	class controls {
-
 		class HQ_box: BOX
 		{
 			idc = -1;
@@ -2584,14 +2583,14 @@ class bunker_menu 				{
 		*/
 	};
 };
-class squad_recruit 			{
+class squad_recruit {
 	idd=100;
 	movingenable=false;
 
 	class controls {
 		class HQ_box: BOX
 		{
-			idc = 101;
+			idc = -1;
 			text = $STR_antistasi_dialogs_generic_box_text;
 			x = 0.244979 * safezoneW + safezoneX;
 			y = 0.223941 * safezoneH + safezoneY;
@@ -2600,7 +2599,7 @@ class squad_recruit 			{
 		};
 		class HQ_frame: RscFrame
 		{
-			idc = 102;
+			idc = -1;
 			text = $STR_antistasi_dialogs_squad_recruit;
 			x = 0.254979 * safezoneW + safezoneX;
 			y = 0.233941 * safezoneH + safezoneY;
@@ -2609,11 +2608,11 @@ class squad_recruit 			{
 		};
 		class HQ_button_back: RscButton
 		{
-			idc = 103;
+			idc = -1;
 			text = $STR_antistasi_dialogs_generic_button_back_text;
 			x = 0.61 * safezoneW + safezoneX;
 			y = 0.251941 * safezoneH + safezoneY;
-			w = 0.06 * safezoneW;//0.175015
+			w = 0.06 * safezoneW;
 			h = 0.05 * safezoneH;
 			action = "closeDialog 0; _nul = createDialog ""radio_comm"";";
 		};
@@ -2627,6 +2626,26 @@ class squad_recruit 			{
 			h = 0.0560125 * safezoneH;
 			action = "closeDialog 0; [] spawn A3A_fnc_squadOptions;";
 		};
+		/*class HQ_button_sniperTeam: RscButton
+		{
+			idc = 107;
+			text = $STR_antistasi_dialogs_squad_recruit_sniper;
+			x = 0.482498 * safezoneW + safezoneX;
+			y = 0.317959 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			action = "closeDialog 0;nul = [groupsSDKSniper] spawn A3A_fnc_addFIAsquadHC";
+		};*/
+		class HQ_button_sniperTeam: RscButton
+		{
+			idc = -1;
+			text = $STR_antistasi_dialogs_vehicle_purchase_military_support_text;
+			x = 0.482498 * safezoneW + safezoneX;
+			y = 0.317959 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			action = "closeDialog 0; [] spawn A3A_fnc_milSupportRecruit;";
+		};
 		class HQ_button_infteam: RscButton
 		{
 			idc = 105;
@@ -2636,6 +2655,16 @@ class squad_recruit 			{
 			w = 0.175015 * safezoneW;
 			h = 0.0560125 * safezoneH;
 			action = "closeDialog 0;nul = [groupsSDKmid] spawn A3A_fnc_addFIAsquadHC";
+		};
+		class HQ_button_lvh: RscButton
+		{
+			idc = -1;
+			text = $STR_antistasi_dialogs_squad_recruit_lvh;
+			x = 0.482498 * safezoneW + safezoneX;
+			y = 0.415981 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			action = "closeDialog 0; [] spawn A3A_fnc_lightArmorRecruit;";
 		};
 		class HQ_button_ATteam: RscButton
 		{
@@ -2647,47 +2676,26 @@ class squad_recruit 			{
 			h = 0.0560125 * safezoneH;
 			action = "closeDialog 0;nul = [groupsSDKAT] spawn A3A_fnc_addFIAsquadHC";
 		};
-		class HQ_button_sniperTeam: RscButton
+		class HQ_button_avh: RscButton
 		{
-			idc = 107;
-			text = $STR_antistasi_dialogs_squad_recruit_sniper;
+			idc = -1;
+			text = $STR_antistasi_dialogs_squad_recruit_avh;
 			x = 0.482498 * safezoneW + safezoneX;
-			y = 0.317959 * safezoneH + safezoneY;
+			y = 0.514003 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
 			h = 0.0560125 * safezoneH;
-			action = "closeDialog 0;nul = [groupsSDKSniper] spawn A3A_fnc_addFIAsquadHC";
+			action = "closeDialog 0; [] spawn A3A_fnc_ArmorRecruit;";
 		};
 		class HQ_button_infsquadM: RscButton
 		{
 			idc = 108;
 			text = $STR_antistasi_dialogs_squad_recruit_mg;
-			x = 0.482498 * safezoneW + safezoneX;
-			y = 0.514003 * safezoneH + safezoneY;
-			w = 0.175015 * safezoneW;
-			h = 0.0560125 * safezoneH;
-			action = "closeDialog 0;nul = [SDKMGStatic] spawn A3A_fnc_addFIAsquadHC";
-		};
-		class HQ_button_infteamM: RscButton
-		{
-			idc = 109;
-			text = $STR_antistasi_dialogs_squad_recruit_at_car;
-			x = 0.482498 * safezoneW + safezoneX;
-			y = 0.415981 * safezoneH + safezoneY;
-			w = 0.175015 * safezoneW;
-			h = 0.0560125 * safezoneH;
-			action = "closeDialog 0;nul = [vehSDKAT] spawn A3A_fnc_addFIAsquadHC";
-		};
-		class HQ_button_ATteamM: RscButton
-		{
-			idc = 110;
-			text = $STR_antistasi_dialogs_squad_recruit_aa_car;
 			x = 0.272481 * safezoneW + safezoneX;
 			y = 0.612025 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
 			h = 0.0560125 * safezoneH;
-			action = "closeDialog 0;nul = [staticAAteamPlayer] spawn A3A_fnc_addFIAsquadHC";
+			action = "closeDialog 0;nul = [SDKMGStatic] spawn A3A_fnc_addFIAsquadHC";
 		};
-
 		class HQ_button_mortar: RscButton
 		{
 			idc = 111;
@@ -2700,7 +2708,294 @@ class squad_recruit 			{
 		};
 	};
 };
-class player_money 			{
+class mil_support_recruit {
+	idd=100;
+	movingenable=false;
+	
+	class controls {
+		class HQ_box: BOX
+		{
+			idc = -1;
+			text = $STR_antistasi_dialogs_generic_box_text;
+			x = 0.244979 * safezoneW + safezoneX;
+			y = 0.223941 * safezoneH + safezoneY;
+			w = 0.445038 * safezoneW;
+			h = 0.30 * safezoneH;
+		};
+		class HQ_frame: RscFrame
+		{
+			idc = -1;
+			text = $STR_antistasi_dialogs_vehicle_purchase_military_support_text;
+			x = 0.254979 * safezoneW + safezoneX;
+			y = 0.233941 * safezoneH + safezoneY;
+			w = 0.425038 * safezoneW;
+			h = 0.28 * safezoneH;
+		};
+		class HQ_button_back: RscButton
+		{
+			idc = -1;
+			text = $STR_antistasi_dialogs_generic_button_back_text;
+			x = 0.61 * safezoneW + safezoneX;
+			y = 0.251941 * safezoneH + safezoneY;
+			w = 0.06 * safezoneW;//0.175015
+			h = 0.05 * safezoneH;
+			action = "closeDialog 0; [] spawn A3A_fnc_squadRecruit;";
+		};
+		class HQ_button_heal: RscButton
+		{
+			idc = 101;
+			text = $STR_antistasi_dialogs_vehicle_purchase_military_support_hospital;
+			x = 0.272481 * safezoneW + safezoneX;
+			y = 0.317959 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			action = "closeDialog 0;nul = [vehSDKHeal] spawn A3A_fnc_addFIAsquadHC;";
+		};
+		class HQ_button_fuel: RscButton
+		{
+			idc = 102;
+			text = $STR_antistasi_dialogs_vehicle_purchase_military_support_fuel_truck;
+			x = 0.482498 * safezoneW + safezoneX;
+			y = 0.317959 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			action = "closeDialog 0;nul = [vehSDKFuel] spawn A3A_fnc_addFIAsquadHC;";
+		};
+		class HQ_button_repair: RscButton
+		{
+			idc = 103;
+			text = $STR_antistasi_dialogs_vehicle_purchase_military_support_repair_truck;
+			x = 0.272481 * safezoneW + safezoneX;
+			y = 0.415981 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			action = "closeDialog 0;nul = [vehSDKRepair] spawn A3A_fnc_addFIAsquadHC;";
+		};
+		class HQ_button_ammo: RscButton
+		{
+			idc = 104;
+			text = $STR_antistasi_dialogs_vehicle_purchase_military_support_ammo_truck;
+			x = 0.482498 * safezoneW + safezoneX;
+			y = 0.415981 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			action = "closeDialog 0;nul = [vehSDKAmmo] spawn A3A_fnc_addFIAsquadHC;";
+		};
+	}
+}
+class light_armor_recruit {
+	idd=100;
+	movingenable=false;
+	
+	class controls {
+		class HQ_box: BOX
+		{
+			idc = -1;
+			text = $STR_antistasi_dialogs_generic_box_text;
+			x = 0.244979 * safezoneW + safezoneX;
+			y = 0.223941 * safezoneH + safezoneY;
+			w = 0.445038 * safezoneW;
+			h = 0.40 * safezoneH;
+		};
+		class HQ_frame: RscFrame
+		{
+			idc = -1;
+			text = $STR_antistasi_dialogs_squad_recruit_lvh;
+			x = 0.254979 * safezoneW + safezoneX;
+			y = 0.233941 * safezoneH + safezoneY;
+			w = 0.425038 * safezoneW;
+			h = 0.38 * safezoneH;
+		};
+		class HQ_button_back: RscButton
+		{
+			idc = -1;
+			text = $STR_antistasi_dialogs_generic_button_back_text;
+			x = 0.61 * safezoneW + safezoneX;
+			y = 0.251941 * safezoneH + safezoneY;
+			w = 0.06 * safezoneW;//0.175015
+			h = 0.05 * safezoneH;
+			action = "closeDialog 0; [] spawn A3A_fnc_squadRecruit;";
+		};
+		class HQ_button_gaz66: RscButton
+		{
+			idc = 101;
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_gaz66;
+			x = 0.272481 * safezoneW + safezoneX;
+			y = 0.317959 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			action = "closeDialog 0;[vehSDKLightTruck] spawn A3A_fnc_addFIAsquadHC;";
+		};
+		class HQ_button_uaz_dshkm: RscButton
+		{
+			idc = 102;
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_uaz_dshkm;
+			x = 0.482498 * safezoneW + safezoneX;
+			y = 0.317959 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			action = "closeDialog 0;[vehSDKLightArmed] spawn A3A_fnc_addFIAsquadHC;";
+		};
+		class HQ_button_uaz_ags: RscButton
+		{
+			idc = 103;
+		 	text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_uaz_ags;
+			x = 0.272481 * safezoneW + safezoneX;
+		 	y = 0.415981 * safezoneH + safezoneY;
+		 	w = 0.175015 * safezoneW;
+		 	h = 0.0560125 * safezoneH;
+		 	action = "closeDialog 0;[vehSDKGL] spawn A3A_fnc_addFIAsquadHC;";
+		};
+		class HQ_button_uaz_spg9: RscButton
+		{
+			idc = 104;
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_uaz_spg9;
+			x = 0.482498 * safezoneW + safezoneX;
+			y = 0.415981 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			action = "closeDialog 0;nul = [vehSDKAT] spawn A3A_fnc_addFIAsquadHC;";
+		};
+		class HQ_button_gaz66_aa: RscButton
+		{
+			idc = 105;
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_gaz66_zu23;
+			x = 0.272481 * safezoneW + safezoneX;
+			y = 0.514003 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			action = "closeDialog 0;nul = [vehSDKAA] spawn A3A_fnc_addFIAsquadHC;";
+		};
+		class HQ_button_brdm2m: RscButton
+		{
+			idc = 106;
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_brdm2m;
+			x = 0.482498 * safezoneW + safezoneX;
+			y = 0.514003 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			action = "closeDialog 0;nul = [vehSDKBRDM] spawn A3A_fnc_addFIAsquadHC;";
+		};
+	}
+}
+class armor_recruit {
+	idd=100;
+	movingenable=false;
+	
+	class controls {
+		class HQ_box: BOX
+		{
+			idc = -1;
+			text = $STR_antistasi_dialogs_generic_box_text;
+			x = 0.244979 * safezoneW + safezoneX;
+			y = 0.223941 * safezoneH + safezoneY;
+			w = 0.445038 * safezoneW;
+			h = 0.492103 * safezoneH;
+		};
+		class HQ_frame: RscFrame
+		{
+			idc = -1;
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_text;
+			x = 0.254979 * safezoneW + safezoneX;
+			y = 0.233941 * safezoneH + safezoneY;
+			w = 0.425038 * safezoneW;
+			h = 0.462103 * safezoneH;
+		};
+		class HQ_button_back: RscButton
+		{
+			idc = -1;
+			text = $STR_antistasi_dialogs_generic_button_back_text;
+			x = 0.61 * safezoneW + safezoneX;
+			y = 0.251941 * safezoneH + safezoneY;
+			w = 0.06 * safezoneW;//0.175015
+			h = 0.05 * safezoneH;
+			action = "closeDialog 0; [] spawn A3A_fnc_squadRecruit;";
+		};
+		class HQ_button_atgm: RscButton
+		{
+			idc = 101;
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_brdm2_atgm;
+			x = 0.272481 * safezoneW + safezoneX;
+			y = 0.317959 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			action = "closedialog 0; nul = [vehSDKATGM] spawn A3A_fnc_addFIAsquadHC";
+		};
+		class HQ_button_btr: RscButton
+		{
+			idc = 102;
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_btr80;
+			x = 0.482498 * safezoneW + safezoneX;
+			y = 0.317959 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			action = "closeDialog 0;nul = [vehSDKBTR] spawn A3A_fnc_addFIAsquadHC;";
+		};
+		class HQ_button_zsu: RscButton
+		{
+			idc = 103;
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_shilka;
+			x = 0.272481 * safezoneW + safezoneX;
+			y = 0.415981 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			action = "closeDialog 0;nul = [vehSDKZSU] spawn A3A_fnc_addFIAsquadHC;";
+		};
+		class HQ_button_bmd: RscButton
+		{
+			idc = 104;
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_bmd1p;
+			x = 0.482498 * safezoneW + safezoneX;
+			y = 0.415981 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			action = "closeDialog 0;nul = [vehSDKBMD] spawn A3A_fnc_addFIAsquadHC;";
+		};
+		class HQ_button_bmp: RscButton
+		{
+			idc = 105;
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_bmp2;
+			x = 0.272481 * safezoneW + safezoneX;
+			y = 0.514003 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			action = "closeDialog 0;nul = [vehSDKBMP] spawn A3A_fnc_addFIAsquadHC;";
+		};
+		class HQ_button_t72ba: RscButton
+		{
+			idc = 106;
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_t72ba;
+			x = 0.482498 * safezoneW + safezoneX;
+			y = 0.514003 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			action = "closeDialog 0;nul = [vehSDKT72BA] spawn A3A_fnc_addFIAsquadHC;";
+		};
+		class HQ_button_t72bb: RscButton
+		{
+			idc = 107;
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_t72bb;
+			x = 0.272481 * safezoneW + safezoneX;
+			y = 0.612025 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			action = "closeDialog 0;nul = [vehSDKT72BB] spawn A3A_fnc_addFIAsquadHC;";
+		};
+		class HQ_button_2S1: RscButton
+		{
+			idc = 108;
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_2s1;
+			x = 0.482498 * safezoneW + safezoneX;
+			y = 0.612025 * safezoneH + safezoneY;
+			w = 0.175015 * safezoneW;
+			h = 0.0560125 * safezoneH;
+			action = "closeDialog 0;nul = [vehSDK2S1] spawn A3A_fnc_addFIAsquadHC;";
+		};
+	};
+}
+
+
+class player_money {
 	idd=-1;
 	movingenable=false;
 

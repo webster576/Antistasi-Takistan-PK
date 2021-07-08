@@ -291,6 +291,9 @@ class A3A
         class squadOptions {};
         class squadRecruit {};
         class unit_recruit {};
+        class milSupportRecruit {};
+        class lightArmorRecruit {};
+        class ArmorRecruit {};
     };
 
     class EventHandler
