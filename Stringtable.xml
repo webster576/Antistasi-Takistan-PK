@@ -3603,10 +3603,34 @@
         <Russian>Зеленые vs Красные</Russian>
       </Key>
     </Container>
-	<Container name="flag_action">
+    <Container name="flag_action">
       <Key ID="STR_antistasi_flag_action_unitRecruitment">
         <Original>Unit Recruitment</Original>
         <Russian>Нанять бойцов</Russian>
+      </Key>
+      <Key ID="STR_antistasi_flag_action_unitRecruitment_enemies">
+        <Original>You cannot recruit units while there are enemies near you</Original>
+        <Russian>Вы не можете нанимать бойцов пока рядом с вами находятся враги</Russian>
+      </Key>
+      <Key ID="STR_antistasi_flag_action_buyVehicle">
+        <Original>Buy Vehicle</Original>
+        <Russian>Купить транспорт</Russian>
+      </Key>
+      <Key ID="STR_antistasi_flag_action_buyVehicle_enemies">
+        <Original>You cannot buy vehicles while there are enemies near you</Original>
+        <Russian>Вы не можете покупать транспорт пока рядом находятся враги</Russian>
+      </Key>
+      <Key ID="STR_antistasi_flag_action_moveAsset">
+        <Original>Move this asset</Original>
+        <Russian>Передвинуть</Russian>
+      </Key>
+      <Key ID="STR_antistasi_flag_action_personal_garage">
+        <Original>Personal Garage</Original>
+        <Russian>Мой гараж</Russian>
+      </Key>
+      <Key ID="STR_antistasi_flag_action_fraction_garage">
+        <Original>Faction Garage</Original>
+        <Russian>Гараж фракции</Russian>
       </Key>
     </Container>
   </Package>

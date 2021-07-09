@@ -1,0 +1,24 @@
+Достаточно заменить простую строку типа "Faction Garage"
+
+на конструкцию типа
+
+localize "$STR_antistasi_flag_action_fraction_garage"
+
+
+Перевод должен быть определен в контейнере под произвольным ключом, файле Stringtable.xml
+
+<Container name="flag_action">
+  <Key ID="STR_antistasi_flag_action_fraction_garage">
+	<Original>Faction Garage</Original>
+	<Russian>Гараж фракции</Russian>
+  </Key>
+</Container>
+
+
+
+Пример использования:
+_flag addAction [localize "$STR_antistasi_flag_action_personal_garage", { [GARAGE_PERSONAL] spawn A3A_fnc_garage;},nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull])", 4];
+
+
+Более подробная инструкция от разработчика:
+https://community.bistudio.com/wiki/localize
