@@ -1,4 +1,4 @@
-# antistasi_pk
+# Antistasi-Takistan-PK
 Слегка допиленная под себя версия AntiStasi Official Community Edition 2.4.1. - карта Takistan
 (https://github.com/official-antistasi-community/A3-Antistasi/releases)
 
