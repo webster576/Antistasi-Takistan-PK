@@ -6,16 +6,13 @@
 
 В файлике амбициозные планы.txt описаны планы по дальнейшему допиливанию AntiStasi миссии под наши нужды. Все, что хотелось бы реализовать, но до чего пока руки не дошли.
 
-Зависимости:
+### Зависимости:
 
-Базобые библиотеки
-----------------------
+**Базобые библиотеки**
 - CBA_A3
 - Jbad
 
-
-СUP моды
-----------------------
+**СUP моды**
 - CUP Terrains (Core)
 - CUP Terrains (CWA)
 - CUP Terrains (Maps)
@@ -23,23 +20,17 @@
 - CUP Vehicles
 - CUP Weapons
 
-
-RHS моды
-----------------------
+**RHS моды**
 - RHSAFRF
 - RHSGREF
 - RHSSAF
 - RHSUSAF
 
-
-для авиации
-----------------------
+**Для авиации (необязательные)**
 - Pylon Manager
 - FIR AWS (AirWeaponSystem)
 
-
-Улучшенный звук (необязательные)
--------------------------------------
+**Улучшенный звук (необязательные)**
 - JSRS SOUNDMOD
 - JSRS SOUNDMOD - CUP VEHICLES MOD SOUND SUPPORT
 - JSRS SOUNDMOD - CUP WEAPONS MOD SOUND SUPPORT
@@ -48,9 +39,7 @@ RHS моды
 - JSRS SOUNDMOD - RHS SAF Mod Pack Support
 - JSRS SOUNDMOD - RHS USAF Mod Pack Sound Support
 
-
-Украшательства
--------------------------------------
+**Украшательства (необязательные)**
 - Enhanced Movement (улучшенные движения)
 - VET_Unflipping (переворачивание техники)
 - Advanced Towing (тросы для техники)
