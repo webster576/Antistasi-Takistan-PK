@@ -3728,6 +3728,58 @@
         <Original>A traitor has scheduled a meeting with %4 in %1. Kill him before he provides enough intel to give us trouble. Do this before %2. We don't where exactly this meeting will happen. You will recognise the building by the nearby Offroad and %3 presence.</Original>
         <Russian>Предатель назначил встречу с %4 в %1. Убейте его прежде чем он успеет передать противнику данные о нас. Устраните предателя до %2. Мы не знаем где точно будет проходить встреча. Однако мы уверены, что это будет здание рядом с проселочной дорогой. Также %3 опредленно будет там.</Russian>
       </Key>
+      <Key ID="STR_antistasi_drop_crate">
+        <Original>Drop Crate</Original>
+        <Russian>Бросить ящик</Russian>
+      </Key>
+      <Key ID="STR_antistasi_armored_convoy_title">
+        <Original>Armored Convoy</Original>
+        <Russian>Колонна бронетехники</Russian>
+      </Key>
+      <Key ID="STR_antistasi_armored_convoy_desc">
+        <Original>A convoy from %1 is about to depart at %2. It will reinforce %3 with armored vehicles. Try to intercept it. Steal or destroy that thing before it reaches it's destination.</Original>
+        <Russian>Колонна бронетехники из %1 собирается выехать в %2 для того, чтобы усилить гарнизон %3. Попробуйте перехватить колонну. Украдите либо уничтожте бронетехнику прежде, чем она доберется до места назначения.</Russian>
+      </Key>
+      <Key ID="STR_antistasi_ammo_convoy_title">
+        <Original>Ammo Convoy</Original>
+        <Russian>Колонна c боеприпасами</Russian>
+      </Key>
+      <Key ID="STR_antistasi_ammo_convoy_desc">
+        <Original>A convoy from %1 is about to depart at %2. It will provide ammunition to %3. Try to intercept it. Steal or destroy that truck before it reaches it's destination.</Original>
+        <Russian>Колонна c боеприпасами из %1 собирается выехать в %2 для того, чтобы доставить боеприпасы в %3. Попробуйте перехватить колонну. Украдите либо уничтожте грузовик с боеприпасами прежде, чем он доберется до места назначения.</Russian>
+      </Key>
+      <Key ID="STR_antistasi_prisoners_convoy_title">
+        <Original>Prisoner Convoy</Original>
+        <Russian>Конвой с заключенными</Russian>
+      </Key>
+      <Key ID="STR_antistasi_prisoners_convoy_desc">
+        <Original>A group of POWs is being transported from %1 to %3, and it's about to depart at %2. Try to intercept it. Kill or capture the truck driver to make them join you and bring them to HQ. Alive if possible.</Original>
+        <Russian>Группу заключенных собираются перевезти из %1 в %3. Запланированное время отправки %2. Попробуйте освободить заключенных и доставить их на нашу базу. Это создаст нам положительную репутацию. Кроме того, освобожденные люди с удовольствием пополнят наши ряды.</Russian>
+      </Key>
+      <Key ID="STR_antistasi_reinforcements_convoy_title">
+        <Original>Reinforcements Convoy</Original>
+        <Russian>Колонна с подкреплениями</Russian>
+      </Key>
+      <Key ID="STR_antistasi_reinforcements_convoy_desc">
+        <Original>Reinforcements are being sent from %1 to %3 in a convoy, and it's about to depart at %2. Try to intercept and kill all the troops and vehicle objective.</Original>
+        <Russian>Колонна с подкреплениями готовится к отправке из %1 в %3. Примерное время отправки %2. Уничтожьте личный состав колонны и транспорт, на котором он перемещается.</Russian>
+      </Key>
+      <Key ID="STR_antistasi_money_convoy_title">
+        <Original>Money Convoy</Original>
+        <Russian>Грузовик с наличными</Russian>
+      </Key>
+      <Key ID="STR_antistasi_money_convoy_desc">
+        <Original>A truck with plenty of money is being moved from %1 to %3, and it's about to depart at %2. Steal that truck and bring it to HQ. Those funds will be very welcome.</Original>
+        <Russian>Грузовик с огромным количеством наличных собирается выехать из %1 в %3. Примерное время отправки %2. Украдите грузовик, а зате привезите его на базу. Эти средства очень помогут нашему делу.</Russian>
+      </Key>
+      <Key ID="STR_antistasi_supply_convoy_title">
+        <Original>Supply Convoy</Original>
+        <Russian>Грузовик с медикаментами</Russian>
+      </Key>
+      <Key ID="STR_antistasi_supply_convoy_desc">
+        <Original>A truck with medical supplies destination %3 it's about to depart at %2 from %1. Steal that truck bring it to %3 and let people in there know it is %4 who's giving those supplies.</Original>
+        <Russian>Грузовик с медикаментами выезжает в %2 из %1 и направляется к %3. Перехватите грузовик и привезите его в %3 сами. По прибытии не забудьте напомнить местным, что за предоставленную помощь они обязаны благодарить %4.</Russian>
+      </Key>
     </Container>
   </Package>
 </Project>

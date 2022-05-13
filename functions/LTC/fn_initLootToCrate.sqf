@@ -79,7 +79,7 @@ player addAction [
 ];
 
 player addAction [
-    "Drop Crate",
+    localize "$STR_antistasi_drop_crate",
     {
         [nil, false] call A3A_fnc_carryCrate;
     },
