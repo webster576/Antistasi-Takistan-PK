@@ -25,13 +25,13 @@ _textX = "";
 _taskName = "";
 if (_markerX in resourcesX) then
 	{
-	_textX = format ["A %1 would be a fine addition to our cause. Go there and capture it before %2.",_nameDest,_displayTime];
-	_taskName = "Resource Acquisition";
+	_textX = format [localize "$STR_antistasi_resource_acquisition_task_desc",_nameDest,_displayTime];
+	_taskName = localize "$STR_antistasi_resource_acquisition_task_title";
 	}
 else
 	{
-	_textX = format ["A %1 is disturbing our operations in the area. Go there and capture it before %2.",_nameDest,_displayTime];
-	_taskName = "Take the Outpost";
+	_textX = format [localize "$STR_antistasi_take_outpost_task_desc",_nameDest,_displayTime];
+	_taskName = localize "$STR_antistasi_take_outpost_task_title";
 	};
 
 private _taskId = "CON" + str A3A_taskCount;

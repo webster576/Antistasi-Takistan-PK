@@ -15,7 +15,7 @@ if(isNil "_type") then {
 };
 if (isNil "_type" or leader group petros != petros) exitWith { A3A_missionRequestInProgress = nil };
 if (_type in A3A_activeTasks) exitWith {
-	if (!_silent) then {[petros,"globalChat","I already gave you a mission of this type"] remoteExec ["A3A_fnc_commsMP",_requester]};
+	if (!_silent) then {[petros,"globalChat", localize "$STR_antistasi_petros_same_type_mission"] remoteExec ["A3A_fnc_commsMP",_requester]};
 	A3A_missionRequestInProgress = nil;
 };
 

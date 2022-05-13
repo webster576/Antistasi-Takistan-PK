@@ -21,10 +21,10 @@ _displayTime = [_dateLimit] call A3A_fnc_dateToTimeString;//Converts the time po
 
 _nameDest = [_markerX] call A3A_fnc_localizar;
 _holdTime = if(_difficultX) then {4} else {2};
-_taskDescription = format ["%1 population is in need of supplies. We may improve our relationship with that city if we are the ones who provide them. I have placed a crate with supplies near our HQ. Deliver the crate to %1 city center, hold it there for %3 minutes and it's done. Do this before %2.",_nameDest,_displayTime, _holdTime];
+_taskDescription = format [localize "$STR_antistasi_city_supplies_task_desc",_nameDest,_displayTime, _holdTime];
 
 private _taskId = "SUPP" + str A3A_taskCount;
-[[teamPlayer,civilian],_taskId,[_taskDescription,"City Supplies",_markerX],_positionX,false,0,true,"Heal",true] call BIS_fnc_taskCreate;
+[[teamPlayer,civilian],_taskId,[_taskDescription,localize "$STR_antistasi_city_supplies_task_title",_markerX],_positionX,false,0,true,"Heal",true] call BIS_fnc_taskCreate;
 [_taskId, "SUPP", "CREATED"] remoteExecCall ["A3A_fnc_taskUpdate", 2];
 
 //Creating the box
