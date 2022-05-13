@@ -20,7 +20,7 @@
 params ["_object", "_action"];
 
 private _actionNames = (actionIDs _object) apply {(_object actionParams _x)#0};
-private _loadText = format ["Load %1 into nearest vehicle", getText (configFile >> "CfgVehicles" >> typeOf _object >> "displayName")];
+private _loadText = format [localize "$STR_antistasi_load_crate_to_vehicle", getText (configFile >> "CfgVehicles" >> typeOf _object >> "displayName")];
 
 switch (_action) do {
     case "load":{
@@ -51,7 +51,7 @@ switch (_action) do {
         ];
     };
     case "unload": {
-        private _text = "Unload Cargo";
+        private _text = localize "$STR_antistasi_unload_cargo";
         if (_text in _actionNames) exitWith {};
         private _unloadActionID = _object addAction
         [

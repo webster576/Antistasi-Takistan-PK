@@ -68,7 +68,7 @@ private _fnc_placeObject = {
 	_thingX addAction [localize "$STR_antistasi_flag_action_moveAsset", A3A_fnc_moveHQObject,nil,0,false,true,"","(_this == theBoss)"];
 };
 
-private _actionX = _playerX addAction ["Drop Here", {
+private _actionX = _playerX addAction [localize "$STR_antistasi_drop_here", {
 	(_this select 3) params ["_thingX", "_fnc_placeObject"];
 
 	[_thingX, player, (_this select 2)] call _fnc_placeObject;

@@ -132,10 +132,10 @@ switch _typeX do
     };
     case "fireX":
     {
-        fireX addAction ["Rest for 8 Hours", A3A_fnc_skiptime,nil,0,false,true,"","(_this == theBoss)",4];
-        fireX addAction ["Clear Nearby Forest", A3A_fnc_clearForest,nil,0,false,true,"","(_this == theBoss)",4];
-        fireX addAction ["I hate the fog", { [10,0] remoteExec ["setFog",2]; },nil,0,false,true,"","(_this == theBoss)",4];
-        fireX addAction ["Rain rain go away", { [10,0] remoteExec ["setRain",2]; },nil,0,false,true,"","(_this == theBoss)",4];
+        fireX addAction [localize "$STR_antistasi_8_hours_rest", A3A_fnc_skiptime,nil,0,false,true,"","(_this == theBoss)",4];
+        fireX addAction [localize "$STR_antistasi_clear_forest", A3A_fnc_clearForest,nil,0,false,true,"","(_this == theBoss)",4];
+        fireX addAction [localize "$STR_antistasi_clear_fog", { [10,0] remoteExec ["setFog",2]; },nil,0,false,true,"","(_this == theBoss)",4];
+        fireX addAction [localize "$STR_antistasi_clear_rain", { [10,0] remoteExec ["setRain",2]; },nil,0,false,true,"","(_this == theBoss)",4];
         fireX addAction [localize "$STR_antistasi_flag_action_moveAsset", A3A_fnc_moveHQObject,nil,0,false,true,"","(_this == theBoss)",4];
     };
     case "SDKFlag":

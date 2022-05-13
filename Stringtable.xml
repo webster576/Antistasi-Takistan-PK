@@ -3478,11 +3478,11 @@
       </Key>
       <Key ID="STR_antistasi_dialogs_garage_personal">
         <Original>Personal Garage</Original>
-        <Russian>Личный</Russian>
+        <Russian>Личный гараж</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_garage_faction">
         <Original>Faction Garage</Original>
-        <Russian>Фракции</Russian>
+        <Russian>Гараж фракции</Russian>
       </Key>
     </Container>
     <Container name="mortar_type">
@@ -3639,6 +3639,94 @@
       <Key ID="STR_antistasi_hq_management">
         <Original>HQ Management</Original>
         <Russian>Управление базой</Russian>
+      </Key>
+      <Key ID="STR_antistasi_drop_here">
+        <Original>Drop Here</Original>
+        <Russian>Поставить здесь</Russian>
+      </Key>
+      <Key ID="STR_antistasi_empty_garage">
+        <Original>The Garage is empty or the vehicles you have are not suitable to recover in the place you are.\n\nAir vehicles need to be recovered near Airport flags.</Original>
+        <Russian>Гараж пуст либо транспорт, который вы пытаетесь извлечь невозможно расположить в выбранном месте.\n\nВоздушный транспорт возможно извлечь только в аэропорту.</Russian>
+      </Key>
+      <Key ID="STR_antistasi_vehicle_cargo_to_ammobox">
+        <Original>Transfer Vehicle cargo to Ammobox</Original>
+        <Russian>Переместить содержимое машины в Арсенал</Russian>
+      </Key>
+      <Key ID="STR_antistasi_8_hours_rest">
+        <Original>Rest for 8 Hours</Original>
+        <Russian>Спать 8 часов</Russian>
+      </Key>
+      <Key ID="STR_antistasi_clear_forest">
+        <Original>Clear Nearby Forest</Original>
+        <Russian>Убрать близлежайший лес</Russian>
+      </Key>
+      <Key ID="STR_antistasi_clear_fog">
+        <Original>I hate the fog</Original>
+        <Russian>Убрать туман</Russian>
+      </Key>
+      <Key ID="STR_antistasi_clear_rain">
+        <Original>Rain rain go away</Original>
+        <Russian>Убрать дождь</Russian>
+      </Key>
+      <Key ID="STR_antistasi_heal_repair_rearm">
+        <Original>Heal, Repair and Rearm</Original>
+        <Russian>Вылечить, починить и перезарядить</Russian>
+      </Key>
+      <Key ID="STR_antistasi_buy_lootbox">
+        <Original>Buy loot box for 10€</Original>
+        <Russian>Купить ящик для снаряжения за 10€</Russian>
+      </Key>
+      <Key ID="STR_antistasi_carry_crate">
+        <Original>Carry Crate</Original>
+        <Russian>Нести ящик</Russian>
+      </Key>
+      <Key ID="STR_antistasi_loot_from_crate_to_vehicle">
+        <Original>Load loot from crate to vehicle</Original>
+        <Russian>Перенести снаряжение из ящика в машину</Russian>
+      </Key>
+      <Key ID="STR_antistasi_loot_to_crate">
+        <Original>Load loot to crate</Original>
+        <Russian>Собрать инвентарь в ящик</Russian>
+      </Key>
+      <Key ID="STR_antistasi_load_crate_to_vehicle">
+        <Original>Load %1 into nearest vehicle</Original>
+        <Russian>Погрузить %1 в ближайшую машину</Russian>
+      </Key>
+      <Key ID="STR_antistasi_no_vehicles_near_by">
+        <Original>No vehicles nearby</Original>
+        <Russian>Поблизости нет транспорта</Russian>
+      </Key>
+      <Key ID="STR_antistasi_loot_transfered_to">
+        <Original>All loot transfered to %1</Original>
+        <Russian>Снаряжение было перенесено в %1</Russian>
+      </Key>
+      <Key ID="STR_antistasi_loot_transfer_full">
+        <Original>Unable to transfer all loot to %1. %1 full</Original>
+        <Russian>Невозможно перенести все снаряжение в %1. %1 полон</Russian>
+      </Key>
+      <Key ID="STR_antistasi_loot_transfered_to_crate">
+        <Original>Nearby loot transfered to crate</Original>
+        <Russian>Близлежащий инвентарь был собран в ящик</Russian>
+      </Key>
+      <Key ID="STR_antistasi_unable_transfer_loot_to_crate">
+        <Original>Unable to transfer all nearby loot</Original>
+        <Russian>Не удалось собрать весь близлежащий инвентарь в ящик</Russian>
+      </Key>
+      <Key ID="STR_antistasi_unload_cargo">
+        <Original>Unload Cargo</Original>
+        <Russian>Разгрузить</Russian>
+      </Key>
+      <Key ID="STR_antistasi_mission_for_you">
+        <Original>I have a mission for you</Original>
+        <Russian>У меня есть задание для тебя</Russian>
+      </Key>
+      <Key ID="STR_antistasi_kill_the_traitor">
+        <Original>Kill the Traitor</Original>
+        <Russian>Убейте предателя</Russian>
+      </Key>
+      <Key ID="STR_antistasi_kill_the_traitor_desc">
+        <Original>A traitor has scheduled a meeting with %4 in %1. Kill him before he provides enough intel to give us trouble. Do this before %2. We don't where exactly this meeting will happen. You will recognise the building by the nearby Offroad and %3 presence.</Original>
+        <Russian>Предатель назначил встречу с %4 в %1. Убейте его прежде чем он успеет передать противнику данные о нас. Устраните предателя до %2. Мы не знаем где точно будет проходить встреча. Однако мы уверены, что это будет здание рядом с проселочной дорогой. Также %3 опредленно будет там.</Russian>
       </Key>
     </Container>
   </Package>

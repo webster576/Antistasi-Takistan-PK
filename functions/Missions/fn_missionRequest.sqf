@@ -217,7 +217,7 @@ switch (_type) do {
 };
 
 if (count _possibleMarkers > 0) then {
-	if (!_silent) then {[petros,"globalChat","I have a mission for you"] remoteExec ["A3A_fnc_commsMP",_requester]};
+	if (!_silent) then {[petros,"globalChat",localize "$STR_antistasi_mission_for_you"] remoteExec ["A3A_fnc_commsMP",_requester]};
 	sleep 3;			// delay lockout until the mission is registered
 };
 A3A_missionRequestInProgress = nil;
