@@ -65,7 +65,7 @@ private _fnc_placeObject = {
 	// _thingX setPosATL [getPosATL _thingX select 0,getPosATL _thingX select 1,0.1];
 
 	_thingX setVariable ["objectBeingMoved", false];
-	_thingX addAction ["Move this asset", A3A_fnc_moveHQObject,nil,0,false,true,"","(_this == theBoss)"];
+	_thingX addAction [localize "$STR_antistasi_flag_action_moveAsset", A3A_fnc_moveHQObject,nil,0,false,true,"","(_this == theBoss)"];
 };
 
 private _actionX = _playerX addAction ["Drop Here", {

@@ -25,8 +25,8 @@ switch _typeX do
     };
     case "mission":
     {
-        petros addAction ["Mission Request", {CreateDialog "mission_menu";},nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull]) and ([_this] call A3A_fnc_isMember) and (petros == leader group petros)",4];
-        petros addAction ["HQ Management", A3A_fnc_dialogHQ,nil,0,false,true,"","(_this == theBoss) and (petros == leader group petros)", 4];
+        petros addAction [localize "$STR_antistasi_mission_request", {CreateDialog "mission_menu";},nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull]) and ([_this] call A3A_fnc_isMember) and (petros == leader group petros)",4];
+        petros addAction [localize "$STR_antistasi_hq_management", A3A_fnc_dialogHQ,nil,0,false,true,"","(_this == theBoss) and (petros == leader group petros)", 4];
         petros addAction [localize "$STR_antistasi_flag_action_moveAsset", A3A_fnc_moveHQObject,nil,0,false,true,"","(_this == theBoss)"];
     };
     case "truckX":

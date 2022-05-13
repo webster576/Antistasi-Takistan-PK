@@ -3632,6 +3632,14 @@
         <Original>Faction Garage</Original>
         <Russian>Гараж фракции</Russian>
       </Key>
+      <Key ID="STR_antistasi_mission_request">
+        <Original>Mission Request</Original>
+        <Russian>Запросить задание</Russian>
+      </Key>
+      <Key ID="STR_antistasi_hq_management">
+        <Original>HQ Management</Original>
+        <Russian>Управление базой</Russian>
+      </Key>
     </Container>
   </Package>
 </Project>
