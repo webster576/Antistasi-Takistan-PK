@@ -41,6 +41,6 @@ if (str (_display) != "no display") then
 	_ChildControl = _display displayCtrl 106;
 	_costs = (2*(server getVariable staticCrewTeamPlayer));
 	_costHR = 2;
-	_costs = _costs + ([vehSDKBRDM] call A3A_fnc_vehiclePrice) + ([vehSDKTruck] call A3A_fnc_vehiclePrice);
+	_costs = _costs + ([vehSDKBTR80] call A3A_fnc_vehiclePrice) + ([vehSDKTruck] call A3A_fnc_vehiclePrice);
 	_ChildControl  ctrlSetTooltip format ["Cost: %1 €. HR: %2",_costs,_costHR];
 };

@@ -282,10 +282,10 @@ private _templateVariables = [
 	"vehSDKAT",
 	"vehSDKGL",
 	"vehSDKATGM",
-	"vehSDKBRDM",
+	"vehSDKBTR80",
 	"vehSDKBMD",
 	"vehSDKBMP",
-	"vehSDKBTR",
+	"vehSDKBTR80A",
 	"vehSDKZSU",
 	"vehSDKT72BA",
 	"vehSDKT72BB",
@@ -651,7 +651,7 @@ Info("Identifying vehicle types");
 
 private _vehNormal = vehNATONormal + vehCSATNormal + vehNATOCargoTrucks;
 _vehNormal append [vehFIACar,vehFIATruck,vehFIAArmedCar,vehPoliceCar,vehNATOBike,vehCSATBike];
-_vehNormal append [vehSDKTruck,vehSDKLightArmed,vehSDKLightTruck,vehSDKMediumTruck,vehSDKHeavyTruck,vehSDKAT,vehSDKGL,vehSDKATGM,vehSDKBMD,vehSDKBMD,vehSDKBMP,vehSDKBTR,vehSDKZSU,vehSDKT72BA,vehSDKT72BB,vehSDK2S1,vehSDKBike,vehSDKRepair,vehSDKFuel,vehSDKAmmo,vehSDKHeal,vehSDKCarrier];
+_vehNormal append [vehSDKTruck,vehSDKLightArmed,vehSDKLightTruck,vehSDKMediumTruck,vehSDKHeavyTruck,vehSDKAT,vehSDKGL,vehSDKATGM,vehSDKBMD,vehSDKBMD,vehSDKBMP,vehSDKBTR80A,vehSDKZSU,vehSDKT72BA,vehSDKT72BB,vehSDK2S1,vehSDKBike,vehSDKRepair,vehSDKFuel,vehSDKAmmo,vehSDKHeal,vehSDKCarrier];
 DECLARE_SERVER_VAR(vehNormal, _vehNormal);
 
 private _vehBoats = [vehNATOBoat,vehNATORBoat,vehCSATBoat,vehCSATRBoat,vehSDKBoat];
@@ -705,7 +705,7 @@ DECLARE_SERVER_VAR(vehFastRope, _vehFastRope);
 private _vehUnlimited = vehNATONormal + vehCSATNormal + [vehNATORBoat,vehNATOPatrolHeli,vehCSATRBoat,vehCSATPatrolHeli,vehSDKHeliMi8,vehSDKHeliMi8MT,vehSDKHeliMi24V,vehNATOUAV,vehNATOUAVSmall,NATOMG,NATOMortar,vehCSATUAV,vehCSATUAVSmall,CSATMG,CSATMortar];
 DECLARE_SERVER_VAR(vehUnlimited, _vehUnlimited);
 
-private _vehFIA = [vehSDKBike,vehSDKAT,vehSDKGL,vehSDKATGM,vehSDKBRDM,vehSDKBMD,vehSDKBMP,vehSDKBTR,vehSDKZSU,vehSDKT72BA,vehSDKT72BB,vehSDK2S1,vehSDKLightArmed,vehSDKLightTruck,vehSDKMediumTruck,vehSDKHeavyTruck,SDKAAStatic,SDKMGStatic,SDKMGStatic1,SDKATStatic,SDKGLStatic,vehSDKLightUnarmed,vehSDKTruck,vehSDKBoat,SDKMortar,staticATteamPlayer,staticAAteamPlayer,vehSDKRepair,vehSDKFuel,vehSDKAmmo,vehSDKHeal,vehSDKCarrier];
+private _vehFIA = [vehSDKBike,vehSDKAT,vehSDKGL,vehSDKATGM,vehSDKBTR80,vehSDKBMD,vehSDKBMP,vehSDKBTR80A,vehSDKZSU,vehSDKT72BA,vehSDKT72BB,vehSDK2S1,vehSDKLightArmed,vehSDKLightTruck,vehSDKMediumTruck,vehSDKHeavyTruck,SDKAAStatic,SDKMGStatic,SDKMGStatic1,SDKATStatic,SDKGLStatic,vehSDKLightUnarmed,vehSDKTruck,vehSDKBoat,SDKMortar,staticATteamPlayer,staticAAteamPlayer,vehSDKRepair,vehSDKFuel,vehSDKAmmo,vehSDKHeal,vehSDKCarrier];
 DECLARE_SERVER_VAR(vehFIA, _vehFIA);
 
 private _vehCargoTrucks = (vehTrucks + vehNATOCargoTrucks) select { [_x] call A3A_fnc_logistics_getVehCapacity > 1 };
@@ -773,7 +773,7 @@ server setVariable [vehSDKMediumTruck,250,true];							//250
 server setVariable [vehSDKTruck,300,true];									//300
 server setVariable [vehSDKHeavyTruck,350,true];								//350
 server setVariable [civTruck,600,true];										//600
-server setVariable [vehSDKBRDM,900,true];									//900
+server setVariable [vehSDKBTR80,900,true];									//900
 server setVariable [SDKAAStatic,1000,true];									//1000
 server setVariable [vehSDKATGM,1500,true];									//1500
 server setVariable [vehSDKBMP,8000,true];									//8000
@@ -786,7 +786,7 @@ server setVariable [vehSDK2S1,50000,true];									//50000
 {server setVariable [_x,500,true]} forEach [SDKGLStatic,vehSDKAmmo,vehSDKCarrier,vehSDKGL,vehSDKAT];						//500
 {server setVariable [_x,700,true]} forEach [vehSDKAA,SDKATStatic];															//700
 {server setVariable [_x,800,true]} forEach [SDKMortar,staticATteamPlayer,staticAAteamPlayer];								//800
-{server setVariable [_x,2000,true]} forEach [vehSDKBTR,vehSDKHeliMi8];														//2000
+{server setVariable [_x,2000,true]} forEach [vehSDKBTR80A,vehSDKHeliMi8];														//2000
 {server setVariable [_x,3000,true]} forEach [vehSDKZSU,vehSDKHeliMi8MT,vehSDKPlaneL39];										//3000
 {server setVariable [_x,5000,true]} forEach [civHeli,vehSDKBMD,vehSDKHeliMi24V,vehSDKPlaneSu25,vehSDKPlaneMig29S];			//5000
 

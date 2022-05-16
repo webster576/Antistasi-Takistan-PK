@@ -996,12 +996,12 @@ class mil_vehicle_offroad {
 		class HQ_button_brdm: RscButton
 		{
 			idc = 108;
-			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_brdm2m;
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_btr80;
 			x = 0.482498 * safezoneW + safezoneX;
 			y = 0.612025 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
 			h = 0.0560125 * safezoneH;
-			action = "closeDialog 0;nul = [vehSDKBRDM] spawn A3A_fnc_addFIAveh;";
+			action = "closeDialog 0;nul = [vehSDKBTR80] spawn A3A_fnc_addFIAveh;";
 		};
 	};
 };
@@ -1051,12 +1051,12 @@ class mil_vehicle_armored {
 		class HQ_button_btr: RscButton
 		{
 			idc = 102;
-			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_btr80;
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_btr80a;
 			x = 0.482498 * safezoneW + safezoneX;
 			y = 0.317959 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
 			h = 0.0560125 * safezoneH;
-			action = "closeDialog 0;nul = [vehSDKBTR] spawn A3A_fnc_addFIAveh;";
+			action = "closeDialog 0;nul = [vehSDKBTR80A] spawn A3A_fnc_addFIAveh;";
 		};
 		class HQ_button_zsu: RscButton
 		{
@@ -2869,12 +2869,12 @@ class light_armor_recruit {
 		class HQ_button_brdm2m: RscButton
 		{
 			idc = 106;
-			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_brdm2m;
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_btr80;
 			x = 0.482498 * safezoneW + safezoneX;
 			y = 0.514003 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
 			h = 0.0560125 * safezoneH;
-			action = "closeDialog 0;nul = [vehSDKBRDM] spawn A3A_fnc_addFIAsquadHC;";
+			action = "closeDialog 0;nul = [vehSDKBTR80] spawn A3A_fnc_addFIAsquadHC;";
 		};
 	}
 }
@@ -2924,12 +2924,12 @@ class armor_recruit {
 		class HQ_button_btr: RscButton
 		{
 			idc = 102;
-			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_btr80;
+			text = $STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_btr80a;
 			x = 0.482498 * safezoneW + safezoneX;
 			y = 0.317959 * safezoneH + safezoneY;
 			w = 0.175015 * safezoneW;
 			h = 0.0560125 * safezoneH;
-			action = "closeDialog 0;nul = [vehSDKBTR] spawn A3A_fnc_addFIAsquadHC;";
+			action = "closeDialog 0;nul = [vehSDKBTR80A] spawn A3A_fnc_addFIAsquadHC;";
 		};
 		class HQ_button_zsu: RscButton
 		{

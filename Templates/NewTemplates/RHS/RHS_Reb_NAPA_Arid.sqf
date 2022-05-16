@@ -25,12 +25,12 @@
 ["vehicleHealTruck", "rhsgref_ins_g_gaz66_ap2"] call _fnc_saveToTemplate;
 ["vehicleCarrierTruck", "rhssaf_army_kraz255b1_pmp"] call _fnc_saveToTemplate;
 ["vehicleAA", "rhsgref_ins_g_gaz66_zu23"] call _fnc_saveToTemplate;
-["vehicleBRDM", "rhsgref_BRDM2_ins_g"] call _fnc_saveToTemplate;
+["vehicleBTR80", "rhs_btr80_vv"] call _fnc_saveToTemplate;
 
 ["vehicleATGM", "rhsgref_BRDM2_ATGM_ins_g"] call _fnc_saveToTemplate;
 ["vehicleBMD", "rhsgref_ins_g_bmd1p"] call _fnc_saveToTemplate;
 ["vehicleBMP", "rhsgref_cdf_bmp2e"] call _fnc_saveToTemplate;
-["vehicleBTR", "rhsgref_cdf_btr80"] call _fnc_saveToTemplate;
+["vehicleBTR80A", "rhs_btr80a_vv"] call _fnc_saveToTemplate;
 ["vehicleZSU", "rhsgref_cdf_zsu234"] call _fnc_saveToTemplate;
 ["vehicleT72BA", "rhsgref_cdf_t72ba_tv"] call _fnc_saveToTemplate;
 ["vehicleT72BB", "rhsgref_cdf_t72bb_tv"] call _fnc_saveToTemplate;

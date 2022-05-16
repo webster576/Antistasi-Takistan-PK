@@ -941,10 +941,10 @@
         <English>GAZ 66 ZSU-23</English>
         <Russian>ГАЗ 66 с ЗСУ-23-2</Russian>
       </Key>
-      <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_brdm2m">
-        <Original>BRDM 2M</Original>
-        <English>BRDM 2M</English>
-        <Russian>БРДМ 2М</Russian>
+      <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_btr80">
+        <Original>BTR-80</Original>
+        <English>BTR-80</English>
+        <Russian>БТР-80</Russian>
       </Key>
     </Container>
     <Container name="dialog_vehicle_purchase_mil_armored">
@@ -958,10 +958,10 @@
         <English>BRDM 2 ATGM</English>
         <Russian>БРДМ 2 ПТРК</Russian>
       </Key>
-      <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_btr80">
-        <Original>BTR-80</Original>
-        <English>BTR-80</English>
-        <Russian>БТР-80</Russian>
+      <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_btr80a">
+        <Original>BTR-80A</Original>
+        <English>BTR-80A</English>
+        <Russian>БТР-80А</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_shilka">
         <Original>ZSU-23-4 Shilka</Original>
