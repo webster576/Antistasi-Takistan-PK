@@ -9,7 +9,7 @@ _display = findDisplay 100;
 if (str (_display) != "no display") then
 {
 	_ChildControl = _display displayCtrl 101;
-	_ChildControl  ctrlSetTooltip format ["Cost: %1 €",[vehSDKATGM] call A3A_fnc_vehiclePrice];
+	_ChildControl  ctrlSetTooltip format ["Cost: %1 €",[vehSDKBTR80] call A3A_fnc_vehiclePrice];
 	
 	_ChildControl = _display displayCtrl 102;
 	_ChildControl  ctrlSetTooltip format ["Cost: %1 €",[vehSDKBTR80A] call A3A_fnc_vehiclePrice];
@@ -24,11 +24,5 @@ if (str (_display) != "no display") then
 	_ChildControl  ctrlSetTooltip format ["Cost: %1 €",[vehSDKBMP] call A3A_fnc_vehiclePrice];
 	
 	_ChildControl = _display displayCtrl 106;
-	_ChildControl  ctrlSetTooltip format ["Cost: %1 €",[vehSDKT72BA] call A3A_fnc_vehiclePrice];
-	
-	_ChildControl = _display displayCtrl 107;
-	_ChildControl  ctrlSetTooltip format ["Cost: %1 €",[vehSDKT72BB] call A3A_fnc_vehiclePrice];
-	
-	_ChildControl = _display displayCtrl 108;
-	_ChildControl  ctrlSetTooltip format ["Cost: %1 €",[vehSDK2S1] call A3A_fnc_vehiclePrice];
+	_ChildControl  ctrlSetTooltip format ["Cost: %1 €",[vehSDKATGM] call A3A_fnc_vehiclePrice];
 };

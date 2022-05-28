@@ -11,10 +11,14 @@
 //this lines determines basic vehicles, the lightest kind available. -- Example: ["vehiclesBasic", ["B_Quadbike_01_F"]] -- Array, can contain multiple assets
 ["vehicleBasic", "I_G_Quadbike_01_F"] call _fnc_saveToTemplate;
 ["vehicleLightUnarmed", "rhsgref_ins_g_uaz_open"] call _fnc_saveToTemplate;
-["vehicleLightTruck", "rhsgref_ins_g_gaz66o"] call _fnc_saveToTemplate;
 ["vehicleLightArmed", "rhsgref_ins_g_uaz_dshkm_chdkz"] call _fnc_saveToTemplate;
 ["vehicleGL", "rhsgref_ins_g_uaz_ags"] call _fnc_saveToTemplate;
 ["vehicleAT", "rhsgref_ins_g_uaz_spg9"] call _fnc_saveToTemplate;
+["vehicleATМ", "CUP_O_UAZ_METIS_SLA"] call _fnc_saveToTemplate;
+["vehicleAAD", "CUP_O_UAZ_AA_SLA"] call _fnc_saveToTemplate;
+["vehicleAA", "rhsgref_ins_g_gaz66_zu23"] call _fnc_saveToTemplate;
+
+["vehicleLightTruck", "rhsgref_ins_g_gaz66o"] call _fnc_saveToTemplate;
 
 ["vehicleMediumTruck", "rhsgref_ins_g_zil131_flatbed_cover"] call _fnc_saveToTemplate;
 ["vehicleTruck", "rhsgref_ins_g_ural"] call _fnc_saveToTemplate;
@@ -24,7 +28,6 @@
 ["vehicleRepair", "rhsgref_ins_g_gaz66_repair"] call _fnc_saveToTemplate;
 ["vehicleHealTruck", "rhsgref_ins_g_gaz66_ap2"] call _fnc_saveToTemplate;
 ["vehicleCarrierTruck", "rhssaf_army_kraz255b1_pmp"] call _fnc_saveToTemplate;
-["vehicleAA", "rhsgref_ins_g_gaz66_zu23"] call _fnc_saveToTemplate;
 ["vehicleBTR80", "rhs_btr80_vv"] call _fnc_saveToTemplate;
 
 ["vehicleATGM", "rhsgref_BRDM2_ATGM_ins_g"] call _fnc_saveToTemplate;
@@ -32,14 +35,22 @@
 ["vehicleBMP", "rhsgref_cdf_bmp2e"] call _fnc_saveToTemplate;
 ["vehicleBTR80A", "rhs_btr80a_vv"] call _fnc_saveToTemplate;
 ["vehicleZSU", "rhsgref_cdf_zsu234"] call _fnc_saveToTemplate;
-["vehicleT72BA", "rhsgref_cdf_t72ba_tv"] call _fnc_saveToTemplate;
-["vehicleT72BB", "rhsgref_cdf_t72bb_tv"] call _fnc_saveToTemplate;
+
+["vehicleT3485", "CUP_I_T34_NAPA"] call _fnc_saveToTemplate;
+["vehicleT55", "CUP_I_T55_NAPA"] call _fnc_saveToTemplate;
+["vehicleM60A3", "CUP_I_M60A3_RACS"] call _fnc_saveToTemplate;
+["vehicleT72BA", "CUP_I_T72_NAPA"] call _fnc_saveToTemplate;
+
+["vehicleHpodnos", "CUP_O_Hilux_podnos_TK_INS"] call _fnc_saveToTemplate;
+["staticD30", "rhs_D30_vdv"] call _fnc_saveToTemplate;
 ["vehicle2S1", "rhsgref_ins_g_2s1"] call _fnc_saveToTemplate;
+["vehicleBM21", "CUP_O_BM21_SLA"] call _fnc_saveToTemplate;
+
 ["vehicleBoat", "I_C_Boat_Transport_02_F"] call _fnc_saveToTemplate;
 
 ["vehicleMi8", "rhsgref_ins_g_Mi8amt"] call _fnc_saveToTemplate;
 ["vehicleMi8MT", "rhsgref_cdf_reg_Mi17Sh"] call _fnc_saveToTemplate;
-["vehicleMi24V", "rhsgref_cdf_Mi35"] call _fnc_saveToTemplate;
+["vehicleMi24D", "CUP_O_Mi24_D_Dynamic_SLA"] call _fnc_saveToTemplate;
 ["vehicleL39", "rhs_l39_cdf"] call _fnc_saveToTemplate;
 ["vehicleSu25", "rhsgref_cdf_su25"] call _fnc_saveToTemplate;
 ["vehicleMig29S", "rhsgref_cdf_mig29s"] call _fnc_saveToTemplate;

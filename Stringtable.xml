@@ -731,6 +731,14 @@
         <Original>Static</Original>
         <Russian>Орудия</Russian>
       </Key>
+      <Key ID="STR_antistasi_dialogs_vehicle_purchase_military_tanks_text">
+        <Original>Tanks</Original>
+        <Russian>Танки</Russian>
+      </Key>
+      <Key ID="STR_antistasi_dialogs_vehicle_purchase_military_artillery_text">
+        <Original>Artillery</Original>
+        <Russian>Артиллерия</Russian>
+      </Key>
       <Key ID="STR_antistasi_dialogs_vehicle_purchase_military_tooltip">
         <Original>Wide variety of available faction vehicles</Original>
         <English>Wide variety of available faction vehicles</English>
@@ -756,6 +764,14 @@
       <Key ID="STR_antistasi_dialogs_vehicle_purchase_military_static_tooltip">
         <Original>Static weapons</Original>
         <Russian>Стационарные орудия</Russian>
+      </Key>
+      <Key ID="STR_antistasi_dialogs_vehicle_purchase_military_tanks_tooltip">
+        <Original>Main battle tanks</Original>
+        <Russian>Основные боевые танки</Russian>
+      </Key>
+      <Key ID="STR_antistasi_dialogs_vehicle_purchase_military_artillery_tooltip">
+        <Original>Mobile and stationary artillery</Original>
+        <Russian>Мобильные и стационарные артиллерийские орудия</Russian>
       </Key>
     </Container>
     <Container name="dialog_vehicle_purchase_military">
@@ -936,10 +952,20 @@
         <English>UAZ SPG-9</English>
         <Russian>УАЗ с СПГ-9</Russian>
       </Key>
+      <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_uaz_metis">
+        <Original>UAZ Metis</Original>
+        <English>UAZ Metis</English>
+        <Russian>УАЗ с Метис</Russian>
+      </Key>
       <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_gaz66_zu23">
         <Original>GAZ 66 ZSU-23</Original>
         <English>GAZ 66 ZSU-23</English>
         <Russian>ГАЗ 66 с ЗСУ-23-2</Russian>
+      </Key>
+      <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_offroad_uaz_djigit">
+        <Original>UAZ Djigit</Original>
+        <English>UAZ Djigit</English>
+        <Russian>УАЗ с Джигит</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_btr80">
         <Original>BTR-80</Original>
@@ -982,11 +1008,6 @@
         <Original>T-72</Original>
         <English>T-72</English>
         <Russian>T-72</Russian>
-      </Key>
-      <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_t72bb">
-        <Original>T-72 RA</Original>
-        <English>T-72 RA</English>
-        <Russian>T-72 ДЗ</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_mil_armored_2s1">
         <Original>2S1 Carnation</Original>
@@ -3839,6 +3860,94 @@
       <Key ID="STR_antistasi_refugees_evac_task_desc">
         <Original>Группа контрабандистов была арестована в %1. Освободите их прежде, чем они будут этапированы в тюрьму. Вам необоходимо успеть до %2</Original>
         <Russian>Группа контрабандистов была арестована в %1. Освободите их прежде, чем они будут этапированы в тюрьму. Вам необоходимо успеть до %2</Russian>
+      </Key>
+	  <Key ID="STR_antistasi_sector_attack">
+        <Original>%2 Is attacking from the %1. Intercept them or we may loose a sector</Original>
+        <Russian>%2 атакует из %1. Помешайте им или мы можем потерять сектор</Russian>
+      </Key>
+	  <Key ID="STR_antistasi_fraction_attack">
+        <Original>%1 Attack</Original>
+        <Russian>%1 отакЭ!</Russian>
+      </Key>
+	  <Key ID="STR_antistasi_buy_air_vehicle">
+        <Original>Buy Air Vehicle</Original>
+        <Russian>Купить авиатехнику</Russian>
+      </Key>
+      <Key ID="STR_antistasi_fast_travel_groups_commanded_by_player">
+        <Original>You cannot Fast Travel groups commanded by players</Original>
+        <Russian>Вы не можете быстро перемещать группы, управляемые игроками</Russian>
+      </Key>
+      <Key ID="STR_antistasi_fast_travel_while_controlling_ai">
+        <Original>You cannot Fast Travel while you are controlling AI</Original>
+        <Russian>Вы не можете быстро перемещаться пока управляете AI</Russian>
+      </Key>
+      <Key ID="STR_antistasi_fast_travel_jailed">
+        <Original>Nope. Not happening.</Original>
+        <Russian>Иш ты какой хитрый! Посиди пока, отдохни.</Russian>
+      </Key>
+      <Key ID="STR_antistasi_fast_travel_enemies_near_group">
+        <Original>You cannot Fast Travel with enemies near the group</Original>
+        <Russian>Быстрое перемещение невозможно пока рядом с группой находятся враги</Russian>
+      </Key>
+      <Key ID="STR_antistasi_fast_travel_vehicle_drivers">
+        <Original>You cannot Fast Travel if you don't have a driver in all your vehicles or your vehicles are damaged and cannot move or your group is in a boat</Original>
+        <Russian>Быстрое перемещение невозможно, если в каком-либо из ваших транспортных средств нет водителя. Либо одно из ваших транспортных средств повреждено настолько, что не может передвигаться. Вы также не можете быстро перемещаться находясь в лодке.</Russian>
+      </Key>
+      <Key ID="STR_antistasi_fast_travel_zone_click">
+        <Original>Click on the zone you want to travel</Original>
+        <Russian>Выберите точку, в которую вы бы хотели переместиться</Russian>
+      </Key>
+      <Key ID="STR_antistasi_fast_travel_allowed_to_airbase_and_hq">
+        <Original>Player groups are only allowed to Fast Travel to HQ or Airbases</Original>
+        <Russian>Группам с игроками разрещено быстро перемещаться только на базу либо в аэропорт, находящийся под нашим контролем</Russian>
+      </Key>
+      <Key ID="STR_antistasi_fast_travel_enemy_controlled_zone">
+        <Original>You cannot Fast Travel to an enemy controlled zone</Original>
+        <Russian>Вы не можете быстро переместиться на точку, находящуюся под контролем врага</Russian>
+      </Key>
+      <Key ID="STR_antistasi_fast_travel_area_under_attack">
+        <Original>You cannot Fast Travel to an area under attack or with enemies in the surrounding</Original>
+        <Russian>Вы не можете быстро переместиться на точку, находящуюся под атакой или с врагами поблизости</Russian>
+      </Key>
+      <Key ID="STR_antistasi_fast_traveling">
+        <Original>Fast traveling, travel time: %1s , please wait</Original>
+        <Russian>Быстрое перемещение, время до разрыва пространственно временного континума: %1s , пожалуйста подождите</Russian>
+      </Key>
+      <Key ID="STR_antistasi_fast_travel_moving_group">
+        <Original>Moving group %1 to destination</Original>
+        <Russian>Перемещение группы %1 на позицию</Russian>
+      </Key>
+      <Key ID="STR_antistasi_fast_travel_player_wrong_destination">
+        <Original>%1 Fast Travel has been cancelled because some player has boarded their vehicle and the destination is not HQ or an Airbase</Original>
+        <Russian>%1 Быстрое перемещение было отменено потому, что один из игроков попытался сесть в транспорт, который перемещался не на базу либо в аэропорт</Russian>
+      </Key>
+      <Key ID="STR_antistasi_fast_travel_arrived">
+        <Original>You arrived to destination</Original>
+        <Russian>Вы прибыли в место назначения</Russian>
+      </Key>
+      <Key ID="STR_antistasi_fast_travel_group_arrived">
+        <Original>Group %1 arrived to destination</Original>
+        <Russian>Группа %1 прибыла в место назначения</Russian>
+      </Key>
+      <Key ID="STR_antistasi_fast_travel_zone_under_our_control">
+        <Original>You must click near marker under your control</Original>
+        <Russian>Выберите зону, которая находится под нашим контролем</Russian>
+      </Key>
+      <Key ID="STR_antistasi_btn_mortar_hilux">
+        <Original>Mortar hilux</Original>
+        <Russian>Минометный hilux</Russian>
+      </Key>
+      <Key ID="STR_antistasi_btn_2a18m">
+        <Original>D-30A</Original>
+        <Russian>Д-30А</Russian>
+      </Key>
+      <Key ID="STR_antistasi_btn_2s1">
+        <Original>2S1 Gvozdika</Original>
+        <Russian>2С1 Гвоздика</Russian>
+      </Key>
+      <Key ID="STR_antistasi_btn_bm21">
+        <Original>BM-21 Grad</Original>
+        <Russian>БМ-21 Град</Russian>
       </Key>
     </Container>
   </Package>

@@ -21,7 +21,7 @@ if (str (_display) != "no display") then
 	_ChildControl  ctrlSetTooltip format ["Cost: %1 €",[vehSDKHeavyTruck] call A3A_fnc_vehiclePrice];
 	
 	_ChildControl = _display displayCtrl 105;
-	_ChildControl  ctrlSetTooltip format ["Cost: %1 €",[vehSDKFuel] call A3A_fnc_vehiclePrice];	
+	_ChildControl  ctrlSetTooltip format ["Cost: %1 €",[vehSDKFuel] call A3A_fnc_vehiclePrice];
 	
 	_ChildControl = _display displayCtrl 106;
 	_ChildControl  ctrlSetTooltip format ["Cost: %1 €",[vehSDKRepair] call A3A_fnc_vehiclePrice];

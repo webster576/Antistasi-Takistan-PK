@@ -147,7 +147,7 @@ switch _typeX do
         // Ability to by air vehicles. Jets and helicopters
         _airportsX = airportsX select {(sidesX getVariable [_x,sideUnknown] == teamPlayer) and (player inArea _x)};
         if (count _airportsX > 0) then {
-            _flag addAction ["Buy Air Vehicle", {if ([player,300] call A3A_fnc_enemyNearCheck) then {["Buy Air Vehicle", localize "$STR_antistasi_flag_action_buyVehicle_enemies"] call A3A_fnc_customHint;} else {nul = [] spawn A3A_fnc_buyAirVehicle;}},nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull])",4];
+            _flag addAction [localize "STR_antistasi_buy_air_vehicle", {if ([player,300] call A3A_fnc_enemyNearCheck) then {[localize "STR_antistasi_buy_air_vehicle", localize "$STR_antistasi_flag_action_buyVehicle_enemies"] call A3A_fnc_customHint;} else {nul = [] spawn A3A_fnc_buyAirVehicle;}},nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull])",4];
         };
         
         if (isMultiplayer) then
