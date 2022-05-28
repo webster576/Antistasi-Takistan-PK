@@ -3738,15 +3738,15 @@
         <Russian>Разгрузить</Russian>
       </Key>
       <Key ID="STR_antistasi_mission_for_you">
-        <Original>У меня есть задание для тебя</Original>
+        <Original>I have a mission for you</Original>
         <Russian>У меня есть задание для тебя</Russian>
       </Key>
       <Key ID="STR_antistasi_kill_the_traitor">
-        <Original>Убейте предателя</Original>
+        <Original>Kill the Traitor</Original>
         <Russian>Убейте предателя</Russian>
       </Key>
       <Key ID="STR_antistasi_kill_the_traitor_desc">
-        <Original>Предатель назначил встречу в %1. Убейте его прежде чем он успеет передать противнику данные о нас. Устраните предателя до %2. Мы не знаем где точно будет проходить встреча. Однако мы уверены, что это будет здание рядом с проселочной дорогой. Также %3 опредленно будет там.</Original>
+        <Original>A traitor has scheduled a meeting with %4 in %1. Kill him before he provides enough intel to give us trouble. Do this before %2. We don't where exactly this meeting will happen. You will recognise the building by the nearby Offroad and %3 presence.</Original>
         <Russian>Предатель назначил встречу в %1. Убейте его прежде чем он успеет передать противнику данные о нас. Устраните предателя до %2. Мы не знаем где точно будет проходить встреча. Однако мы уверены, что это будет здание рядом с проселочной дорогой. Также %3 опредленно будет там.</Russian>
       </Key>
       <Key ID="STR_antistasi_drop_crate">
@@ -3754,111 +3754,111 @@
         <Russian>Бросить ящик</Russian>
       </Key>
       <Key ID="STR_antistasi_armored_convoy_title">
-        <Original>Колонна бронетехники</Original>
+        <Original>Armored Convoy</Original>
         <Russian>Колонна бронетехники</Russian>
       </Key>
       <Key ID="STR_antistasi_armored_convoy_desc">
-        <Original>Колонна бронетехники из %1 собирается выехать в %2 для того, чтобы усилить гарнизон %3. Попробуйте перехватить колонну. Украдите либо уничтожте бронетехнику прежде, чем она доберется до места назначения.</Original>
+        <Original>A convoy from %1 is about to depart at %2. It will reinforce %3 with armored vehicles. Try to intercept it. Steal or destroy that thing before it reaches it's destination.</Original>
         <Russian>Колонна бронетехники из %1 собирается выехать в %2 для того, чтобы усилить гарнизон %3. Попробуйте перехватить колонну. Украдите либо уничтожте бронетехнику прежде, чем она доберется до места назначения.</Russian>
       </Key>
       <Key ID="STR_antistasi_ammo_convoy_title">
-        <Original>Колонна c боеприпасами</Original>
+        <Original>Ammo Convoy</Original>
         <Russian>Колонна c боеприпасами</Russian>
       </Key>
       <Key ID="STR_antistasi_ammo_convoy_desc">
-        <Original>Колонна c боеприпасами из %1 собирается выехать в %2 для того, чтобы доставить боеприпасы в %3. Попробуйте перехватить колонну. Украдите либо уничтожте грузовик с боеприпасами прежде, чем он доберется до места назначения.</Original>
+        <Original>A convoy from %1 is about to depart at %2. It will provide ammunition to %3. Try to intercept it. Steal or destroy that truck before it reaches it's destination.</Original>
         <Russian>Колонна c боеприпасами из %1 собирается выехать в %2 для того, чтобы доставить боеприпасы в %3. Попробуйте перехватить колонну. Украдите либо уничтожте грузовик с боеприпасами прежде, чем он доберется до места назначения.</Russian>
       </Key>
       <Key ID="STR_antistasi_prisoners_convoy_title">
-        <Original>Конвой с заключенными</Original>
+        <Original>Prisoner Convoy</Original>
         <Russian>Конвой с заключенными</Russian>
       </Key>
       <Key ID="STR_antistasi_prisoners_convoy_desc">
-        <Original>Группу заключенных собираются перевезти из %1 в %3. Запланированное время отправки %2. Попробуйте освободить заключенных и доставить их на нашу базу. Это создаст нам положительную репутацию. Кроме того, освобожденные люди с удовольствием пополнят наши ряды.</Original>
+        <Original>A group of POWs is being transported from %1 to %3, and it's about to depart at %2. Try to intercept it. Kill or capture the truck driver to make them join you and bring them to HQ. Alive if possible.</Original>
         <Russian>Группу заключенных собираются перевезти из %1 в %3. Запланированное время отправки %2. Попробуйте освободить заключенных и доставить их на нашу базу. Это создаст нам положительную репутацию. Кроме того, освобожденные люди с удовольствием пополнят наши ряды.</Russian>
       </Key>
       <Key ID="STR_antistasi_reinforcements_convoy_title">
-        <Original>Колонна с подкреплениями</Original>
+        <Original>Reinforcements Convoy</Original>
         <Russian>Колонна с подкреплениями</Russian>
       </Key>
       <Key ID="STR_antistasi_reinforcements_convoy_desc">
-        <Original>Колонна с подкреплениями готовится к отправке из %1 в %3. Примерное время отправки %2. Уничтожьте личный состав колонны и транспорт, на котором он перемещается.</Original>
+        <Original>Reinforcements are being sent from %1 to %3 in a convoy, and it's about to depart at %2. Try to intercept and kill all the troops and vehicle objective.</Original>
         <Russian>Колонна с подкреплениями готовится к отправке из %1 в %3. Примерное время отправки %2. Уничтожьте личный состав колонны и транспорт, на котором он перемещается.</Russian>
       </Key>
       <Key ID="STR_antistasi_money_convoy_title">
-        <Original>Грузовик с наличными</Original>
+        <Original>Money Convoy</Original>
         <Russian>Грузовик с наличными</Russian>
       </Key>
       <Key ID="STR_antistasi_money_convoy_desc">
-        <Original>Грузовик с огромным количеством наличных собирается выехать из %1 в %3. Примерное время отправки %2. Украдите грузовик, а зате привезите его на базу. Эти средства очень помогут нашему делу.</Original>
+        <Original>A truck with plenty of money is being moved from %1 to %3, and it's about to depart at %2. Steal that truck and bring it to HQ. Those funds will be very welcome.</Original>
         <Russian>Грузовик с огромным количеством наличных собирается выехать из %1 в %3. Примерное время отправки %2. Украдите грузовик, а зате привезите его на базу. Эти средства очень помогут нашему делу.</Russian>
       </Key>
       <Key ID="STR_antistasi_supply_convoy_title">
-        <Original>Грузовик с медикаментами</Original>
+        <Original>Supply Convoy</Original>
         <Russian>Грузовик с медикаментами</Russian>
       </Key>
       <Key ID="STR_antistasi_supply_convoy_desc">
-        <Original>Грузовик с медикаментами выезжает в %2 из %1 и направляется к %3. Перехватите грузовик и привезите его в %3 сами. По прибытии не забудьте напомнить местным, что за предоставленную помощь они обязаны благодарить %4.</Original>
+        <Original>A truck with medical supplies destination %3 it's about to depart at %2 from %1. Steal that truck bring it to %3 and let people in there know it is %4 who's giving those supplies.</Original>
         <Russian>Грузовик с медикаментами выезжает в %2 из %1 и направляется к %3. Перехватите грузовик и привезите его в %3 сами. По прибытии не забудьте напомнить местным, что за предоставленную помощь они обязаны благодарить %4.</Russian>
       </Key>
       <Key ID="STR_antistasi_ammotruck_task_title">
-        <Original>Украдите либо уничтожьте грузовик с боеприпасами</Original>
+        <Original>Steal or Destroy Ammotruck</Original>
         <Russian>Украдите либо уничтожьте грузовик с боеприпасами</Russian>
       </Key>
       <Key ID="STR_antistasi_ammotruck_task_desc">
-        <Original>Мы обнаружили грузовик с боеприпасами в %1. Направляйтесь туда. Уничтожьте либо украдите грузовик до %2.</Original>
+        <Original>We've spotted an Ammotruck in an %1. Go there and destroy or steal it before %2.</Original>
         <Russian>Мы обнаружили грузовик с боеприпасами в %1. Направляйтесь туда. Уничтожьте либо украдите грузовик до %2.</Russian>
       </Key>
       <Key ID="STR_antistasi_petros_same_type_mission">
-        <Original>Я уже дал вам миссию подобного типа</Original>
+        <Original>I already gave you a mission of this type</Original>
         <Russian>Я уже дал вам миссию подобного типа</Russian>
       </Key>
       <Key ID="STR_antistasi_city_supplies_task_title">
-        <Original>Обеспечение города</Original>
+        <Original>City Supplies</Original>
         <Russian>Обеспечение города</Russian>
       </Key>
       <Key ID="STR_antistasi_city_supplies_task_desc">
-        <Original>Населению города %1 требуется гуманитарная помощь. Мы можем предоставить ее, улучшив тем самым отношения с жителями города. Я разместил упаковку со всем необходимым возле нашей базы. Доставь эту упаковку в центр города %1, выгрузи и последи за ней в течении 3 минут. Упаковка с гуманитаркой должна быть доставлена до %2.</Original>
+        <Original>%1 population is in need of supplies. We may improve our relationship with that city if we are the ones who provide them. I have placed a crate with supplies near our HQ. Deliver the crate to %1 city center, hold it there for %3 minutes and it's done. Do this before %2.</Original>
         <Russian>Населению города %1 требуется гуманитарная помощь. Мы можем предоставить ее, улучшив тем самым отношения с жителями города. Я разместил упаковку со всем необходимым возле нашей базы. Доставь эту упаковку в центр города %1, выгрузи и последи за ней в течении 3 минут. Упаковка с гуманитаркой должна быть доставлена до %2.</Russian>
       </Key>
       <Key ID="STR_antistasi_destroy_radio_tower_task_title">
-        <Original>Уничтожьте радиовышку</Original>
+        <Original>Destroy Radio Tower</Original>
         <Russian>Уничтожьте радиовышку</Russian>
       </Key>
       <Key ID="STR_antistasi_destroy_radio_tower_task_desc">
-        <Original>Нам необходимо уничтожить или захватить радио вышку в %1. Это позволит избавить местное население от пропаганды %3. Успейте до %2</Original>
+        <Original>We need to destroy or take a Radio Tower in %1. This will interrupt %3 Propaganda Nework. Do it before %2.</Original>
         <Russian>Нам необходимо уничтожить или захватить радио вышку в %1. Это позволит избавить местное население от пропаганды %3. Успейте до %2</Russian>
       </Key>
       <Key ID="STR_antistasi_pow_rescue_task_title">
-        <Original>Спасение узников</Original>
+        <Original>POW Rescue</Original>
         <Russian>Спасение узников</Russian>
       </Key>
       <Key ID="STR_antistasi_pow_rescue_task_desc">
-        <Original>Группа узников ожидает казни в %1. Мы обязаны успеть предотвратить казнь до %2. Спасенные узники должны быть доставлены на нашу базу. Это поднимет авторитет нашей фракции среди местного населения, а освобожденные узники присоединятся к нашей борьбе.</Original>
+        <Original>A group of POWs is awaiting for execution in %1. We must rescue them before %2. Bring them to HQ</Original>
         <Russian>Группа узников ожидает казни в %1. Мы обязаны успеть предотвратить казнь до %2. Спасенные узники должны быть доставлены на нашу базу. Это поднимет авторитет нашей фракции среди местного населения, а освобожденные узники присоединятся к нашей борьбе.</Russian>
       </Key>
       <Key ID="STR_antistasi_take_outpost_task_title">
-        <Original>Захватите аванпост</Original>
+        <Original>Take the Outpost</Original>
         <Russian>Захватите аванпост</Russian>
       </Key>
       <Key ID="STR_antistasi_take_outpost_task_desc">
-        <Original>Аванпост %1 мешает нашей борьбе в данном регионе. Захватите его до %2</Original>
+        <Original>A %1 is disturbing our operations in the area. Go there and capture it before %2.</Original>
         <Russian>Аванпост %1 мешает нашей борьбе в данном регионе. Захватите его до %2</Russian>
       </Key>
       <Key ID="STR_antistasi_resource_acquisition_task_title">
-        <Original>Захват ресурсной точки</Original>
+        <Original>Resource Acquisition</Original>
         <Russian>Захват ресурсной точки</Russian>
       </Key>
       <Key ID="STR_antistasi_resource_acquisition_task_desc">
-        <Original>Захват %1 принесет нам неплохую прибыль. Захватите её до %2.</Original>
+        <Original>A %1 would be a fine addition to our cause. Go there and capture it before %2.</Original>
         <Russian>Захват %1 принесет нам неплохую прибыль. Захватите её до %2.</Russian>
       </Key>
       <Key ID="STR_antistasi_refugees_evac_task_title">
-        <Original>Спасение контрабандистов</Original>
+        <Original>Refugees Evac</Original>
         <Russian>Спасение контрабандистов</Russian>
       </Key>
       <Key ID="STR_antistasi_refugees_evac_task_desc">
-        <Original>Группа контрабандистов была арестована в %1. Освободите их прежде, чем они будут этапированы в тюрьму. Вам необоходимо успеть до %2</Original>
+        <Original>A group of smugglers have been arrested in %1 and they are about to be sent to prison. Go there and free them in order to make them join our cause. Do this before %2</Original>
         <Russian>Группа контрабандистов была арестована в %1. Освободите их прежде, чем они будут этапированы в тюрьму. Вам необоходимо успеть до %2</Russian>
       </Key>
 	  <Key ID="STR_antistasi_sector_attack">
