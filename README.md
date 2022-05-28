@@ -29,6 +29,8 @@
 **Для авиации (необязательные)**
 - Pylon Manager
 - FIR AWS (AirWeaponSystem)
+- Advanced Sling Loading
+- CH View Distance
 
 **Улучшенный звук (необязательные)**
 - JSRS SOUNDMOD
