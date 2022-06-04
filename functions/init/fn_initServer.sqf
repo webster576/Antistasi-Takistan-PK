@@ -13,6 +13,11 @@ fireX allowDamage false;
 mapX allowDamage false;
 teamPlayer = side group petros; 				// moved here because it must be initialized before accessing any saved vars
 
+//Disable VN music
+if (isClass (configFile/"CfgVehicles"/"vn_module_dynamicradiomusic_disable")) then {
+    A3A_VN_MusicModule = (createGroup sideLogic) createUnit ["vn_module_dynamicradiomusic_disable", [worldSize, worldSize,0], [],0,"NONE"];
+};
+
 //Load server id
 serverID = profileNameSpace getVariable ["ss_ServerID",nil];
 if(isNil "serverID") then {
@@ -174,6 +179,18 @@ addMissionEventHandler ["BuildingChanged", {
 		if !(_oldBuilding in antennas || _oldBuilding in antennasDead) then {
 			destroyedBuildings pushBack _oldBuilding;
 		};
+	};
+}];
+
+addMissionEventHandler ["EntityKilled", {
+	params ["_victim", "_killer", "_instigator"];
+	private _killerSide = side group (if (isNull _instigator) then {_killer} else {_instigator});
+	Debug_2("%1 killed by %2", typeof _victim, _killerSide);
+
+	if !(isNil {_victim getVariable "ownerSide"}) then {
+		// Antistasi-created vehicle
+		[_victim, _killerSide, false] call A3A_fnc_vehKilledOrCaptured;
+		[_victim] spawn A3A_fnc_postmortem;
 	};
 }];
 

@@ -142,18 +142,18 @@ _vehiclesX pushBack _flagX;
 private _ammoBox = if (garrison getVariable [_markerX + "_lootCD", 0] == 0) then
 {
 	private _ammoBoxType = if (_sideX == Occupants) then {NATOAmmoBox} else {CSATAmmoBox};
-	private _ammoBox = _ammoBoxType createVehicle _positionX;
+	private _ammoBox = [_ammoBoxType, _positionX, 15, 5, true] call A3A_fnc_safeVehicleSpawn;
 	// Otherwise when destroyed, ammoboxes sink 100m underground and are never cleared up
 	_ammoBox addEventHandler ["Killed", { [_this#0] spawn { sleep 10; deleteVehicle (_this#0) } }];
 	[_ammoBox] spawn A3A_fnc_fillLootCrate;
 	[_ammoBox] call A3A_fnc_logistics_addLoadAction;
 
-	if ((_markerX in seaports) and !A3A_hasIFA) then {
+	if (_markerX in seaports) then {
 		[_ammoBox] spawn {
 			sleep 1;    //make sure fillLootCrate finished clearing the crate
 			{
 				_this#0 addItemCargoGlobal [_x, round random [2,6,8]];
-			} forEach diveGear;
+			} forEach (A3A_faction_reb getVariable "diveGear");
 		};
 	};
 	_ammoBox;

@@ -55,6 +55,7 @@ if (count _positionTel > 0) then
 	//if (_base in outpostsFIA) exitWith {hint "You cannot Fast Travel to roadblocks and watchposts"; openMap [false,false]};
 
 	if ([getMarkerPos _base,500] call A3A_fnc_enemyNearCheck) exitWith {[localize "STR_antistasi_dialogs_radio_comm_fast_travel", localize "STR_antistasi_fast_travel_area_under_attack"] call A3A_fnc_customHint; openMap [false,false]};
+	if (!([player] call A3A_fnc_isMember) && {!([_positionTel] call A3A_fnc_playerLeashCheckPosition)}) exitWith {["Fast Travel", format ["There are no members nearby the target location. You need to be within %1 km of HQ or a member.", ceil (memberDistance/1e3)]] call A3A_fnc_customHint;};
 
 	if (_positionTel distance getMarkerPos _base < 50) then
 		{
@@ -132,6 +133,7 @@ if (count _positionTel > 0) then
 		//if (!_esHC) then {sleep _distanceX};
 		if (!_esHC) then {disableUserInput false;cutText [localize "STR_antistasi_fast_travel_arrived","BLACK IN",1]} else {[localize "STR_antistasi_dialogs_radio_comm_fast_travel", format [localize "STR_antistasi_fast_travel_group_arrived",groupID _groupX]] call A3A_fnc_customHint;};
 		if (_forcedX) then {forcedSpawn = forcedSpawn - [_base]};
+		[] call A3A_fnc_playerLeashRefresh;
 		sleep 5;
 		{_x allowDamage true} forEach units _groupX;
 		}

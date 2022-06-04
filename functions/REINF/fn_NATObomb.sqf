@@ -1,12 +1,12 @@
-if (bombRuns < 1) exitWith {["Air Support", "You lack of enough Air Support to make this request"] call A3A_fnc_customHint;};
+if (bombRuns < 1) exitWith {["Air Support", "You lack of enough Air Support to make this request."] call A3A_fnc_customHint;};
 //if (!allowPlayerRecruit) exitWith {hint "Server is very loaded. <br/>Wait one minute or change FPS settings in order to fulfill this request"};
-if (!([player] call A3A_fnc_hasRadio)) exitWith {if !(A3A_hasIFA) then {["Air Support", "You need a radio in your inventory to be able to give orders to other squads"] call A3A_fnc_customHint;} else {["Air Support", "You need a Radio Man in your group to be able to give orders to other squads"] call A3A_fnc_customHint;}};
-if ({sidesX getVariable [_x,sideUnknown] == teamPlayer} count airportsX == 0) exitWith {["Air Support", "You need to control an airport in order to fulfill this request"] call A3A_fnc_customHint;};
+if (!([player] call A3A_fnc_hasRadio)) exitWith {if !(A3A_hasIFA) then {["Air Support", "You need a radio in your inventory to be able to give orders to other squads."] call A3A_fnc_customHint;} else {["Air Support", "You need a Radio Man in your group to be able to give orders to other squads"] call A3A_fnc_customHint;}};
+if ({sidesX getVariable [_x,sideUnknown] == teamPlayer} count airportsX == 0) exitWith {["Air Support", "You need to control an airport in order to fulfill this request."] call A3A_fnc_customHint;};
 _typeX = _this select 0;
 
 positionTel = [];
 
-["Air Support", "Select the spot from which the plane will start to drop the bombs"] call A3A_fnc_customHint;
+["Air Support", "Select the spot from which the plane will start to drop the bombs."] call A3A_fnc_customHint;
 
 if (!visibleMap) then {openMap true};
 onMapSingleClick "positionTel = _pos;";
@@ -25,7 +25,7 @@ _mrkorig setMarkerTypeLocal "hd_destroy";
 _mrkorig setMarkerColorLocal "ColorRed";
 _mrkOrig setMarkerTextLocal "Bomb Run Init";
 
-["Air Support", "Select the map position to which the plane will exit to calculate plane's route vector"] call A3A_fnc_customHint;
+["Air Support", "Select the map position to which the plane will exit to calculate plane's route vector."] call A3A_fnc_customHint;
 
 onMapSingleClick "positionTel = _pos;";
 
@@ -51,6 +51,7 @@ _mrkDest setMarkerColorLocal "ColorRed";
 _mrkDest setMarkerTextLocal "Bomb Run Exit";
 
 //openMap false;
+private _isHelicopter = vehSDKPlane isKindOf "helicopter";
 
 _angorig = _ang - 180;
 
@@ -62,7 +63,7 @@ _plane = _planefn select 0;
 _planeCrew = _planefn select 1;
 _groupPlane = _planefn select 2;
 
-_plane setPosATL [getPosATL _plane select 0, getPosATL _plane select 1, 1000];
+_plane setPosATL [getPosATL _plane select 0, getPosATL _plane select 1, if (_isHelicopter) then {100} else {1000}];
 _plane disableAI "TARGET";
 _plane disableAI "AUTOTARGET";
 _plane flyInHeight 100;
@@ -72,7 +73,7 @@ _plane flyInHeightASL [(_minAltASL select 2) +100, (_minAltASL select 2) +100, (
 driver _plane sideChat "Starting Bomb Run. ETA 30 seconds.";
 _wp1 = group _plane addWaypoint [_pos1, 0];
 _wp1 setWaypointType "MOVE";
-_wp1 setWaypointSpeed "LIMITED";
+if (!_isHelicopter) then { _wp1 setWaypointSpeed "LIMITED" };
 _wp1 setWaypointBehaviour "CARELESS";
 
 if(_typeX == "NAPALM" && !napalmEnabled) then {_typeX == "HE"};
@@ -88,7 +89,7 @@ private _bombParams = [_plane, _typeX, 4, (_pos1 distance2D _pos2)];
 };
 
 _wp2 = group _plane addWaypoint [_pos2, 1];
-_wp2 setWaypointSpeed "LIMITED";
+if (!_isHelicopter) then { _wp2 setWaypointSpeed "LIMITED" };
 _wp2 setWaypointType "MOVE";
 
 _wp3 = group _plane addWaypoint [_finpos, 2];

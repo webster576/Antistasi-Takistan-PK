@@ -51,8 +51,8 @@ switch (_type) do {
 
 		if (count _possibleMarkers == 0) then {
 			if (!_silent) then {
-				[petros,"globalChat","I have no assasination missions for you. Move our HQ closer to the enemy"] remoteExec ["A3A_fnc_commsMP",_requester];
-				[petros,"hint","Assasination Missions require cities, Patrolled Jungles or Airports closer than 4Km from your HQ.", "Missions"] remoteExec ["A3A_fnc_commsMP",_requester];
+				[petros,"globalChat","I have no assassination missions for you. Move our HQ closer to the enemy."] remoteExec ["A3A_fnc_commsMP",_requester];
+				[petros,"hint","Assassination Missions require cities, patrolled Jungles or Airports closer than 4Km from your HQ.", "Missions"] remoteExec ["A3A_fnc_commsMP",_requester];
 			};
 		} else {
 			private _site = selectRandom _possibleMarkers;
@@ -92,7 +92,7 @@ switch (_type) do {
 
 		if (count _possibleMarkers == 0) then {
 			if (!_silent) then {
-				[petros,"globalChat","I have no destroy missions for you. Move our HQ closer to the enemy"] remoteExec ["A3A_fnc_commsMP",_requester];
+				[petros,"globalChat","I have no destroy missions for you. Move our HQ closer to the enemy."] remoteExec ["A3A_fnc_commsMP",_requester];
 				[petros,"hint","Destroy Missions require Airbases or Radio Towers closer than 4Km from your HQ.", "Missions"] remoteExec ["A3A_fnc_commsMP",_requester];
 			};
 		} else {
@@ -120,7 +120,7 @@ switch (_type) do {
 
 		if (count _possibleMarkers == 0) then {
 			if (!_silent) then {
-				[petros,"globalChat","I have no logistics missions for you. Move our HQ closer to the enemy"] remoteExec ["A3A_fnc_commsMP",_requester];
+				[petros,"globalChat","I have no logistics missions for you. Move our HQ closer to the enemy."] remoteExec ["A3A_fnc_commsMP",_requester];
 				[petros,"hint","Logistics Missions require Outposts, Seaports or Banks closer than 4Km from your HQ.", "Missions"] remoteExec ["A3A_fnc_commsMP",_requester];
 			};
 		} else {
@@ -146,7 +146,7 @@ switch (_type) do {
 
 		if (count _possibleMarkers == 0) then {
 			if (!_silent) then {
-				[petros,"globalChat","I have no support missions for you. Move our HQ closer to the enemy"] remoteExec ["A3A_fnc_commsMP",_requester];
+				[petros,"globalChat","I have no support missions for you. Move our HQ closer to the enemy."] remoteExec ["A3A_fnc_commsMP",_requester];
 				[petros,"hint","Support Missions require Cities closer than 4Km from your HQ.", "Missions"] remoteExec ["A3A_fnc_commsMP",_requester];
 			};
 		} else {
@@ -165,7 +165,7 @@ switch (_type) do {
 
 		if (count _possibleMarkers == 0) then {
 			if (!_silent) then {
-				[petros,"globalChat","I have no rescue missions for you. Move our HQ closer to the enemy"] remoteExec ["A3A_fnc_commsMP",_requester];
+				[petros,"globalChat","I have no rescue missions for you. Move our HQ closer to the enemy."] remoteExec ["A3A_fnc_commsMP",_requester];
 				[petros,"hint","Rescue Missions require Cities or Airports closer than 4Km from your HQ.", "Missions"] remoteExec ["A3A_fnc_commsMP",_requester];
 			};
 		} else {
@@ -177,42 +177,40 @@ switch (_type) do {
 	case "CONVOY": {
 		if (bigAttackInProgress) exitWith {
 			if (!_silent) then {
-				[petros,"globalChat","There is a big battle around, I don't think the enemy will send any convoy"] remoteExec ["A3A_fnc_commsMP",_requester];
+				[petros,"globalChat","There is a big battle around, I don't think the enemy will send any convoy."] remoteExec ["A3A_fnc_commsMP",_requester];
 				[petros,"hint","Convoy Missions require a calmed status around the island, and now it is not the proper time.", "Missions"] remoteExec ["A3A_fnc_commsMP",_requester];
 			};
 		};
-		//prety mutch untuched, not mutch in common with the others
-		private _Markers = (airportsX + resourcesX + factories + seaports + outposts - blackListDest);
-		_Markers = _Markers select {sidesX getVariable [_x,sideUnknown] != teamPlayer};
-		if (count _Markers > 0) then {
-			for "_i" from 0 to ((count _Markers) - 1) do {
-				private _site = _Markers select _i;
-				private _pos = getMarkerPos _site;
-				private _base = [_site] call A3A_fnc_findBasesForConvoy;
-				if ((_pos distance (getMarkerPos respawnTeamPlayer) < (distanceMission*2)) and (_base !="")) then {
-					if (
-						((sidesX getVariable [_site,sideUnknown] == Occupants) and (sidesX getVariable [_base,sideUnknown] == Occupants))
-						or ((sidesX getVariable [_site,sideUnknown] == Invaders) and (sidesX getVariable [_base,sideUnknown] == Invaders))
-					) then {_possibleMarkers pushBack _site};
-				};
+		// only do the city convoys on flip?
+		private _markers = (airportsX + resourcesX + factories + seaports + outposts - blackListDest);
+		// Pre-filter the possible source bases to make this less n-squared
+		private _possibleBases = (airportsX + outposts) select { (getMarkerPos _x) distance (getMarkerPos respawnTeamPlayer) < distanceMission + 3000 };
+		private _convoyPairs = [];
+		{
+			private _site = _x;
+			if ((getMarkerPos _site) distance (getMarkerPos respawnTeamPlayer) > distanceMission) then {continue};
+			if (sidesX getVariable [_site, teamPlayer] == teamPlayer) then {continue};
+			private _base = [_site, _possibleBases] call A3A_fnc_findBasesForConvoy;
+			if (_base != "") then {
+				_possibleMarkers pushBack _site;
+				_convoyPairs pushBack [_site, _base];
 			};
-		};
+		} forEach _markers;
 
 		if (count _possibleMarkers == 0) then
 		{
 			if (!_silent) then {
-				[petros,"globalChat","I have no Convoy missions for you. Move our HQ closer to the enemy"] remoteExec ["A3A_fnc_commsMP",_requester];
-				[petros,"hint","Convoy Missions require Airports or Cities closer than 5Km from your HQ, and they must have an idle friendly base in their surroundings.", "Missions"] remoteExec ["A3A_fnc_commsMP",_requester];
+				[petros,"globalChat","I have no Convoy missions for you. Move our HQ closer to the enemy."] remoteExec ["A3A_fnc_commsMP",_requester];
+				[petros,"hint","Convoy Missions require nearby enemy facilities, with a road route to an idle base within 3km.", "Missions"] remoteExec ["A3A_fnc_commsMP",_requester];
 			};
 		} else {
-			private _site = selectRandom _possibleMarkers;
-			private _base = [_site] call A3A_fnc_findBasesForConvoy;
-			[[_site,_base],"A3A_fnc_convoy"] remoteExec ["A3A_fnc_scheduler",2];
+			private _convoyPair = selectRandom _convoyPairs;
+			[_convoyPair,"A3A_fnc_convoy"] remoteExec ["A3A_fnc_scheduler",2];
 		};
 	};
 
 	default {
-        Error_1("%1 is not an accepted task type", _type);
+        Error_1("%1 is not an accepted task type.", _type);
 	};
 };
 

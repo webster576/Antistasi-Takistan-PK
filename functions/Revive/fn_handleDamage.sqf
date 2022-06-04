@@ -48,13 +48,12 @@ private _makeUnconscious =
 	params ["_unit", "_injurer"];
 	_unit setVariable ["incapacitated",true,true];
 	_unit setUnconscious true;
-	_unit allowDamage false;
 	if (vehicle _unit != _unit) then
 	{
 		moveOut _unit;
 	};
-	
 	if (isPlayer _unit) then {
+		_unit allowDamage false;
 		// Func. Trying to switch command to most appropriete remain unit.
 		private _switchToNextMostApproprieteUnit = {
 			params ["_unit_group", "_group_owner"];
@@ -112,7 +111,6 @@ private _makeUnconscious =
 			[_player_group_units, _unit_owner] call _switchToNextMostApproprieteUnit;
 		};
 	};
-	
 	private _fromside = if (!isNull _injurer) then {side group _injurer} else {sideUnknown};
 	[_unit,_fromside] spawn A3A_fnc_unconscious;
 };

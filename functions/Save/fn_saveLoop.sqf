@@ -4,10 +4,10 @@ if (!isServer) exitWith {
     Error("Miscalled server-only function");
 };
 
-if (savingServer) exitWith {["Save Game", "Server data save is still in progress"] remoteExecCall ["A3A_fnc_customHint",theBoss]};
+if (savingServer) exitWith {["Save Game", "Server data save is still in progress..."] remoteExecCall ["A3A_fnc_customHint",theBoss]};
 savingServer = true;
 Info("Starting persistent save");
-["Persistent Save Starting","Starting persistent save..."] remoteExec ["A3A_fnc_customHint",0,false];
+["Persistent Save","Starting persistent save..."] remoteExec ["A3A_fnc_customHint",0,false];
 
 // Set next autosave time, so that we won't run another shortly after a manual save
 autoSaveTime = time + autoSaveInterval;
@@ -113,17 +113,19 @@ _vehInGarage = _vehInGarage + vehInGarage;
 ["resourcesFIA", _resourcesBackground] call A3A_fnc_setStatVariable;
 ["hr", _hrBackground] call A3A_fnc_setStatVariable;
 ["vehInGarage", _vehInGarage] call A3A_fnc_setStatVariable;
+["HR_Garage", [] call HR_GRG_fnc_getSaveData] call A3A_fnc_setStatVariable;
 
 _arrayEst = [];
 {
 	_veh = _x;
 	_typeVehX = typeOf _veh;
 	if ((_veh distance getMarkerPos respawnTeamPlayer < 50) and !(_veh in staticsToSave) and !(_typeVehX in ["ACE_SandbagObject","Land_FoodSacks_01_cargo_brown_F","Land_Pallet_F"])) then {
-		if (((not (_veh isKindOf "StaticWeapon")) and (not (_veh isKindOf "ReammoBox")) and (not (_veh isKindOf "ReammoBox_F")) and (not (_veh isKindOf "FlagCarrier")) and (not(_veh isKindOf "Building"))) and (not (_typeVehX == "C_Van_01_box_F")) and (count attachedObjects _veh == 0) and (alive _veh) and ({(alive _x) and (!isPlayer _x)} count crew _veh == 0) and (not(_typeVehX == "WeaponHolderSimulated"))) then {
+		if (((not (_veh isKindOf "StaticWeapon")) and (not (_veh isKindOf "ReammoBox")) and (not (_veh isKindOf "ReammoBox_F")) and (not(_veh isKindOf "Building"))) and (not (_typeVehX == "C_Van_01_box_F")) and (count attachedObjects _veh == 0) and (alive _veh) and ({(alive _x) and (!isPlayer _x)} count crew _veh == 0) and (not(_typeVehX == "WeaponHolderSimulated"))) then {
 			_posVeh = getPosWorld _veh;
 			_xVectorUp = vectorUp _veh;
 			_xVectorDir = vectorDir _veh;
-			_arrayEst pushBack [_typeVehX,_posVeh,_xVectorUp,_xVectorDir];
+            private _state = [_veh] call HR_GRG_fnc_getState;
+			_arrayEst pushBack [_typeVehX,_posVeh,_xVectorUp,_xVectorDir, _state];
 		};
 	};
 } forEach vehicles - [boxX,flagX,fireX,vehicleBox,mapX];
@@ -175,7 +177,10 @@ _wurzelGarrison = [];
 ["usesWurzelGarrison", true] call A3A_fnc_setStatVariable;
 
 _arrayMines = [];
+private _mineChance = 500 / (500 max count allMines);
 {
+	// randomly discard mines down to ~500 to avoid ballooning saves
+	if (random 1 > _mineChance) then { continue };
 	_typeMine = typeOf _x;
 	_posMine = getPos _x;
 	_dirMine = getDir _x;
@@ -189,7 +194,7 @@ _arrayMines = [];
 	if (_x mineDetectedBy Invaders) then {
 		_detected pushBack Invaders
 	};
-	_arrayMines = _arrayMines + [[_typeMine,_posMine,_detected,_dirMine]];
+	_arrayMines pushBack [_typeMine,_posMine,_detected,_dirMine];
 } forEach allMines;
 
 ["minesX", _arrayMines] call A3A_fnc_setStatVariable;
@@ -225,7 +230,7 @@ _dataX = [];
 _dataX = [];
 {
 	_dataX pushBack [_x,timer getVariable _x];
-} forEach (vehAttack + vehNATOAttackHelis + vehPlanes + vehCSATAttackHelis);
+} forEach (vehAttack + vehMRLS + vehAA + vehHelis + vehFixedWing + [vehNATOBoat, vehCSATBoat, staticATOccupants, staticAAOccupants, staticATInvaders, staticAAInvaders]);
 
 ["idleassets",_dataX] call A3A_fnc_setStatVariable;
 
@@ -245,5 +250,5 @@ _controlsX = controlsX select {(sidesX getVariable [_x,sideUnknown] == teamPlaye
 saveProfileNamespace;
 savingServer = false;
 _saveHintText = ["<t size='1.5'>",nameTeamPlayer," Assets:<br/><t color='#f0d498'>HR: ",str _hrBackground,"<br/>Money: ",str _resourcesBackground," €</t></t><br/><br/>Further infomation is provided in <t color='#f0d498'>Map Screen > Game Options > Persistent Save-game</t>."] joinString "";
-["Persistent Save Completed",_saveHintText] remoteExec ["A3A_fnc_customHint",0,false];
+["Persistent Save",_saveHintText] remoteExec ["A3A_fnc_customHint",0,false];
 Info("Persistent Save Completed");

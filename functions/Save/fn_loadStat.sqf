@@ -11,6 +11,7 @@
 */
 #include "..\..\Includes\common.inc"
 FIX_LINE_NUMBERS()
+
 private _translateMarker = {
 	params ["_mrk"];
 	if (_mrk find "puesto" == 0) exitWith { "outpost" + (_mrk select [6]) };
@@ -25,7 +26,7 @@ private _specialVarLoads = [
 	"garrison","tasks","smallCAmrk","membersX","vehInGarage","destroyedBuildings","idlebases",
 	"idleassets","chopForest","weather","killZones","jna_dataList","controlsSDK","mrkCSAT","nextTick",
 	"bombRuns","wurzelGarrison","aggressionOccupants", "aggressionInvaders",
-	"countCA", "attackCountdownInvaders", "testingTimerIsActive", "version"
+	"countCA", "attackCountdownInvaders", "testingTimerIsActive", "version", "HR_Garage"
 ];
 
 private _varName = _this select 0;
@@ -76,7 +77,9 @@ if (_varName in _specialVarLoads) then {
 	if (_varName == 'hr') then {server setVariable ["HR",_varValue,true]};
 	if (_varName == 'dateX') then {setDate _varValue};
 	if (_varName == 'weather') then {
-		0 setFog (_varValue select 0);
+		// Avoid persisting potentially-broken fog values
+		private _fogParams = _varValue select 0;
+		0 setFog [_fogParams#0, (_fogParams#1) max 0, (_fogParams#2) max 0];
 		0 setRain (_varValue select 1);
 		forceWeatherChange
 	};
@@ -92,7 +95,14 @@ if (_varName in _specialVarLoads) then {
 			server setVariable [_x,_costs,true];
 		} forEach soldiersSDK;
 	};
-	if (_varName == 'vehInGarage') then {vehInGarage= +_varValue; publicVariable "vehInGarage"};
+    if (_varname == "HR_Garage") then {
+        [_varValue] call HR_GRG_fnc_loadSaveData;
+    };
+	if (_varName == 'vehInGarage') then { //convert old garage to new garage
+        vehInGarage= [];
+        publicVariable "vehInGarage";
+        [_varValue, ""] call HR_GRG_fnc_addVehiclesByClass;
+    };
 	if (_varName == 'destroyedBuildings') then {
 		{
 			// nearestObject sometimes picks the wrong building and is several times slower
@@ -114,36 +124,35 @@ if (_varName in _specialVarLoads) then {
 	};
 	if (_varName == 'minesX') then {
 		for "_i" from 0 to (count _varvalue) - 1 do {
-			_typeMine = _varvalue select _i select 0;
-			switch _typeMine do {
-				case "APERSMine_Range_Ammo": {_typeMine = "APERSMine"};
-				case "ATMine_Range_Ammo": {_typeMine = "ATMine"};
-				case "APERSBoundingMine_Range_Ammo": {_typeMine = "APERSBoundingMine"};
-				case "SLAMDirectionalMine_Wire_Ammo": {_typeMine = "SLAMDirectionalMine"};
-				case "APERSTripMine_Wire_Ammo": {_typeMine = "APERSTripMine"};
-				case "ClaymoreDirectionalMine_Remote_Ammo": {_typeMine = "Claymore_F"};
-			};
-			_posMine = _varvalue select _i select 1;
-			_mineX = createMine [_typeMine, _posMine, [], 0];
-			_detected = _varvalue select _i select 2;
+			(_varvalue select _i) params ["_typeMine", "_posMine", "_detected", "_dirMine"];
+			private _mineX = createVehicle [_typeMine, _posMine, [], 0, "CAN_COLLIDE"];
+			if !(isNil "_dirMine") then { _mineX setDir _dirMine };
 			{_x revealMine _mineX} forEach _detected;
-			if (count (_varvalue select _i) > 3) then {
-				_dirMine = _varvalue select _i select 3;
-				_mineX setDir _dirMine;
-			};
 		};
 	};
 	if (_varName == 'garrison') then {
 		{
-			garrison setVariable [[_x select 0] call _translateMarker, _x select 1, true];
+			private _garrison = [];
+			{
+				if !(_x isEqualType "") then { continue };		// skip garbage created by old bugs
+				if (_x isEqualTo "") then { continue };
+				if (_x find "loadouts_rebel" == 0) then {
+					// fix for 2.4 -> 2.5 rebel garrison incompatibility
+					_garrison pushBack ("loadouts_reb" + (_x select [14]));
+				} else {
+					_garrison pushBack _x;
+				};
+			} forEach (_x select 1);
+
+			garrison setVariable [[_x select 0] call _translateMarker, _garrison, true];
 			if (count _x > 2) then { garrison setVariable [(_x select 0) + "_lootCD", _x select 2, true] };
 		} forEach _varvalue;
 	};
 	if (_varName == 'wurzelGarrison') then {
 		{
-			garrison setVariable [format ["%1_garrison", (_x select 0)], _x select 1, true];
-			garrison setVariable [format ["%1_requested", (_x select 0)], _x select 2, true];
-			garrison setVariable [format ["%1_over", (_x select 0)], _x select 3, true];
+			garrison setVariable [format ["%1_garrison", (_x select 0)], +(_x select 1), true];
+			garrison setVariable [format ["%1_requested", (_x select 0)], +(_x select 2), true];
+			garrison setVariable [format ["%1_over", (_x select 0)], +(_x select 3), true];
 			[(_x select 0)] call A3A_fnc_updateReinfState;
 		} forEach _varvalue;
 	};
@@ -258,15 +267,11 @@ if (_varName in _specialVarLoads) then {
 	};
 	if (_varname == 'staticsX') then {
 		for "_i" from 0 to (count _varvalue) - 1 do {
-			_typeVehX = _varvalue select _i select 0;
-			_posVeh = _varvalue select _i select 1;
-			_xVectorUp = _varvalue select _i select 2;
-			_xVectorDir = _varvalue select _i select 3;
+            (_varValue#_i) params ["_typeVehX", "_posVeh", "_xVectorUp", "_xVectorDir", "_state"];
 			private _veh = createVehicle [_typeVehX,[0,0,1000],[],0,"CAN_COLLIDE"];
 			// This is only here to handle old save states. Could be removed after a few version itterations. -Hazey
-			if ((_varvalue select _i select 2) isEqualType 0) then { // We have to check number because old save state might still be using getDir. -Hazey
-				_dirVeh = _varvalue select _i select 2;
-				_veh setDir _dirVeh;
+			if (_xVectorUp isEqualType 0) then { // We have to check number because old save state might still be using getDir. -Hazey
+				_veh setDir _xVectorUp; //is direction due to old save
 				_veh setVectorUp surfaceNormal (_posVeh);
 				_veh setPosATL _posVeh;
 			} else {
@@ -278,6 +283,9 @@ if (_varName in _specialVarLoads) then {
 				staticsToSave pushBack _veh;
 			}
 			else {
+                if (!isNil "_state") then {
+                    [_veh, _state] call HR_GRG_fnc_setState;
+                };
 				[_veh] spawn A3A_fnc_vehDespawner;
 			};
 		};

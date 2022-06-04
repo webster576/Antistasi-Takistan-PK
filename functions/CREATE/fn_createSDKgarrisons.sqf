@@ -15,7 +15,7 @@ if (_markerX != "Synd_HQ") then
 	if (!(_markerX in citiesX)) then
 	{
 		private _veh = createVehicle [SDKFlag, _positionX, [],0, "NONE"];
-		if (A3A_hasIFA) then {_veh setFlagTexture SDKFlagTexture};
+		_veh setFlagTexture SDKFlagTexture;
 		_veh allowDamage false;
 		_vehiclesX pushBack _veh;
 		[_veh,"SDKFlag"] remoteExec ["A3A_fnc_flagaction",0,_veh];
@@ -92,10 +92,11 @@ if (staticCrewTeamPlayer in _garrison) then
 
 // Move riflemen into saved static weapons in area
 {
+	if !(isNil {_x getVariable "lockedForAI"}) then { continue };
 	private _index = _garrison findIf {_x in SDKMil};
 	if (_index == -1) exitWith {};
 	private _unit = objNull;
-	if (typeOf _x == SDKMortar) then
+	if (typeOf _x in vehMortars) then
 	{
 		if (isNull _groupMortars) then { _groupMortars = createGroup teamPlayer };
 		_unit = [_groupMortars, (_garrison select _index), _positionX, [], 0, "NONE"] call A3A_fnc_createUnit;

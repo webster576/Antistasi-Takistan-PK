@@ -46,17 +46,17 @@
 ["vehiclesHelisAttack", ["I_Heli_light_03_dynamicLoadout_F"]] call _fnc_saveToTemplate; 		//this line determines attack helis -- Example: ["vehiclesHelisAttack", ["B_Heli_Attack_01_F"]] -- Array, can contain multiple assets
 
 ["vehiclesArtillery", [
-["B_MBT_01_arty_F",["32Rnd_155mm_Mo_shells"]],
-["I_Truck_02_MRL_F", ["12Rnd_230mm_rockets"]]
+["I_Truck_02_MRL_F", ["12Rnd_230mm_rockets"]],
+["B_MBT_01_arty_F",["32Rnd_155mm_Mo_shells"]]
 ]] call _fnc_saveToTemplate; 		//this line determines artillery vehicles -- Example: ["vehiclesArtillery", [["B_MBT_01_arty_F", ["32Rnd_155mm_Mo_shells"]]]] -- Array, can contain multiple assets
 
 ["uavsAttack", ["I_UAV_02_dynamicLoadout_F"]] call _fnc_saveToTemplate; 				//this line determines attack UAVs -- Example: ["uavsAttack", ["B_UAV_02_CAS_F"]] -- Array, can contain multiple assets
 ["uavsPortable", ["I_UAV_01_F"]] call _fnc_saveToTemplate; 				//this line determines portable UAVs -- Example: ["uavsPortable", ["B_UAV_01_F"]] -- Array, can contain multiple assets
 
 //Config special vehicles - militia vehicles are mostly used in the early game, police cars are being used by troops around cities -- Example:
-["vehiclesMilitiaLightArmed", ["I_MRAP_03_hmg_F"]] call _fnc_saveToTemplate; //this line determines lightly armed militia vehicles -- Example: ["vehiclesMilitiaLightArmed", ["B_G_Offroad_01_armed_F"]] -- Array, can contain multiple assets
+["vehiclesMilitiaLightArmed", ["B_G_Offroad_01_armed_F"]] call _fnc_saveToTemplate; //this line determines lightly armed militia vehicles -- Example: ["vehiclesMilitiaLightArmed", ["B_G_Offroad_01_armed_F"]] -- Array, can contain multiple assets
 ["vehiclesMilitiaTrucks", ["I_Truck_02_transport_F", "I_Truck_02_covered_F"]] call _fnc_saveToTemplate; 	//this line determines militia trucks (unarmed) -- Example: ["vehiclesMilitiaTrucks", ["B_G_Van_01_transport_F"]] -- Array, can contain multiple assets
-["vehiclesMilitiaCars", ["I_MRAP_03_F"]] call _fnc_saveToTemplate; 		//this line determines militia cars (unarmed) -- Example: ["vehiclesMilitiaCars", ["B_G_Offroad_01_F"]] -- Array, can contain multiple assets
+["vehiclesMilitiaCars", ["B_G_Offroad_01_F"]] call _fnc_saveToTemplate; 		//this line determines militia cars (unarmed) -- Example: ["vehiclesMilitiaCars", ["B_G_Offroad_01_F"]] -- Array, can contain multiple assets
 
 ["vehiclesPolice", ["B_GEN_Offroad_01_gen_F"]] call _fnc_saveToTemplate; 			//this line determines police cars -- Example: ["vehiclesPolice", ["B_GEN_Offroad_01_gen_F"]] -- Array, can contain multiple assets
 
@@ -120,8 +120,8 @@ _loadoutData setVariable ["heavyExplosives", ["SatchelCharge_Remote_Mag"]]; 			/
 
 _loadoutData setVariable ["antiInfantryGrenades", ["HandGrenade", "MiniGrenade"]]; 		//this line determines anti infantry grenades (frag and such) -- Example: ["HandGrenade", "MiniGrenade"] -- Array, can contain multiple assets
 _loadoutData setVariable ["antiTankGrenades", []]; 			//this line determines anti tank grenades. Leave empty when not available. -- Array, can contain multiple assets
-_loadoutData setVariable ["smokeGrenades", ["SmokeShell", "SmokeShellYellow", "SmokeShellRed", "SmokeShellPurple", "SmokeShellOrange", "SmokeShellGreen", "SmokeShellBlue"]];
-
+_loadoutData setVariable ["smokeGrenades", ["SmokeShell"]];
+_loadoutData setVariable ["signalsmokeGrenades", ["SmokeShellYellow", "SmokeShellRed", "SmokeShellPurple", "SmokeShellOrange", "SmokeShellGreen", "SmokeShellBlue"]];
 
 //Basic equipment. Shouldn't need touching most of the time.
 //Mods might override this, or certain mods might want items removed (No GPSs in WW2, for example)
@@ -186,7 +186,7 @@ _sfLoadoutData setVariable ["rifles", [
 ["arifle_Mk20_F", "muzzle_snds_M", "acc_pointer_IR", "optic_Hamr", ["30Rnd_556x45_Stanag", "30Rnd_556x45_Stanag", "30Rnd_556x45_Stanag_Tracer_Yellow"], [], ""]
 ]];
 _sfLoadoutData setVariable ["carbines", [
-["arifle_Mk20C_F", "muzzle_snds_65_TI_blk_F", "acc_pointer_IR", "optic_Holosight_blk_F", ["30Rnd_556x45_Stanag", "30Rnd_556x45_Stanag", "30Rnd_556x45_Stanag_Tracer_Yellow"], [], ""],
+["arifle_Mk20C_F", "muzzle_snds_M", "acc_pointer_IR", "optic_Holosight_blk_F", ["30Rnd_556x45_Stanag", "30Rnd_556x45_Stanag", "30Rnd_556x45_Stanag_Tracer_Yellow"], [], ""],
 ["arifle_Mk20C_F", "muzzle_snds_M", "acc_pointer_IR", "optic_Holosight_lush_F", ["30Rnd_556x45_Stanag", "30Rnd_556x45_Stanag", "30Rnd_556x45_Stanag_Tracer_Yellow"], [], ""]
 ]];
 _sfLoadoutData setVariable ["grenadeLaunchers", [
@@ -322,6 +322,7 @@ _militiaLoadoutData setVariable ["machineGuns", [
 ["LMG_Mk200_F", "", "", "", ["200Rnd_65x39_cased_Box_Red", "200Rnd_65x39_cased_Box_Red", "200Rnd_65x39_cased_Box_Tracer_Red"], [], "bipod_03_f_blk"]
 ]];
 _militiaLoadoutData setVariable ["marksmanRifles", [["srifle_EBR_F", "", "", "optic_MRCO", [], [], ""] ]];
+_militiaLoadoutData setVariable ["sniperRifles", [["srifle_EBR_F", "", "", "optic_SOS", [], [], ""] ]];
 _militiaLoadoutData setVariable ["sidearms", ["hgun_ACPC2_F"]];
 
 //////////////////////////
@@ -370,7 +371,7 @@ private _squadLeaderTemplate = {
 	["items_squadLeader_extras"] call _fnc_addItemSet;
 	["items_miscEssentials"] call _fnc_addItemSet;
 	["antiInfantryGrenades", 2] call _fnc_addItem;
-	["smokeGrenades", 2] call _fnc_addItem;
+	["signalsmokeGrenades", 2] call _fnc_addItem;
 	["smokeGrenades", 2] call _fnc_addItem;
 
 	["maps"] call _fnc_addMap;

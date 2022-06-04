@@ -196,10 +196,31 @@ switch (true) do
     };
 };
 
+// Avoid making area attacks against friendlies or groups of houses, although "mistakes" can be made
+private _friendlyCount = count (units side _group inAreaArray [getpos _enemy, 150, 150]);
+private _maxFriendlies = if (side _group == Invaders) then { random [1, 2, 10] } else { random [0, 0, 5] };
+
+private _nearHouses = call {
+	if (side _group == Invaders) exitWith { 0 };		// invaders are fine with bombing towns
+	// many buildings within military facilities also count as HOUSE, so first check if we're inside a town radius
+	private _cityIndex = citiesX findIf { _enemy inArea _x };
+	if (_cityIndex == -1) exitWith { 0 };
+	count nearestTerrainObjects [getpos _enemy, ["HOUSE"], 100, false];
+};
+private _maxHouses = (1 + random 5) ^ 2;
+
+if (_friendlyCount > _maxFriendlies or _nearHouses > _maxHouses) then
+{
+	ServerDebug_3("Area attacks blocked at %1 due to %2 friendlies and %3 houses", getpos _enemy, _friendlyCount, _nearHouses);
+    _supportTypes = _supportTypes - ["MORTAR", "AIRSTRIKE", "CARPETBOMB", "MISSILE", "ORBSTRIKE"];
+};
+
 if(_forceSupport) then
 {
     //Remove the slow QRF support if too far away, help needs to be there fast
     _supportTypes = _supportTypes - ["QRF"];
+    //meh, leave it as a fallback at least
+    _supportTypes pushBack "QRF";
 };
 
 _supportTypes;

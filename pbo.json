@@ -1,0 +1,17 @@
+{
+    "compress": {
+        "exclude": [
+        ],
+        "include": [
+            "\\.sqf$",
+            "\\.txt$",
+            "\\.xml$"
+        ]
+    },
+    "headers": [
+        {
+            "name": "prefix",
+            "value": "Antistasi\\Finished releases\\New packed\\Antistasi-Takistan-2-5-3.takistan"
+        }
+    ]
+}

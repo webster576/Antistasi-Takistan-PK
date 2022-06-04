@@ -19,6 +19,7 @@ if (isServer) then {
 	} ];
 };
 
+removeAllActions _oldUnit;
 _nul = [_oldUnit] spawn A3A_fnc_postmortem;
 
 _oldUnit setVariable ["incapacitated",false,true];
@@ -28,7 +29,7 @@ if (side group player == teamPlayer) then
 	{
 	_owner = _oldUnit getVariable ["owner",_oldUnit];
 
-	if (_owner != _oldUnit) exitWith {["Remote AI", "Died while remote controlling AI"] call A3A_fnc_customHint; selectPlayer _owner; disableUserInput false; deleteVehicle _newUnit};
+	if (_owner != _oldUnit) exitWith {["Remote AI", "Died while remote controlling AI."] call A3A_fnc_customHint; selectPlayer _owner; disableUserInput false; deleteVehicle _newUnit};
 
 	_nul = [0,-1,getPos _oldUnit] remoteExec ["A3A_fnc_citySupportChange",2];
 
@@ -76,15 +77,10 @@ if (side group player == teamPlayer) then
 		{
 		[_newUnit, true] remoteExec ["A3A_fnc_theBossTransfer", 2];
 		};
-
-
-	removeAllItemsWithMagazines _newUnit;
-	{_newUnit removeWeaponGlobal _x} forEach weapons _newUnit;
-	removeBackpackGlobal _newUnit;
-	removeVest _newUnit;
-	removeAllAssignedItems _newUnit;
 	//Give them a map, in case they're commander and need to replace petros.
-	_newUnit linkItem "ItemMap";
+	_newUnit setUnitLoadout [[],[],[],[selectRandom ((A3A_faction_civ getVariable "uniforms") + (A3A_faction_reb getVariable "uniforms")), []],[],[],selectRandom (A3A_faction_civ getVariable "headgear"),"",[],
+	[(selectRandom unlockedmaps),"","",(selectRandom unlockedCompasses),(selectRandom unlockedwatches),""]];
+
 	if (!isPlayer (leader group player)) then {(group player) selectLeader player};
 	player addEventHandler ["FIRED",
 		{
@@ -221,7 +217,7 @@ if (side group player == teamPlayer) then
 				};
 				_markersX = markersX select {sidesX getVariable [_x,sideUnknown] == teamPlayer};
 				_pos = position _veh;
-				if (_markersX findIf {_pos inArea _x} != -1) then {["Static Deployed", "Static weapon has been deployed for use in a nearby zone, and will be used by garrison militia if you leave it here the next time the zone spawns"] call A3A_fnc_customHint;};
+				if (_markersX findIf {_pos inArea _x} != -1) then {["Static Deployed", "Static weapon has been deployed for use in a nearby zone, and will be used by garrison militia if you leave it here the next time the zone spawns."] call A3A_fnc_customHint;};
 			};
 		}];
 	player addEventHandler ["WeaponDisassembled",
@@ -238,6 +234,7 @@ if (side group player == teamPlayer) then
 	[] execVM "OrgPlayers\unitTraits.sqf";
 	[] spawn A3A_fnc_statistics;
 	if (LootToCrateEnabled) then {call A3A_fnc_initLootToCrate};
+	call A3A_fnc_dropObject;
 	}
 else
 	{

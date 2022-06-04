@@ -158,19 +158,21 @@ else
 		_size = [_markerX] call A3A_fnc_sizeMarker;
 		if ({if (_x inArea _markerX) exitWith {1}} count allMines == 0) then
 			{
-			for "_i" from 1 to 60 do
-				{
-				_mineX = createMine ["APERSMine",_positionX,[],_size];
-				if (_sideX == Occupants) then {Occupants revealMine _mineX} else {Invaders revealMine _mineX};
+			Debug_1("Creating a Minefield at %1", _markerX);
+				private _mines = ([A3A_faction_inv,A3A_faction_occ] select (_sideX == Occupants)) getVariable "minefieldAPERS";
+				private _revealTo = [Invaders,Occupants] select (_sideX == Occupants);
+				for "_i" from 1 to 45 do {
+					_mineX = createMine [ selectRandom _mines ,_positionX,[],_size];
+					_revealTo revealMine _mineX;
 				};
 			};
 		_groupX = [_positionX,_sideX, _cfg] call A3A_fnc_spawnGroup;
 		_nul = [leader _groupX, _markerX, "SAFE","SPAWNED","RANDOM","NOVEH2","NOFOLLOW"] execVM "scripts\UPSMON.sqf";//TODO need delete UPSMON link
-		if !(A3A_hasIFA) then
+		_typeVehX = if (_sideX == Occupants) then {vehNATOUAVSmall} else {vehCSATUAVSmall};
+		if (_typeVehX != "not_supported") then
 			{
 			sleep 1;
 			{_soldiers pushBack _x} forEach units _groupX;
-			_typeVehX = if (_sideX == Occupants) then {vehNATOUAVSmall} else {vehCSATUAVSmall};
 			_uav = createVehicle [_typeVehX, _positionX, [], 0, "FLY"];
 			[_sideX, _uav] call A3A_fnc_createVehicleCrew;
 			_vehiclesX pushBack _uav;

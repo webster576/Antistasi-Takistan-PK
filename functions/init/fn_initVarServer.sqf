@@ -103,7 +103,7 @@ DECLARE_SERVER_VAR(A3A_taskCount, 0);
 //List of statics (MGs, AA, etc) that will be saved and loaded.
 DECLARE_SERVER_VAR(staticsToSave, []);
 //Whether the players have access to radios.
-DECLARE_SERVER_VAR(haveRadio, A3A_hasTFAR || A3A_hasACRE || A3A_hasTFARBeta);
+DECLARE_SERVER_VAR(haveRadio, call A3A_fnc_checkRadiosUnlocked);
 //List of vehicles that are reported (I.e - Players can't go undercover in them)
 DECLARE_SERVER_VAR(reportedVehs, []);
 //Currently destroyed buildings.
@@ -112,6 +112,8 @@ DECLARE_SERVER_VAR(reportedVehs, []);
 server setVariable ["hr",8,true];
 //Initial faction money pool
 server setVariable ["resourcesFIA",1000,true];
+// Time of last garbage clean. Note: serverTime may not reset to zero if server was not restarted. Therefore, it should capture the time at start of mission.
+DECLARE_SERVER_VAR(A3A_lastGarbageCleanTime, serverTime);
 
 ////////////////////////////////////
 //     SERVER ONLY VARIABLES     ///
@@ -183,9 +185,7 @@ private _otherEquipmentArrayNames = [
 	"invaderBackpackDevice",
 	"occupantBackpackDevice",
 	"rebelBackpackDevice",
-	"civilianBackpackDevice",
-	"diveGear",
-	"flyGear"
+	"civilianBackpackDevice"
 ];
 
 DECLARE_SERVER_VAR(otherEquipmentArrayNames, _otherEquipmentArrayNames);
@@ -199,7 +199,7 @@ everyEquipmentRelatedArrayName = allEquipmentArrayNames + unlockedEquipmentArray
 } forEach everyEquipmentRelatedArrayName;
 
 //Create a global namespace for custom unit types.
-DECLARE_SERVER_VAR(customUnitTypes, [true] call A3A_fnc_createNamespace);
+DECLARE_SERVER_VAR(A3A_customUnitTypes, [true] call A3A_fnc_createNamespace);
 
 ////////////////////////////////////
 //          MOD CONFIG           ///
@@ -222,9 +222,9 @@ FIX_LINE_NUMBERS()
 				["TF_give_personal_radio_to_regular_soldier", false, true,"mission"] call CBA_settings_fnc_set;
 				["TF_give_microdagr_to_soldier", false, true,"mission"] call CBA_settings_fnc_set;
 				};
-			//tf_teamPlayer_radio_code = "";publicVariable "tf_teamPlayer_radio_code";								//to make enemy vehicles usable as LR radio
-			//tf_east_radio_code = tf_teamPlayer_radio_code; publicVariable "tf_east_radio_code";					//to make enemy vehicles usable as LR radio
-			//tf_guer_radio_code = tf_teamPlayer_radio_code; publicVariable "tf_guer_radio_code";					//to make enemy vehicles usable as LR radio
+			tf_teamPlayer_radio_code = "";publicVariable "tf_teamPlayer_radio_code";								//to make enemy vehicles usable as LR radio
+			tf_east_radio_code = tf_teamPlayer_radio_code; publicVariable "tf_east_radio_code";					//to make enemy vehicles usable as LR radio
+			tf_guer_radio_code = tf_teamPlayer_radio_code; publicVariable "tf_guer_radio_code";					//to make enemy vehicles usable as LR radio
 			["TF_same_sw_frequencies_for_side", true, true,"mission"] call CBA_settings_fnc_set;						//synchronize SR default frequencies
 			["TF_same_lr_frequencies_for_side", true, true,"mission"] call CBA_settings_fnc_set;						//synchronize LR default frequencies
 		};
@@ -251,6 +251,7 @@ private _templateVariables = [
 	"nameTeamPlayer",
 	"SDKFlag",
 	"SDKFlagTexture",
+	"SDKFlagMarkerType",
 	"typePetros",
 	"staticCrewTeamPlayer",
 	"SDKUnarmed",
@@ -489,6 +490,8 @@ private _templateVariables = [
 } forEach _templateVariables;
 
 call compile preProcessFileLineNumbers "Templates\selector.sqf";
+//Set SDKFlagTexture on FlagX
+if (local flagX) then { flagX setFlagTexture SDKFlagTexture } else { [flagX, SDKFlagTexture] remoteExec ["setFlagTexture", owner flagX] };
 
 ////////////////////////////////////
 //     TEMPLATE SANITY CHECK      //
@@ -700,7 +703,10 @@ DECLARE_SERVER_VAR(vehAA, _vehAA);
 private _vehMRLS = [vehCSATMRLS, vehNATOMRLS];
 DECLARE_SERVER_VAR(vehMRLS, _vehMRLS);
 
-private _vehArmor = [vehTanks,vehAA,vehMRLS] + vehAPCs;
+private _vehMortars = [SDKMortar, NATOMortar, CSATMortar];
+DECLARE_SERVER_VAR(vehMortars, _vehMortars);
+
+private _vehArmor = vehTanks + vehAA + vehMRLS + vehAPCs;
 DECLARE_SERVER_VAR(vehArmor, _vehArmor);
 
 private _vehTransportAir = vehNATOTransportHelis + vehCSATTransportHelis + vehNATOTransportPlanes + vehCSATTransportPlanes;
@@ -713,6 +719,7 @@ private _vehUnlimited = vehNATONormal + vehCSATNormal + [vehNATORBoat,vehNATOPat
 DECLARE_SERVER_VAR(vehUnlimited, _vehUnlimited);
 
 private _vehFIA = [vehSDKBike,vehSDKAT,vehSDKATM,vehSDKHpodnos,vehSDKGL,vehSDKATGM,vehSDKBTR80,vehSDKBMD,vehSDKBMP,vehSDKBTR80A,vehSDKZSU,vehSDKT3485,vehSDKT55,vehSDKT72BA,vehSDKM60A3,vehSDK2S1,vehSDKBM21,vehSDKLightArmed,vehSDKLightTruck,vehSDKMediumTruck,vehSDKHeavyTruck,SDKAAStatic,SDKMGStatic,SDKMGStatic1,SDKATStatic,SDKD30,SDKGLStatic,vehSDKLightUnarmed,vehSDKTruck,vehSDKBoat,SDKMortar,staticATteamPlayer,staticAAteamPlayer,vehSDKRepair,vehSDKFuel,vehSDKAmmo,vehSDKHeal,vehSDKCarrier];
+if (vehSDKAA != "not_supported") then { _vehFIA pushBack vehSDKAA };
 DECLARE_SERVER_VAR(vehFIA, _vehFIA);
 
 private _vehCargoTrucks = (vehTrucks + vehNATOCargoTrucks) select { [_x] call A3A_fnc_logistics_getVehCapacity > 1 };
@@ -739,7 +746,8 @@ if (A3A_hasIFA) then {
 ////////////////////////////////////
 //     ACRE ITEM MODIFICATIONS   ///
 ////////////////////////////////////
-if (A3A_hasACRE) then {initialRebelEquipment append ["ACRE_PRC343","ACRE_PRC148","ACRE_PRC152","ACRE_PRC77","ACRE_PRC117F"];};
+if (A3A_hasACRE) then {initialRebelEquipment append ["ACRE_PRC343","ACRE_PRC148","ACRE_PRC152","ACRE_SEM52SL"];};
+if (A3A_hasACRE && startWithLongRangeRadio) then {initialRebelEquipment append ["ACRE_SEM70", "ACRE_PRC117F", "ACRE_PRC77"];};
 
 ////////////////////////////////////
 //    UNIT AND VEHICLE PRICES    ///

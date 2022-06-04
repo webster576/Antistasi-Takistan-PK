@@ -1,5 +1,3 @@
-#include "..\Garage\defineGarage.inc"
-
 private ["_flag","_typeX"];
 
 if (!hasInterface) exitWith {};
@@ -71,10 +69,6 @@ switch _typeX do
             [_flag] call A3A_fnc_logistics_addLoadAction;
         };
     };
-    case "moveS":
-    {
-        _flag addAction [localize "$STR_antistasi_flag_action_moveAsset", A3A_fnc_moveHQObject,nil,0,false,true,"","(_this == theBoss)"]
-    };
     case "remove":
     {
         if (player == _flag) then
@@ -83,7 +77,8 @@ switch _typeX do
             {
                 removeAllActions _flag;
                 if (player == player getVariable ["owner",player]) then {[] call SA_Add_Player_Tow_Actions};
-                call A3A_fnc_initLootToCrate;
+                if (lootToCrateEnabled) then {call A3A_fnc_initLootToCrate};
+                call A3A_fnc_dropObject;
             }
             else
             {
@@ -120,22 +115,14 @@ switch _typeX do
     };
     case "garage":
     {
-        if (isMultiplayer) then
-        {
-            _flag addAction [localize "$STR_antistasi_flag_action_personal_garage", { [GARAGE_PERSONAL] spawn A3A_fnc_garage;},nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull])", 4];
-            _flag addAction [localize "$STR_antistasi_flag_action_fraction_garage", { [GARAGE_FACTION] spawn A3A_fnc_garage; },nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull])", 4];
-        }
-        else
-        {
-            _flag addAction [localize "$STR_antistasi_flag_action_fraction_garage", { [GARAGE_FACTION] spawn A3A_fnc_garage; },nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull])", 4]
-        };
+        [_flag] call HR_GRG_fnc_initGarage;
     };
     case "fireX":
     {
         fireX addAction [localize "$STR_antistasi_8_hours_rest", A3A_fnc_skiptime,nil,0,false,true,"","(_this == theBoss)",4];
         fireX addAction [localize "$STR_antistasi_clear_forest", A3A_fnc_clearForest,nil,0,false,true,"","(_this == theBoss)",4];
         fireX addAction [localize "$STR_antistasi_clear_fog", { [10,0] remoteExec ["setFog",2]; },nil,0,false,true,"","(_this == theBoss)",4];
-        fireX addAction [localize "$STR_antistasi_clear_rain", { [10,0] remoteExec ["setRain",2]; },nil,0,false,true,"","(_this == theBoss)",4];
+        fireX addAction [localize "$STR_antistasi_clear_rain", { [10,0] remoteExec ["setRain",2]; [60,0.25] remoteExec ["setOvercast",2] },nil,0,false,true,"","(_this == theBoss)",4];
         fireX addAction [localize "$STR_antistasi_flag_action_moveAsset", A3A_fnc_moveHQObject,nil,0,false,true,"","(_this == theBoss)",4];
     };
     case "SDKFlag":
@@ -143,22 +130,7 @@ switch _typeX do
         removeAllActions _flag;
         _flag addAction [localize "$STR_antistasi_flag_action_unitRecruitment", {if ([player,300] call A3A_fnc_enemyNearCheck) then {[localize "$STR_antistasi_flag_action_unitRecruitment", localize "$STR_antistasi_flag_action_unitRecruitment_enemies"] call A3A_fnc_customHint;} else { [] spawn A3A_fnc_unit_recruit; };},nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull])",4];
         _flag addAction [localize "$STR_antistasi_flag_action_buyVehicle", {if ([player,300] call A3A_fnc_enemyNearCheck) then {[localize "$STR_antistasi_flag_action_buyVehicle", localize "$STR_antistasi_flag_action_buyVehicle_enemies"] call A3A_fnc_customHint;} else {nul = createDialog "vehicle_option"}},nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull])",4];
-        
-        // Ability to by air vehicles. Jets and helicopters
-        _airportsX = airportsX select {(sidesX getVariable [_x,sideUnknown] == teamPlayer) and (player inArea _x)};
-        if (count _airportsX > 0) then {
-            _flag addAction [localize "STR_antistasi_buy_air_vehicle", {if ([player,300] call A3A_fnc_enemyNearCheck) then {[localize "STR_antistasi_buy_air_vehicle", localize "$STR_antistasi_flag_action_buyVehicle_enemies"] call A3A_fnc_customHint;} else {nul = [] spawn A3A_fnc_buyAirVehicle;}},nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull])",4];
-        };
-        
-        if (isMultiplayer) then
-        {
-            _flag addAction [localize "$STR_antistasi_flag_action_personal_garage", { [GARAGE_PERSONAL] spawn A3A_fnc_garage; },nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull])",4];
-            _flag addAction [localize "$STR_antistasi_flag_action_fraction_garage", { [GARAGE_FACTION] spawn A3A_fnc_garage; },nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull])",4];
-        }
-        else
-        {
-            _flag addAction [localize "$STR_antistasi_flag_action_fraction_garage", { [GARAGE_FACTION] spawn A3A_fnc_garage; },nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull])",4]
-        };
+        [_flag] call HR_GRG_fnc_initGarage;
     };
     case "Intel_Small":
     {
@@ -171,5 +143,17 @@ switch _typeX do
     case "Intel_Large":
     {
         _flag addAction ["Download Intel", A3A_fnc_searchIntelOnLaptop, nil, 4, true, false, "", "isPlayer _this", 4];
+    };
+    case "Intel_Encrypted":
+    {
+        _flag addAction ["Decifer Intel", A3A_fnc_searchEncryptedIntel, nil, 4, true, false, "", "isPlayer _this", 4];
+    };
+    case "static":
+    {
+        private _cond = "(_target getVariable ['ownerSide', teamPlayer] == teamPlayer) and (isNull attachedTo _target) and ([_this] call A3A_fnc_isMember) and ";
+        _flag addAction ["Allow AIs to use this weapon", A3A_fnc_unlockStatic, nil, 1, false, false, "", _cond+"!isNil {_target getVariable 'lockedForAI'}", 4];
+        _flag addAction ["Prevent AIs using this weapon", A3A_fnc_lockStatic, nil, 1, false, false, "", _cond+"isNil {_target getVariable 'lockedForAI'}", 4];
+    //    _flag addAction ["Kick AI off this weapon", A3A_fnc_lockStatic, nil, 1, true, false, "", _cond+"isNil {_target getVariable 'lockedForAI'} and !(isNull gunner _target) and !(isPlayer gunner _target)}", 4];
+        _flag addAction ["Move this asset", A3A_fnc_moveHQObject, nil, 1.5, false, false, "",  _cond+"(count crew _target == 0)", 4];
     };
 };

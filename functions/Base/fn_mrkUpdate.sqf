@@ -12,7 +12,7 @@ if (sidesX getVariable [_markerX,sideUnknown] == teamPlayer) then
 		_textX = format ["%2 Airbase%1",_textX,nameTeamPlayer];
 		[_mrkD,format ["%1 Airbase",nameTeamPlayer]] remoteExec ["setMarkerTextLocal",[Occupants,Invaders],true];
 		//_mrkD setMarkerText format ["SDK Airbase%1",_textX];
-		if (markerType _mrkD != "flag_FIA") then {_mrkD setMarkerType "flag_FIA"};
+		if (markerType _mrkD != SDKFlagMarkerType) then {_mrkD setMarkerType SDKFlagMarkerType};
 		_mrkD setMarkerColor "Default";
 		}
 	else
@@ -45,6 +45,10 @@ if (sidesX getVariable [_markerX,sideUnknown] == teamPlayer) then
 	}
 else
 	{
+	if (_markerX in citiesX) exitWith {
+		_mrkD setMarkerText "";
+		_mrkD setMarkerColor ([colorOccupants, "ColorBlack"] select (_markerX in destroyedSites));
+	};
 	if (sidesX getVariable [_markerX,sideUnknown] == Occupants) then
 		{
 		if (_markerX in airportsX) then

@@ -217,11 +217,11 @@
         <Korean>AI는 현재 아스널의 지뢰 재고를 이용하여, 목표물에 지뢰를 심거나 제거합니다.</Korean>
       </Key>
       <Key ID="STR_antistasi_dialogs_build_outpost_button_text">
-        <Original>Outpost or Roadblock</Original>
-        <English>Outpost or Roadblock</English>
-        <French>Avant-Poste ou Barrage Routier</French>
+        <Original>Watchpost or Roadblock</Original>
+        <English>Watchpost or Roadblock</English>
+        <French>Poste de Garde ou Barrage Routier</French>
         <Russian>БП или НП</Russian>
-        <German>Außenposten oder Straßensperre</German>
+        <German>Wachposten oder Straßensperre</German>
         <Czech>Předsunutá hlídka nebo Zátaras</Czech>
         <Chinesesimp>前哨或路障</Chinesesimp>
         <Korean>전초기지 또는 검문소</Korean>
@@ -613,6 +613,7 @@
         <German>Antistasi Altis</German>
         <Czech>Antistasi Altis</Czech>
         <Korean>Antistasi Altis</Korean>
+        <Chinesesimp>Antistasi Altis</Chinesesimp>
       </Key>
       <Key ID="STR_antistasi_credits_generic_missiondesc_text">
         <Original>Be a Resistance leader, be a hero.</Original>
@@ -625,7 +626,7 @@
         <Korean>저항세력의 지도자가 되고 영웅이 되십시오.</Korean>
       </Key>
       <Key ID="STR_antistasi_credits_generic_version_text">
-        <Original>2.4.1</Original>
+        <Original>2.5.3</Original>
       </Key>
     </Container>
     <Container name="dialog_vehicle_purchase">
@@ -792,7 +793,7 @@
         <Russian>Квадроцикл</Russian>
         <German>Quad</German>
         <Czech>Čtyřkolka</Czech>
-        <Chinesesimp>四轮摩托车</Chinesesimp>
+        <Chinesesimp>全地形交通工具</Chinesesimp>
         <Korean>ATV</Korean>
       </Key>
       <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_military_s_mg_text">
@@ -812,7 +813,7 @@
         <Russian>Купить станковый пулемёт</Russian>
         <German>Kaufe ein ein statisches Maschinengewehr.</German>
         <Czech>Koupit lafetovaný kulomet</Czech>
-        <Chinesesimp>购买放置固定重机枪</Chinesesimp>
+        <Chinesesimp>购买固定式机枪</Chinesesimp>
         <Korean>고정형 중기관총 구입</Korean>
       </Key>
       <Key ID="STR_antistasi_dialogs_dialog_vehicle_purchase_military_s_mortar_text">
@@ -1072,6 +1073,7 @@
         <Original>Antistasi Altis</Original>
         <English>Antistasi Altis</English>
         <Russian>Antistasi Алтис</Russian>
+        <Chinesesimp>Antistasi Altis</Chinesesimp>
       </Key>
       <Key ID="STR_antistasi_mission_info_altis_mapname_text">
         <Original>Antistasi - Liberation of Altis</Original>
@@ -1322,11 +1324,13 @@
         <Original>Antistasi Chernarus Winter</Original>
         <English>Antistasi Chernarus Winter</English>
         <Russian>Antistasi Чернорусь Зима</Russian>
+        <Chinesesimp>Antistasi Chernarus Winter</Chinesesimp>
       </Key>
       <Key ID="STR_antistasi_mission_info_chernawinter_mapname_text">
         <Original>Antistasi - Chilled revolt</Original>
         <English>Antistasi - Chilled revolt</English>
         <Russian>Antistasi - Зимнее восстание</Russian>
+        <Chinesesimp>Antistasi - 冰冷的反抗</Chinesesimp>
       </Key>
       <Key ID="STR_antistasi_mission_info_chernawinter_description_text">
         <Original>Be the Resistance Leader. Fight against a superior enemy in technology, number, assets and vehicles. Use guerrilla tactics in a totally dynamic world, with around 18 sidemissions, everywhere, anytime, anything.</Original>
@@ -1336,7 +1340,7 @@
         <German>Sei ein Anführer des Widerstands. Kämpfe gegen einen technologisch und zahlenmäßigen überlegenen Feind. Nutze Guerillataktiken in einer vollständig dynamischen Welt mit 18 möglichen Sekundärmissionen. Es könnte jederzeit und überall alles passieren...</German>
         <Czech>Buďte vůdcem odboje. Bojujte proti nadřazenému nepříteli v technologii, počtu, majetku a vozidlech. Použijte partyzánskou taktiku ve zcela dynamickém světě, přibližně s 18 vedlejšími misemi, všude kdykoli a cokoli.</Czech>
         <Korean>반군 지도자가 되십시오. 수적 그리고 질적으로 막강한 적과 싸우십시오. 18개의 서브 미션과 함께 언제 어디든지 게릴라 전술을 사용하십시오.</Korean>
-        <Chinesesimp>作为抵抗运动的领袖,与优势敌人使用游击战术灵活作战,有18个左右的支线任务.</Chinesesimp>
+        <Chinesesimp>成为抵抗军领袖。与技术、数量、资产和载具远胜于你的强大敌人作战。面对完全动态的世界和大约18种支线任务, 任何时间, 任何地点, 任何情况, 运用游击战术。</Chinesesimp>
       </Key>
       <Key ID="STR_antistasi_mission_info_chernawinter_blurb_text">
         <Original>Beware: Santa Claus is hunting you!</Original>
@@ -1356,6 +1360,7 @@
         <German>Antistasi Kunduz</German>
         <Czech>Antistasi Kunduz</Czech>
         <Korean>Antistasi Kunduz</Korean>
+        <Chinesesimp>Antistasi Kunduz</Chinesesimp>
       </Key>
       <Key ID="STR_antistasi_mission_info_kunduz_mapname_text">
         <Original>Antistasi - Battle of Kunduz</Original>
@@ -1395,6 +1400,7 @@
         <Czech>Antistasi Tembelan</Czech>
         <Korean>Antistasi Tembelan</Korean>
         <Russian>Antistasi Тембелан</Russian>
+        <Chinesesimp>Antistasi Tembelan</Chinesesimp>
       </Key>
       <Key ID="STR_antistasi_mission_info_tembelan_mapname_text">
         <Original>Antistasi - Liberation of Tembelan Island</Original>
@@ -1463,21 +1469,25 @@
         <Chinesesimp>在骆驼背上战斗</Chinesesimp>
         <Russian>Сражайся верхом на верблюде</Russian>
       </Key>
-      <Key ID="STR_antistasi_mission_info_1_mapname_short_text">
-        <Original>Placeholder</Original>
-        <English>Placeholder</English>
+      <Key ID="STR_antistasi_mission_info_camlaonam_mapname_short_text">
+        <Original>Antistasi Cam Lao Nam</Original>
+        <English>Antistasi Cam Lao Nam</English>
+        <Chinesesimp>Antistasi Cam Lao Nam</Chinesesimp>
       </Key>
-      <Key ID="STR_antistasi_mission_info_1_mapname_text">
-        <Original>Placeholder</Original>
-        <English>Placeholder</English>
+      <Key ID="STR_antistasi_mission_info_camlaonam_mapname_text">
+        <Original>Antistasi - Liberation of Cam Lao Nam</Original>
+        <English>Antistasi - Liberation of Cam Lao Nam</English>
+        <Chinesesimp>Antistasi - 解放柬老南</Chinesesimp>
       </Key>
-      <Key ID="STR_antistasi_mission_info_1_description_text">
-        <Original>Placeholder</Original>
-        <English>Placeholder</English>
+      <Key ID="STR_antistasi_mission_info_camlaonam_description_text">
+        <Original>Be the Resistance Leader. Fight against a superior enemy in technology, number, assets and vehicles. Use guerrilla tactics in a totally dynamic world, with around 18 sidemissions, everywhere, anytime, anything.</Original>
+        <English>Be the Resistance Leader. Fight against a superior enemy in technology, number, assets and vehicles. Use guerrilla tactics in a totally dynamic world, with around 18 sidemissions, everywhere, anytime, anything.</English>
+        <Chinesesimp>成为抵抗军领袖。与技术、数量、资产和载具远胜于你的强大敌人作战。面对完全动态的世界和大约18种支线任务, 任何时间, 任何地点, 任何情况, 运用游击战术。</Chinesesimp>
       </Key>
-      <Key ID="STR_antistasi_mission_info_1_blurb_text">
-        <Original>Placeholder</Original>
-        <English>Placeholder</English>
+      <Key ID="STR_antistasi_mission_info_camlaonam_blurb_text">
+        <Original>Tree? Which tree?!?</Original>
+        <English>Tree? Which tree?!?</English>
+        <Chinesesimp>树? 哪棵树?!?</Chinesesimp>
       </Key>
       <Key ID="STR_antistasi_mission_info_2_mapname_short_text">
         <Original>Placeholder</Original>
@@ -1514,10 +1524,12 @@
       <Key ID="STR_antistasi_mission_info_sahrani_mapname_short_text">
         <Original>Antistasi Sahrani</Original>
         <English>Antistasi Sahrani</English>
+        <Chinesesimp>Antistasi Sahrani</Chinesesimp>
       </Key>
       <Key ID="STR_antistasi_mission_info_sahrani_mapname_text">
         <Original>Antistasi - Liberation of Sahrani</Original>
         <English>Antistasi - Liberation of Sahrani</English>
+        <Chinesesimp>Antistasi - 解放 Sahrani</Chinesesimp>
       </Key>
       <Key ID="STR_antistasi_mission_info_sahrani_description_text">
 		  <Original>Be the Resistance Leader. Fight against a superior enemy in technology, number, assets and vehicles. Use guerrilla tactics in a totally dynamic world, with around 18 sidemissions, everywhere, anytime, anything.</Original>
@@ -1527,16 +1539,18 @@
           <German>Sei ein Anführer des Widerstands. Kämpfe gegen einen technologisch und zahlenmäßigen überlegenen Feind. Nutze Guerillataktiken in einer vollständig dynamischen Welt mit 18 möglichen Sekundärmissionen. Es könnte jederzeit und überall alles passieren...</German>
           <Czech>Buďte vedoucím odboje. Bojujte proti nadřazenému nepříteli v technologii, počtu, majetku a vozidlech. Použijte partyzánskou taktiku ve zcela dynamickém světě, přibližně s 18 vedlejšími misemi, všude kdykoli a cokoli.</Czech>
           <Korean>반군 지도자가 되십시오. 수적 그리고 질적으로 막강한 적과 싸우십시오. 18개의 서브 미션과 함께 언제 어디든지 게릴라 전술을 사용하십시오.</Korean>
-          <Chinesesimp>作为抵抗运动的领袖,与优势敌人使用游击战术灵活作战,有18个左右的支线任务.</Chinesesimp>
+          <Chinesesimp>成为抵抗军领袖。与技术、数量、资产和载具远胜于你的强大敌人作战。面对完全动态的世界和大约18种支线任务, 任何时间, 任何地点, 任何情况, 运用游击战术。</Chinesesimp>
         </Key>
       <Key ID="STR_antistasi_mission_info_sahrani_blurb_text">
         <Original>The reunification of Sahrani</Original>
         <English>The reunification of Sahrani</English>
+        <Chinesesimp>Sahrani 的统一</Chinesesimp>
       </Key>
       <Key ID="STR_antistasi_mission_info_takistan_mapname_short_text">
         <Original>Antistasi Takistan</Original>
         <English>Antistasi Takistan</English>
         <Russian>Antistasi Такистан</Russian>
+        <Chinesesimp>Antistasi Takistan</Chinesesimp>
       </Key>
       <Key ID="STR_antistasi_mission_info_takistan_mapname_text">
         <Original>Antistasi - Liberation of Takistan</Original>
@@ -1557,6 +1571,7 @@
       <Key ID="STR_antistasi_mission_info_takistan_blurb_text">
         <Original>In the Heat of the Takistani Desert</Original>
         <English>In the Heat of the Takistani Desert</English>
+        <Chinesesimp>在 Takistan 沙漠的热浪中</Chinesesimp>
       </Key>
     </Container>
     <Container name="journal_entries">
@@ -2058,6 +2073,14 @@
         <Chinesesimp>按END启用 / 关闭 耳塞. 使用ACE时禁用.</Chinesesimp>
         <Korean>END키로 이어플러그 탈부착이 가능합니다. ACE모드에선 불가능.</Korean>
         <Russian>Нажмите END, чтобы включить/отключить беруши. Отключено при использовании ACE.</Russian>
+      </Key>
+      <Key ID="STR_antistasi_journal_entry_header_SpecialK_6">
+        <Original>Toggle Info Bar Visibility</Original>
+        <Russian>Переключить видимость информ. строки</Russian>
+      </Key>
+      <Key ID="STR_antistasi_journal_entry_text_SpecialK_6">
+        <Original>Press ALT+HOME to show / hide information bar at the top of the screen.</Original>
+        <Russian>Нажмите ALT+HOME, чтобы отобразить/скрыть информационную строку в верхней части экрана.</Russian>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_Features_1">
         <Original>Faction Leader</Original>
@@ -2852,6 +2875,7 @@
         <German>UPSMon von Monsada, Kronzy und Cool=Azroul13.&lt;br/&gt;Persistent Save von zooloo75.&lt;br/&gt;Tags von Marker und Melbo.&lt;br/&gt;JAS von Jeroen (Entschuldige, dass es so lange gedauert hat dich hinzuzufügen)&lt;br/&gt;Advanced Towing von Seth Duda.</German>
         <Czech>UPSMon od Monsada, Kronzy and Cool = Azroul13 &lt;br/&gt;Trvalé Uložit podle zooloo75.&lt;br/&gt;Štítky Marker a Melbo.&lt;br/&gt;JAS od Jeroen (omlouvám se za to, že jste byli pozdě)&lt;br/&gt;Štítky od Markera a Melba.&lt;br/&gt;Rozšířené tažení od Setha Dudy.</Czech>
         <Korean>UPSMon 제공 : Monsada, Kronzy and Cool=Azroul13.&lt;br/&gt;Persistent Save 제공 : zooloo75.&lt;br/&gt;태그 제공 : Marker and Melbo.&lt;br/&gt;JAS 제공: Jeroen &lt;br/&gt;Advanced Towing 제공 : Seth Duda.</Korean>
+        <Chinesesimp>UPSMon by Monsada, Kronzy 和 Cool=Azroul13。&lt;br/&gt;Persistent Save by zooloo75。&lt;br/&gt;Tags by Marker 和 Melbo。&lt;br/&gt;JAS by Jeroen (抱歉这么晚才把你添加进来)。&lt;br/&gt;Advanced Towing by Seth Duda。</Chinesesimp>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_Credits_2">
         <Original>Mods</Original>
@@ -2867,6 +2891,7 @@
         <German>Integrierte (optionale) Mods:&lt;br/&gt;TFAR: Funkgerät in Arsenal integriert. Sound deaktiviert, wenn der Spieler bewusstlos ist.&lt;br/&gt;ACE Medical: Deaktiviert das Antistasi Revive System.&lt;br/&gt;VORSICHT: Die Speicherung des Spielstands mit TFAR oder jedglicher Mod für Waffen führt dazu, dass diese Mods bis zum Ende notwendig sind.&lt;br/&gt;&lt;br/&gt;Jeder clientseitige Mod, wie z.B. JSRS, Blastcore oder UI Mod sollte funktionieren.&lt;br/&gt;Einheiten und Fahrzeuge aus Mods funktionieren nicht. KI Mods können zu Fehlern führen. (Antistasi hat in jedem Fall viel am KI Verhalten geändert)</German>
         <Czech>Integrované (volitelné) Módy:&lt;br/&gt;TFAR: Rádio integrované v Arsenalu. Zvuk je deaktivován, když je hráč v bezvědomí.&lt;br/&gt;ACE Lékař: Vypne Antistasi revive system.&lt;br/&gt;&lt;br/&gt;UPOZORNĚNÍ: Používání systému Uložení hry s TFAR a jakýmkoli aktivovaným módem zbraně je v budoucnosti povinné.&lt;br/&gt;&lt;br/&gt; Mód by měl fungovat. Módy pro jednotky a vozidla nebudou fungovat.&lt;br/&gt;&lt;br/&gt; Režimy AI mohou způsobit poruchy (v každém případě má Antistasi těžké vylepšení AI).</Czech>
         <Korean>추가적인 모드들&lt;br/&gt;TFAR: 라디오 대체, 쓰러졌을 경우 라디오 비활성화&lt;br/&gt;ACE Medical: 안티스타시 기존 리바이브 시스템 대체.&lt;br/&gt;&lt;br/&gt;주의: 해당 모드들을 사용 한 채로 저장을 하면, 그 이후에도 계속 사용해야 함.&lt;br/&gt;&lt;br/&gt;클라이언트 사이드 모드, 가령 jsrs, 블라스트 코어, UI 모드들은 상관 없음..&lt;br/&gt;&lt;br/&gt;유닛과 차량 모드들은 적용되지 않고, AI 모드는 적용시 불량이 날수 있습니다.</Korean>
+        <Original>内置支持的(可选)模组: &lt;br/&gt;TFAR: 无线电已集成至军火库。玩家失去意识时将会禁用声音。&lt;br/&gt;ACE医疗: 将会禁用 Antistasi 复苏系统。&lt;br/&gt;&lt;br/&gt;注意: 进行永久性存储时使用TFAR和任何武器模组, 将使它们成为强制性模组。&lt;br/&gt;&lt;br/&gt;任何客户端模组, 如JSRS, Blastcore, 用户界面模组都应当能够正常使用。&lt;br/&gt;&lt;br/&gt;单位和载具模组不会正常工作。AI模组可能会导致任务异常(在绝大多数情况下, Antistasi 对AI逻辑进行了重度调整)。</Original>
       </Key>
       <Key ID="STR_antistasi_journal_entry_header_Credits_3">
         <Original>Thanks</Original>
@@ -2882,183 +2907,227 @@
         <French>LanCommi pour son artwork.&lt;br/&gt;Goon et jw custom: pour une partie du code du script NAPALM.&lt;br/&gt;rebel12340: pour le script de brouillage radio.&lt;br/&gt;Manko: pour le morceau de code pour les bouchons d'oreilles.&lt;br/&gt;bobchaos: pour avoir gérer la communauté malgré toutes les difficultés.&lt;br/&gt;Et à tous les joueurs qui passent leur temps à faire des commentaires, des suggestions et des rapports sur les forums Steam, Github et BIS.</French>
         <Czech>LanCommi za jeho umělecké dílo.&lt;br/&gt;Goon a jw vlastní: Část kódu pro skript NAPALM.&lt;br/&gt;rebel12340: Radio Jam script&lt;br/&gt;Manko: Sniper snippet&lt;br/&gt;bobchaos: Správa komunity i přes všechny obtíže.&lt;br/&gt;A všichni hráči, kteří tráví čas přípravou komentářů, návrhů a zpráv na fórech Steam, Github a BIS</Czech>
         <Korean>LanCommi : 이미지 지원&lt;br/&gt;Goon and jw custom: 네이팜 코드 일부 제공&lt;br/&gt;rebel12340:라디오 먹통 스크립트 제공&lt;br/&gt;Manko: 이어플러그 제공&lt;br/&gt;bobchaos: 커뮤니티 관리&lt;br/&gt;그리고 그 외 모든 Github와 스팀 커뮤니티에서 관심을 가져주신 분들.</Korean>
+        <Original>LanCommi 的美术设计。&lt;br/&gt;Goon 和 jw custom: 部分凝固汽油弹(NAPALM)脚本。&lt;br/&gt;rebel12340: 无线电阻塞脚本。&lt;br/&gt;Manko: 耳塞脚本。&lt;br/&gt;bobchaos: 尽管困难重重, 但仍在管理社区。&lt;br/&gt;以及所有花时间在Steam、Github和BIS论坛上发表评论、建议和报告的玩家。</Original>
       </Key>
     </Container>
     <Container name="game_options">
       <Key ID="STR_antistasi_dialogs_maps_game_options">
         <Original>Game Options</Original>
+        <Chinesesimp>游戏选项</Chinesesimp>
         <Russian>Параметры</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_maps_civ_limit">
         <Original>Civ Limit</Original>
+        <Chinesesimp>平民限制</Chinesesimp>
         <Russian>Лимит гражданских</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_maps_civ_limit_tooltip">
         <Original>Set the max number of spawned civilians. Affects game performance.</Original>
+        <Chinesesimp>设置平民的最大生成数量。影响游戏性能。</Chinesesimp>
         <Russian>Установите максимальное количество мирных жителей. Влияет на производительность игры.</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_maps_spawn_distance">
         <Original>Spawn Distance</Original>
+        <Chinesesimp>生成距离</Chinesesimp>
         <Russian>Дистанция спавна</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_maps_spawn_distance_tooltip">
         <Original>Affects performance. Please use this with caution. Set it to lower distances if you feel Antistasi is running bad.</Original>
+        <Chinesesimp>影响性能。请小心使用。如果你觉得 Antistasi 运行不够流畅, 把它调到更低的距离。</Chinesesimp>
         <Russian>Влияет на производительность. Пожалуйста, используйте это с осторожностью. Установите меньшее расстояние, если чувствуете, что Antistasi работает плохо.</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_maps_ai_limiter">
         <Original>AI Limiter</Original>
+        <Chinesesimp>AI限制</Chinesesimp>
         <Russian>Лимит ИИ</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_maps_ai_limiter_tooltip">
         <Original>Sets how much local and simulated AI can spawn in the map. Affects performance and AI ""intelligence"". Use with caution. This is not an exact number as vehicles and squad leaders will allways spawn.</Original>
+        <Chinesesimp>设置地图中可以生成多少本地和模拟AI。影响性能和AI"智能"。小心使用。这不是一个准确的数字, 因为载具和班长始终会生成。</Chinesesimp>
         <Russian>Устанавливает, сколько локальных и смоделированных ИИ может появиться на карте. Влияет на производительность и «интеллект» ИИ. Используйте с осторожностью. Это не точное число, поскольку всегда будут появляться машины и лидеры отрядов.</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_maps_music">
         <Original>Music ON/OFF</Original>
+        <Chinesesimp>音乐播放/关闭</Chinesesimp>
         <Russian>Музыка ВКЛ / ВЫКЛ</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_maps_music_tooltip">
         <Original>Disables/Enable situational music.</Original>
+        <Chinesesimp>禁用/启用背景音乐</Chinesesimp>
         <Russian>Отключение/включение музыки</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_maps_save">
         <Original>Persistent Save</Original>
+        <Chinesesimp>持久化存档</Chinesesimp>
         <Russian>Сохранение</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_maps_save_tooltip">
         <Original>Use this option to save your current game. It does save the most important data in a ""Grand Theft Auto"" way. This opnion allows good MP save and independent saves of any version update. Vanilla saves are disabled because of lack of several features.</Original>
+        <Chinesesimp>使用此选项保存当前游戏进度。它确实以"侠盗猎车手"的方式保存了绝大多数重要数据。此功能实现了优秀的多人游戏存档功能, 并确保存档不受版本更新影响。由于缺少某些特性, 游戏原生的存档功能被禁用。</Chinesesimp>
         <Russian>Используйте эту опцию, чтобы сохранить вашу текущую игру. Он действительно сохраняет самые важные данные способом "Grand Theft Auto". Этот вариант обеспечивает хорошее сохранение MP и независимое сохранение любого обновления версии. Ванильные сохранения отключены из-за отсутствия некоторых функций.</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_maps_fps_limiter_plus">
         <Original>+10 AI Limit</Original>
+        <Chinesesimp>+10 AI上限</Chinesesimp>
         <Russian>+10 к лимиту ИИ</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_maps_fps_limiter_minus">
         <Original>-10 AI Limit</Original>
+        <Chinesesimp>-10 AI上限</Chinesesimp>
         <Russian>-10 к лимиту ИИ</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_maps_spawn_config">
         <Original>Spawn Distance Config</Original>
+        <Chinesesimp>生成距离配置</Chinesesimp>
         <Russian>Настройка дистаниции спавна</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_maps_spawn_config_plus">
         <Original>+100 Spawn Dist.</Original>
+        <Chinesesimp>+100米生成距离</Chinesesimp>
         <Russian>+100 метров</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_maps_spawn_config_minus">
         <Original>-100 Spawn Dist.</Original>
+        <Chinesesimp>-100米生成距离</Chinesesimp>
         <Russian>-100 метров</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_maps_civ_config">
         <Original>Civ Presence Config</Original>
+        <Chinesesimp>平民存在配置</Chinesesimp>
         <Russian>Настройка гражданского насиления</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_maps_civ_config_plus">
         <Original>+1 Max Civs</Original>
+        <Chinesesimp>+1 平民上限</Chinesesimp>
         <Russian>+1 к лимиту</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_maps_civ_config_minus">
         <Original>-1 Max Civs</Original>
+        <Chinesesimp>-1 平民上限</Chinesesimp>
         <Russian>-1 к лимиту</Russian>
       </Key>
     </Container>
     <Container name="mission_menu">
       <Key ID="STR_antistasi_dialogs_mission_menu_available_missions">
         <Original>Available Missions</Original>
+        <Chinesesimp>可用任务</Chinesesimp>
         <Russian>Доступные миссии</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_mission_menu_assasination_missions">
         <Original>Assasination Mission</Original>
+        <Chinesesimp>刺杀任务</Chinesesimp>
         <Russian>Миссия на убийство</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_mission_menu_convoy_ambush">
         <Original>Convoy Ambush</Original>
+        <Chinesesimp>车队伏击</Chinesesimp>
         <Russian>Засада конвоя</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_mission_menu_destroy_missions">
         <Original>Destroy Missions</Original>
+        <Chinesesimp>摧毁任务</Chinesesimp>
         <Russian>Миссия на уничтожение</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_mission_menu_conquest_missions">
         <Original>Conquest Missions</Original>
+        <Chinesesimp>攻占任务</Chinesesimp>
         <Russian>Миссия захвата</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_mission_menu_logistics_missions">
         <Original>Logistics Missions</Original>
+        <Chinesesimp>后勤任务</Chinesesimp>
         <Russian>Миссия перевозки</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_mission_menu_logistics_missions_tooltip">
         <Original>Missions to acquire money or equipment</Original>
+        <Chinesesimp>获取资金和装备的任务</Chinesesimp>
         <Russian>Миссии по добыче денег или оборудования</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_mission_menu_support_missions">
         <Original>Support Missions</Original>
+        <Chinesesimp>支援任务</Chinesesimp>
         <Russian>Миссия поддержки</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_mission_menu_support_missions_tooltip">
         <Original>Missions to increase your support within the population</Original>
+        <Chinesesimp>增加民众支持度的任务</Chinesesimp>
         <Russian>Миссии по увеличению вашей поддержки среди населения</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_mission_menu_rescue_missions">
         <Original>Rescue Missions</Original>
+        <Chinesesimp>救援任务</Chinesesimp>
         <Russian>Спасательные миссии</Russian>
       </Key>
     </Container>
     <Container name="radio_comm">
       <Key ID="STR_antistasi_dialogs_radio_comm">
         <Original>Battle Options</Original>
+        <Chinesesimp>作战选项</Chinesesimp>
         <Russian>Управление</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_radio_comm_fast_travel">
         <Original>Fast Travel</Original>
+        <Chinesesimp>快速旅行</Chinesesimp>
         <Russian>Быстрое Перемещение</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_radio_comm_fast_travel_tooltip">
         <Original>Teleport your squad or a HC selected squad to a friendly zone depending on several factors</Original>
+        <Chinesesimp>满足条件时, 将您的班组或指挥部小队传送至友军占领区</Chinesesimp>
         <Russian>Телепортируйте свой отряд или отряд, выбранный HC, в дружественную зону в зависимости от нескольких факторов</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_radio_comm_player_money">
         <Original>Player and Money</Original>
+        <Chinesesimp>玩家与资金</Chinesesimp>
         <Russian>Игрок и деньги</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_radio_comm_player_money_tooltip">
         <Original>Look at some player and interact with him</Original>
+        <Chinesesimp>面向玩家并与其互动</Chinesesimp>
         <Russian>Посмотрите на игрока чтобы взаимодействовать с ним</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_radio_comm_undercover">
         <Original>Undercover ON</Original>
+        <Chinesesimp>启用伪装</Chinesesimp>
         <Russian>Скрытность ВКЛ</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_radio_comm_undercover_tooltip">
         <Original>Become Undercover if you match the requirements. Enemy AI won't attack you until they discover you</Original>
+        <Chinesesimp>满足条件时可进入伪装状态。敌方AI在识破你之前不会攻击你</Chinesesimp>
         <Russian>Станьте скрытным, если вы соответствуете требованиям. Вражеский ИИ не нападет на вас, пока не обнаружит вас</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_radio_comm_garage">
         <Original>Garage Vehicle</Original>
+        <Chinesesimp>载具仓库</Chinesesimp>
         <Russian>Гараж</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_radio_comm_garage_tooltip">
         <Original>Vehicle or Static gun you're looking at will be garaged, interact with Flag to retrieve</Original>
+        <Chinesesimp>你面前的载具或固定式武器将被存放至车库, 与旗帜来取出</Chinesesimp>
         <Russian>Автомобиль или статическая пушка, на которую вы смотрите, будут помещены в гараж, взаимодействуйте с Флагом, чтобы получить</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_radio_comm_construct">
         <Original>Construct Here</Original>
+        <Chinesesimp>建造</Chinesesimp>
         <Russian>Строительство</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_radio_comm_construct_tooltip">
         <Original>Construct in the spot where you are a selected building facing this direction</Original>
+        <Chinesesimp>在你所在的位置, 朝向此方向建造所选建筑</Chinesesimp>
         <Russian>Постройте в том месте, где вы выбрали здание, обращенное в этом направлении</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_radio_comm_unlock_vehicle">
         <Original>Unlock Vehicle</Original>
+        <Chinesesimp>解锁载具</Chinesesimp>
         <Russian>Разблокировать технику</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_radio_comm_unlock_vehicle_tooltip">
         <Original>Allow other groups to mount this vehicle</Original>
+        <Chinesesimp>允许其他小队搭乘该载具</Chinesesimp>
         <Russian>Разрешить другим группам садиться на этот автомобиль</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_radio_comm_ai_management">
         <Original>AI Management</Original>
+        <Chinesesimp>AI管理</Chinesesimp>
         <Russian>Управление ИИ</Russian>
       </Key>
       <Key ID="STR_antistasi_dialogs_radio_comm_ai_management_tooltip">
@@ -3478,6 +3547,18 @@
       <Key ID="STR_antistasi_dialogs_player_money_donate_faction_tooltip">
         <Original>It will increase your prestige among your faction</Original>
         <Russian>Это повысит ваш престиж среди вашей фракции</Russian>
+      </Key>
+      <Key ID="STR_antistasi_dialogs_toggle_info_bar_title">
+        <Original>Information Bar</Original>
+        <Russian>Информационная строка</Russian>
+      </Key>
+      <Key ID="STR_antistasi_dialogs_toggle_info_bar_body_off">
+        <Original>You've turned off top information bar. To enable it, press ALT+HOME.</Original>
+        <Russian>Вы выключили отображение информационной строки. Чтобы включить её снова, нажмите ALT+HOME.</Russian>
+      </Key>
+      <Key ID="STR_antistasi_dialogs_toggle_info_bar_body_on">
+        <Original>You've turned on top information bar. To disable it, press ALT+HOME.</Original>
+        <Russian>Вы включили отображение информационной строки. Чтобы выключить её, нажмите ALT+HOME.</Russian>
       </Key>
     </Container>
     <Container name="garage_sell">
@@ -3948,6 +4029,432 @@
       <Key ID="STR_antistasi_btn_bm21">
         <Original>BM-21 Grad</Original>
         <Russian>БМ-21 Град</Russian>
+      </Key>
+    </Container>
+	<Container name="HR_GRG">
+        <Key ID="STR_HR_GRG_Generic_Cancel">
+            <Original>Cancel</Original>
+            <English>Cancel</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Generic_Lock">
+            <Original>(Un)Lock</Original>
+            <English>(Un)Lock</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Generic_Confirm">
+            <Original>Confirm</Original>
+            <English>Confirm</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Generic_Cars">
+            <Original>Cars</Original>
+            <English>Cars</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Generic_Armored">
+            <Original>Armor</Original>
+            <English>Armor</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Generic_Air">
+            <Original>Aircraft</Original>
+            <English>Aircraft</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Generic_AirDisabled">
+            <Original>You can only acces aircrafts from a friendly airbase</Original>
+            <English>You can only acces aircrafts from a friendly airbase</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Generic_Boat">
+            <Original>Ships</Original>
+            <English>Ships</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Generic_Static">
+            <Original>Statics</Original>
+            <English>Statics</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Generic_Mounts">
+            <Original>Mounts</Original>
+            <English>Mounts</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Generic_Texture">
+            <Original>Texture</Original>
+            <English>Texture</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Generic_Anim">
+            <Original>Customize</Original>
+            <English>Customize</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Generic_Pylons">
+            <Original>Pylons</Original>
+            <English>Pylons</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Generic_PylonDisabled">
+            <Original>Pylons require an ammo source to edit</Original>
+            <English>Pylons require an ammo source to edit</English>
+        </Key>
+        <Key ID="STR_HR_GRG_SourcePanel_Header">
+            <Original>Sources:</Original>
+            <English>Sources:</English>
+        </Key>
+        <Key ID="STR_HR_GRG_SourcePanel_toolTip_Ammo_Available">
+            <Original>Vehicles will be rearmed when ungaraged</Original>
+            <English>Vehicles will be rearmed when ungaraged</English>
+        </Key>
+        <Key ID="STR_HR_GRG_SourcePanel_toolTip_Ammo_Unavailable">
+            <Original>Vehicles won't be rearmed when ungaraged as the garage lacks a ammo source</Original>
+            <English>Vehicles won't be rearmed when ungaraged as the garage lacks a ammo source</English>
+        </Key>
+        <Key ID="STR_HR_GRG_SourcePanel_toolTip_Ammo_Disabled">
+            <Original>Rearm disabled by server</Original>
+            <English>Rearm disabled by server</English>
+        </Key>
+        <Key ID="STR_HR_GRG_SourcePanel_toolTip_Fuel_Available">
+            <Original>Vehicles will be refueled when ungaraged</Original>
+            <English>Vehicles will be refueled when ungaraged</English>
+        </Key>
+        <Key ID="STR_HR_GRG_SourcePanel_toolTip_Fuel_Unavailable">
+            <Original>Vehicles won't be refueled when ungaraged as the garage lacks a fuel source</Original>
+            <English>Vehicles won't be refueled when ungaraged as the garage lacks a fuel source</English>
+        </Key>
+        <Key ID="STR_HR_GRG_SourcePanel_toolTip_Fuel_Disabled">
+            <Original>Refuel disabled by server settings</Original>
+            <English>Refuel disabled by server settings</English>
+        </Key>
+        <Key ID="STR_HR_GRG_SourcePanel_toolTip_Repair_Available">
+            <Original>Vehicles will be repaired when ungaraged</Original>
+            <English>Vehicles will be repaired when ungaraged</English>
+        </Key>
+        <Key ID="STR_HR_GRG_SourcePanel_toolTip_Repair_Unavailable">
+            <Original>Vehicles won't be repaired when ungaraged as the garage lacks a repair source</Original>
+            <English>Vehicles won't be repaired when ungaraged as the garage lacks a repair source</English>
+        </Key>
+        <Key ID="STR_HR_GRG_SourcePanel_toolTip_Repair_Disabled">
+            <Original>Repair disabled by server settings</Original>
+            <English>Repair disabled by server settings</English>
+        </Key>
+        <Key ID="STR_HR_GRG_InfoPanel_isAmmoSource">
+            <Original>Vehicle is an ammo source</Original>
+            <English>Vehicle is an ammo source</English>
+        </Key>
+        <Key ID="STR_HR_GRG_InfoPanel_isFuelSource">
+            <Original>Vehicle is an fuel source</Original>
+            <English>Vehicle is an fuel source</English>
+        </Key>
+        <Key ID="STR_HR_GRG_InfoPanel_isRepairSource">
+            <Original>Vehicle is an repair source</Original>
+            <English>Vehicle is an repair source</English>
+        </Key>
+        <Key ID="STR_HR_GRG_InfoPanel_isNotSource">
+            <Original>Vehicle is not a source</Original>
+            <English>Vehicle is not a source</English>
+        </Key>
+        <Key ID="STR_HR_GRG_InfoPanel_Seats">
+            <Original>Seats:</Original>
+            <English>Seats:</English>
+        </Key>
+        <Key ID="STR_HR_GRG_InfoPanel_Cargo">
+            <Original>Cargo:</Original>
+            <English>Cargo:</English>
+        </Key>
+        <Key ID="STR_HR_GRG_InfoPanel_AceCargo">
+            <Original>Ace Cargo:</Original>
+            <English>Ace Cargo:</English>
+        </Key>
+        <Key ID="STR_HR_GRG_InfoPanel_Capacity">
+            <Original>Capacity:</Original>
+            <English>Capacity:</English>
+        </Key>
+        <Key ID="STR_HR_GRG_InfoPanel_Available">
+            <Original>Available:</Original>
+            <English>Available:</English>
+        </Key>
+        <Key ID="STR_HR_GRG_InfoPanel_Speed">
+            <Original>Top speed:</Original>
+            <English>Top speed:</English>
+        </Key>
+        <Key ID="STR_HR_GRG_InfoPanel_HP">
+            <Original>Horse power:</Original>
+            <English>Horse power:</English>
+        </Key>
+        <Key ID="STR_HR_GRG_InfoPanel_Mass">
+            <Original>Mass:</Original>
+            <English>Mass:</English>
+        </Key>
+        <Key ID="STR_HR_GRG_openGarage_Action">
+            <Original>&lt;img image='\A3\ui_f\data\GUI\Rsc\RscDisplayArsenal\spaceGarage_ca.paa'&gt;&lt;/img&gt; Open Garage</Original>
+            <English>&lt;img image='\A3\ui_f\data\GUI\Rsc\RscDisplayArsenal\spaceGarage_ca.paa'&gt;&lt;/img&gt; Open Garage</English>
+        </Key>
+        <Key ID="STR_HR_GRG_addVehicle_Action">
+            <!--%1 is display name of vehicle-->
+            <Original>&lt;img image='\A3\ui_f\data\GUI\Rsc\RscDisplayArsenal\spaceGarage_ca.paa'&gt;&lt;/img&gt; Garage %1</Original>
+            <English>&lt;img image='\A3\ui_f\data\GUI\Rsc\RscDisplayArsenal\spaceGarage_ca.paa'&gt;&lt;/img&gt; Garage %1</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Feedback_addVehicle_Null">
+            <Original>You are not looking at a vehicle</Original>
+            <English>You are not looking at a vehicle</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Feedback_confirm_NullSelection">
+            <Original>No vehicle selected</Original>
+            <English>No vehicle selected</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Feedback_addVehicle_SATow">
+            <Original>You can't garage a Vehicle with your Tow Rope out or a Vehicle attached</Original>
+            <English>You can't garage a Vehicle with your Tow Rope out or a Vehicle attached</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Feedback_addVehicle_LTC">
+            <Original>Loot crate stored</Original>
+            <English>Loot crate stored</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Feedback_addVehicle_LightSource_Stored">
+            <Original>Light stored</Original>
+            <English>Light stored</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Feedback_addVehicle_Distance">
+            <Original>You can't garage vehicles that are more than 25m away from you</Original>
+            <English>You can't garage vehicles that are more than 25m away from you</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Feedback_addVehicle_Destroyed">
+            <Original>You can't garage a destroyed vehicle</Original>
+            <English>You can't garage a destroyed vehicle</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Feedback_addVehicle_Locked">
+            <Original>You can't garage a locked vehicle</Original>
+            <English>You can't garage a locked vehicle</English>
+        </Key>
+        <!--%1 is faction name-->
+        <Key ID="STR_HR_GRG_Feedback_addVehicle_badLocation">
+            <Original>You and the vehicle need to be in a %1 garrison surrounding in order to garage a it</Original>
+            <English>You and the vehicle need to be in a %1 garrison surrounding in order to garage a it</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Feedback_addVehicle_enemiesEngaging">
+            <Original>You can't garage vehicles while enemies are engaging you</Original>
+            <English>You can't garage vehicles while enemies are engaging you</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Feedback_addVehicle_enemiesNear">
+            <Original>You can't garage vehicles while enemies are near you</Original>
+            <English>You can't garage vehicles while enemies are near you</English>
+        </Key>
+        <!--%1 is faction name-->
+        <Key ID="STR_HR_GRG_Feedback_addVehicle_airBlocked">
+            <Original>You can't garage a aircraft while you are not near an Aiport which belongs to %1. Please move your aircraft to an Airport to garage it</Original>
+            <English>You can't garage a aircraft while you are not near an Aiport which belongs to %1. Please move your aircraft to an Airport to garage it</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Feedback_addVehicle_GenericFail">
+            <Original>You can't garage this</Original>
+            <English>You can't garage this</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Feedback_addVehicle_inVehicle">
+            <Original>You can't garage a vehicle while in another vehicle</Original>
+            <English>You can't garage a vehicle while in another vehicle</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Feedback_addVehicle_Crewed">
+            <Original>You can't garage a vehicle with crew inside</Original>
+            <English>You can't garage a vehicle with crew inside</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Feedback_addVehicle_Capacity">
+            <Original>Theres not enough room to garage this vehicle</Original>
+            <English>Theres not enough room to garage this vehicle</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Feedback_addVehicle_Success">
+            <!--%1 is display name of vehicle-->
+            <Original>%1 Garaged</Original>
+            <English>%1 Garaged</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Feedback_requestMount_Denied">
+            <Original>Cant mount static</Original>
+            <English>Cant mount static</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Feedback_checkedOutToolTip">
+            <!-- name is appended on at the start with a spcae in between-->
+            <Original>is looking at this vehicle.</Original>
+            <English>is looking at this vehicle.</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Feedback_LockedToolTip">
+            <!-- name is appended on at the end with a spcae in between-->
+            <Original>Vehicle is locked by</Original>
+            <English>Vehicle is locked by</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Feedback_CP_Rotation">
+            <!--Keybinds are hardcoded to key DIK codes: DIK_E, DIK_Q, DIK_ESCAPE, DIK_RETURN, and DIK_SPACE-->
+            <Original>&lt;t size='0.6'&gt;Rotate Left: Q &lt;br/&gt;Rotate Right: E &lt;br/&gt;Cancel: Enter/ESC &lt;br/&gt;Place: Space&lt;/t&gt;</Original>
+            <English>&lt;t size='0.6'&gt;Rotate Left: Q &lt;br/&gt;Rotate Right: E &lt;br/&gt;Cancel: Enter/ESC &lt;br/&gt;Place: Space&lt;/t&gt;</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Feedback_CP_TooFar">
+            <Original>&lt;t size='0.6'&gt;Cant place vehicle that far away &lt;br/&gt;Cancel: Enter/ESC &lt;/t&gt;</Original>
+            <English>&lt;t size='0.6'&gt;Cant place vehicle that far away &lt;br/&gt;Cancel: Enter/ESC &lt;/t&gt;</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Feedback_CP_Blocked">
+            <Original>&lt;t size='0.6'&gt;Something is blocking placement &lt;br/&gt; Rotate Left: Q &lt;br/&gt;Rotate Right: E &lt;br/&gt;Cancel: Enter/ESC &lt;/t&gt;</Original>
+            <English>&lt;t size='0.6'&gt;Something is blocking placement &lt;br/&gt; Rotate Left: Q &lt;br/&gt;Rotate Right: E &lt;br/&gt;Cancel: Enter/ESC &lt;/t&gt;</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Feedback_CallbackFailed">
+            <Original>&lt;t size='0.6'&gt;Something is blocking placement &lt;br/&gt; Rotate Left: Q &lt;br/&gt;Rotate Right: E &lt;br/&gt;Cancel: Enter/ESC &lt;/t&gt;</Original>
+            <English>&lt;t size='0.6'&gt;Something is blocking placement &lt;br/&gt; Rotate Left: Q &lt;br/&gt;Rotate Right: E &lt;br/&gt;Cancel: Enter/ESC &lt;/t&gt;</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Feedback_Cam_Controls">
+            <Original>Camera controls</Original>
+            <English>Camera controls</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Feedback_Cam_Rotate">
+            <Original>Rotate: Right Mouse Button + Move mouse</Original>
+            <English>Rotate: Right Mouse Button + Move mouse</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Feedback_Cam_Zoom">
+            <Original>Zoom: Right Mouse Button + Mouse wheel</Original>
+            <English>Zoom: Right Mouse Button + Mouse wheel</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Pylons_Mirror">
+            <Original>Mirror</Original>
+            <English>Mirror</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Pylons_CustomPreset">
+            <Original>[Custom preset]</Original>
+            <English>[Custom preset]</English>
+        </Key>
+        <!--%1 is pylon number-->
+        <Key ID="STR_HR_GRG_Pylons_PylonText">
+            <Original>Pylon %1</Original>
+            <English>Pylon %1</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Pylons_Empty">
+            <Original>[Empty]</Original>
+            <English>[Empty]</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Pylons_noPylons">
+            <Original>No pylon customizations for:</Original>
+            <English>No pylon customizations for:</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Pylons_Gunner">
+            <Original>Gunner</Original>
+            <English>Gunner</English>
+        </Key>
+        <Key ID="STR_HR_GRG_Pylons_Driver">
+            <Original>Driver</Original>
+            <English>Driver</English>
+        </Key>
+        </Container>
+    <Container name="Utility_Items">
+        <Key ID="STR_A3A_Utility_Items_Feedback_Normal">
+            <Original>Q/E to rotate - Space/Enter to stop.</Original>
+            <English>Q/E to rotate - Space/Enter to stop.</English>
+        </Key>
+        <Key ID="STR_A3A_Utility_Items_Feedback_Far">
+            <Original>You're too far</Original>
+            <English>You're too far</English>
+        </Key>
+        <Key ID="STR_A3A_Utility_Items_Feedback_Title">
+            <Original>Utility items</Original>
+            <English>Utility items</English>
+        </Key>
+        <Key ID="STR_A3A_Utility_Items_Feedback_Attached_Objects">
+            <Original>You are already carrying something.</Original>
+            <English>You are already carrying something.</English>
+        </Key>
+    </Container>
+    <Container name="time_units">
+      <!--Note the lack of front spacing on abbreviations.-->
+      <!--Auto translated.-->>
+      <Key ID="STR_antistasi_timeSpan_days">
+        <Original>Days</Original>
+        <German>Tage</German>
+        <Russian>дней</Russian>
+        <French>jours</French>
+        <Czech>dní</Czech>
+        <Chinesesimp>天</Chinesesimp>
+        <Korean>일</Korean>
+      </Key>
+      <Key ID="STR_antistasi_timeSpan_hours">
+        <Original>Hours</Original>
+        <German>Stunden</German>
+        <Russian>часов</Russian>
+        <French>heures</French>
+        <Czech>hodin</Czech>
+        <Chinesesimp>小时</Chinesesimp>
+        <Korean>시간</Korean>
+      </Key>
+      <Key ID="STR_antistasi_timeSpan_minutes">
+        <Original>Minutes</Original>
+        <German>Minuten</German>
+        <Russian>минут</Russian>
+        <French>minutes</French>
+        <Czech>minut</Czech>
+        <Chinesesimp>分钟</Chinesesimp>
+        <Korean>분</Korean>
+      </Key>
+      <Key ID="STR_antistasi_timeSpan_seconds">
+        <Original>Seconds</Original>
+        <German>Sekunden</German>
+        <Russian>секунд</Russian>
+        <French>secondes</French>
+        <Czech>sekund</Czech>
+        <Chinesesimp>秒</Chinesesimp>
+        <Korean>초</Korean>
+      </Key>
+      <Key ID="STR_antistasi_timeSpan_milliseconds">
+        <Original>Milliseconds</Original>
+        <German>Millisekunden</German>
+        <Russian>миллисекунд</Russian>
+        <French>millisecondes</French>
+        <Czech>milisekund</Czech>
+        <Chinesesimp>毫秒</Chinesesimp>
+        <Korean>밀리초</Korean>
+      </Key>
+      <Key ID="STR_antistasi_timeSpan_microseconds">
+        <Original>Microseconds</Original>
+        <German>Mikrosekunden</German>
+        <Russian>микросекунд</Russian>
+        <French>microsecondes</French>
+        <Czech>mikrosekund</Czech>
+        <Chinesesimp>微秒</Chinesesimp>
+        <Korean>마이크로초</Korean>
+      </Key>
+      <Key ID="STR_antistasi_timeSpan_nanoseconds">
+        <Original>Nanoseconds</Original>
+        <German>Nanosekunden</German>
+        <Russian>наносекунд</Russian>
+        <French>nanosecondes</French>
+        <Czech>nanosekund</Czech>
+        <Chinesesimp>纳秒</Chinesesimp>
+        <Korean>나노초</Korean>
+      </Key>
+      <Key ID="STR_antistasi_timeSpan_days_abbr">
+        <Original>d</Original>
+      </Key>
+      <Key ID="STR_antistasi_timeSpan_hours_abbr">
+        <Original>h</Original>
+      </Key>
+      <Key ID="STR_antistasi_timeSpan_minutes_abbr">
+        <Original>m</Original>
+      </Key>
+      <Key ID="STR_antistasi_timeSpan_seconds_abbr">
+        <Original>s</Original>
+      </Key>
+      <Key ID="STR_antistasi_timeSpan_milliseconds_abbr">
+        <Original>ms</Original>
+      </Key>
+      <Key ID="STR_antistasi_timeSpan_microseconds_abbr">
+        <Original>µs</Original>   <!--Note: Micro sign (µ) U+00B5, is completely different from Greek Mu (μ) U+-->
+      </Key>
+      <Key ID="STR_antistasi_timeSpan_nanoseconds_abbr">
+        <Original>ns</Original>
+      </Key>
+      <Key ID="STR_antistasi_timeSpan_now">
+        <Original>(Now)</Original>
+        <German>(Gegenwart)</German>
+        <Russian>(настоящее время)</Russian>
+        <French>(actuel maintenant)</French>
+        <Czech>(nyní)</Czech>
+        <Chinesesimp>(现在)</Chinesesimp>
+        <Korean>(현재)</Korean>
+      </Key>
+    </Container>
+    <Container name ="Base">
+      <Key ID="STR_antistasi_Base_vehicleBoxHeal_Healed">
+        <Original>Nearby units have been healed, refreshed, and can go undercover again.&lt;br/&gt;&lt;br/&gt; Nearby vehicles are no longer reported.</Original>
+      </Key>
+      <Key ID="STR_antistasi_Base_vehicleBoxHeal_UsedRecently">
+        <Original>The box has been used in the last 30 seconds! Please wait for a bit.</Original>
+      </Key>
+    </Container>
+    <Container name ="singleWord">
+      <Key ID="STR_antistasi_singleWord_Heal">
+        <Original>Heal</Original>
       </Key>
     </Container>
   </Package>

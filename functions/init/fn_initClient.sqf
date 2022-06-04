@@ -1,4 +1,3 @@
-#include "..\Garage\defineGarage.inc"
 #include "..\..\Includes\common.inc"
 FIX_LINE_NUMBERS()
 
@@ -91,6 +90,7 @@ if (isMultiplayer && {playerMarkersEnabled}) then {
 
 [player] spawn A3A_fnc_initRevive;		// with ACE medical, only used for helmet popping & TK checks
 [] spawn A3A_fnc_outOfBounds;
+[] spawn A3A_fnc_darkMapFix;
 
 if (!A3A_hasACE) then {
 	[] spawn A3A_fnc_tags;
@@ -265,7 +265,7 @@ player addEventHandler ["WeaponAssembled", {
 		_markersX = markersX select {sidesX getVariable [_x,sideUnknown] == teamPlayer};
 		_pos = position _veh;
 		[_veh] call A3A_fnc_logistics_addLoadAction;
-		if (_markersX findIf {_pos inArea _x} != -1) then {["Static Deployed", "Static weapon has been deployed for use in a nearby zone, and will be used by garrison militia if you leave it here the next time the zone spawns"] call A3A_fnc_customHint;};
+		if (_markersX findIf {_pos inArea _x} != -1) then {["Static Deployed", "Static weapon has been deployed for use in a nearby zone, and will be used by garrison militia if you leave it here the next time the zone spawns."] call A3A_fnc_customHint;};
 	};
 }];
 
@@ -289,7 +289,7 @@ player addEventHandler ["GetInMan", {
 			if (!isNil "_owner") then {
 				if (_owner isEqualType "") then {
 					if ({getPlayerUID _x == _owner} count (units group player) == 0) then {
-						["Warning", "You cannot board other player vehicle if you are not in the same group"] call A3A_fnc_customHint;
+						["Warning", "You cannot board other player vehicle if you are not in the same group."] call A3A_fnc_customHint;
 						moveOut _unit;
 						_exit = true;
 					};
@@ -305,6 +305,13 @@ player addEventHandler ["GetInMan", {
 		};
 	};
 }];
+
+if (A3A_hasACE) then {
+    ["ace_explosives_place", {
+        params ["_explosive","_dir","_pitch","_unit"];
+		if (_unit == player) then { player setCaptive false };
+    }] call CBA_fnc_addEventHandler;
+};
 
 call A3A_fnc_initUndercover;
 
@@ -327,9 +334,9 @@ if (isMultiplayer) then {
 			} else {
 				_nonMembers = {(side group _x == teamPlayer) and !([_x] call A3A_fnc_isMember)} count (call A3A_fnc_playableUnits);
 				if (_nonMembers >= (playableSlotsNumber teamPlayer) - bookedSlots) then {["memberSlots",false,1,false,false] call BIS_fnc_endMission};
-				if (memberDistance != 16000) then {[] execVM "orgPlayers\nonMemberDistance.sqf"};
+				[] spawn A3A_fnc_playerLeash;
 
-				["General Info", "Welcome Guest<br/><br/>You have joined this server as guest"] call A3A_fnc_customHint;
+				["General Info", "Welcome Guest<br/><br/>You have joined this server as guest."] call A3A_fnc_customHint;
 			};
 		};
 	};
@@ -357,11 +364,11 @@ if (isServer || player isEqualTo theBoss || (call BIS_fnc_admin) > 0) then {  //
 		[A3A_hasTFAR || A3A_hasTFARBeta,"TFAR","Players will use TFAR radios. Unconscious players' radios will be muted."],
 		[A3A_hasACRE,"ACRE","Players will use ACRE radios. Unconscious players' radios will be muted."],
 		[A3A_hasACE,"ACE 3","ACE items added to arsenal and ammo-boxes."],
-		[A3A_hasACEMedical,"ACE 3 Medical","Default revive system will be disabled"],
+		[A3A_hasACEMedical,"ACE 3 Medical","Default revive system will be disabled."],
 		[A3A_hasRHS,"RHS","All factions will be replaced by RHS (AFRF &amp; USAF &amp; GREF)."],
 		[A3A_has3CBFactions,"3CB Factions","All Factions will be Replaced by 3CB Factions."],
 		[A3A_has3CBBAF,"3CB BAF","Occupant Faction will be Replaced by British Armed forces."],
-		[A3A_hasFFAA,"FFAA","Occupant faction will be replaced by Spanish Armed Forces"],
+		[A3A_hasFFAA,"FFAA","Occupant faction will be replaced by Spanish Armed Forces."],
 		[A3A_hasIvory,"Ivory Cars","Mod cars will be added to civilian car spawns."]
 	] select {_x#0};
 
@@ -383,7 +390,7 @@ gameMenu = (findDisplay 46) displayAddEventHandler ["KeyDown",A3A_fnc_keys];
 if (A3A_hasACE) then
 {
 	if (isNil "ace_interact_menu_fnc_compileMenu" || isNil "ace_interact_menu_fnc_compileMenuSelfAction") exitWith {
-        Error("ACE non-public functions have changed, rebel group join/leave actions will not be removed");
+        Error("ACE non-public functions have changed, rebel group join/leave actions will not be removed.");
 	};
 	// Remove group join action from all rebel unit types
 	// Need to compile the menus first, because ACE delays creating menus until a unit of that class is created
@@ -417,13 +424,12 @@ _flagLight setLightAttenuation [7, 0, 0.5, 0.5];
 vehicleBox allowDamage false;
 vehicleBox addAction [localize "$STR_antistasi_heal_repair_rearm", A3A_fnc_healAndRepair,nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull]) and (side (group _this) == teamPlayer)", 4];
 vehicleBox addAction ["Vehicle Arsenal", JN_fnc_arsenal_handleAction, [], 0, true, false, "", "alive _target && vehicle _this != _this", 10];
-if (A3A_hasACE) then { [vehicleBox, vehicleBox] call ace_common_fnc_claim;};	//Disables ALL Ace Interactions
-if (isMultiplayer) then {
-	vehicleBox addAction [localize "$STR_antistasi_dialogs_garage_personal", { [GARAGE_PERSONAL] spawn A3A_fnc_garage },nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull]) and (side (group _this) == teamPlayer)", 4];
-};
-vehicleBox addAction [localize "$STR_antistasi_dialogs_garage_faction", { [GARAGE_FACTION] spawn A3A_fnc_garage; },nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull]) and (side (group _this) == teamPlayer)", 4];
-vehicleBox addAction [localize "$STR_antistasi_flag_action_buyVehicle", {if ([player,300] call A3A_fnc_enemyNearCheck) then {["Purchase Vehicle", "You cannot buy vehicles while there are enemies near you"] call A3A_fnc_customHint;} else {nul = createDialog "vehicle_option"}},nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull]) and (side (group _this) == teamPlayer)", 4];
-vehicleBox addAction [localize "$STR_antistasi_flag_action_moveAsset", A3A_fnc_moveHQObject,nil,0,false,true,"","(_this == theBoss)", 4];
+[vehicleBox] call HR_GRG_fnc_initGarage;
+if (A3A_hasACE) then { [vehicleBox, VehicleBox] call ace_common_fnc_claim;};	//Disables ALL Ace Interactions
+vehicleBox addAction [localize "STR_antistasi_dialogs_vehicle_purchase_buy_text", {if ([player,300] call A3A_fnc_enemyNearCheck) then {["Purchase Vehicle", "You cannot buy vehicles while there are enemies near you."] call A3A_fnc_customHint;} else {nul = createDialog "vehicle_option"}},nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull]) and (side (group _this) == teamPlayer)", 4];
+vehicleBox addAction [localize "STR_antistasi_flag_action_moveAsset", A3A_fnc_moveHQObject,nil,0,false,true,"","(_this == theBoss)", 4];
+vehicleBox addAction ["Buy Light for 25€", {player call A3A_fnc_spawnLight},nil,0,false,true,"","true",4];
+call A3A_fnc_dropObject;
 
 if (LootToCrateEnabled) then {
 	vehicleBox addAction [localize "$STR_antistasi_buy_lootbox", {player call A3A_fnc_spawnCrate},nil,0,false,true,"","true", 4];
@@ -443,7 +449,8 @@ mapX addAction ["Game Options", {
 		"<br/>Limited Fast Travel: "+ (["No","Yes"] select limitedFT) +
 		"<br/>AI Limit: "+ str maxUnits +
 		"<br/>Spawn Distance: "+ str distanceSPWN + "m" +
-		"<br/>Civilian Limit: "+ str civPerc
+		"<br/>Civilian Limit: "+ str civPerc +
+		"<br/>Time since GC: " + ([[serverTime-A3A_lastGarbageCleanTime] call A3A_fnc_secondsToTimeSpan,1,0,false,2,false,true] call A3A_fnc_timeSpan_format)
 	] call A3A_fnc_customHint;
 	CreateDialog "game_options";
 	nil;
